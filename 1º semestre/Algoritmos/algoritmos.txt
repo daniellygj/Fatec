@@ -1,0 +1,1460 @@
+Capítulo 1 – Exercício 1 – No torneio de atletismo, Barnabé, Gumercindo e Teodoro participaram das provas de 100 metros rasos, saltos em distância e arremesso de dardo. Cada um deles conseguiu um primeiro lugar, um segundo e um terceiro. Descubra o que cada um conquistou sabendo que:
+•	Gumercindo venceu Barnabé no salto em distância;
+•	Teodoro chegou atrás de Gumercindo no arremesso de dardo; 
+•	Barnabé não chegou em primeiro nos 100 metros
+
+
+G = Gumercindo
+T = Teodoro
+B = Barnabé
+
+
+      rasos   saltos  dardo
+1	T	G	B
+2	B	T	G
+3	G	B	T
+
+
+
+Capítulo 1 – Exercício 2 – João tem três barris. No barril A, que está vazio, cabem 8 litros. No barril B, 5. No barril C, 3 litros. Que deve fazer para deixar os barris A e B com 4 litros cada e o C vazio?
+
+
+
+1-	Colocar o liquido que está no barril C dentro do barril A
+2-	Usar o barril B para encher o C
+3-	Pegar o barril C e colocar seu liquido dentro do barril A
+4-	Pegar o barril B e colocar seu liquido no barril C
+5-	Pegar o barril A e colocar seu liquido no barril B
+6-	Terminar de encher o barril C com o barril B
+7-	Colocar o liquido do barril C dentro do A
+
+
+
+Capítulo 1 – Exercício 3 – Tendo como exemplo os algoritmos desenvolvidos para solucionar o problema da troca de lâmpadas, elabore um algoritmo que mostre os passos necessários para trocar um pneu furado. Considere o seguinte conjunto de situações:
+•	Trocar o pneu traseiro esquerdo;
+•	Trocar o pneu traseiro esquerdo, e antes, verificar se o pneu reserva está em condições de uso;
+•	Verificar se existe algum pneu furado; se houver, verificar o pneu reserva e, então, trocar o pneu correto
+Para cada algoritmo faça um refinamento do anterior, introduzindo novas ações e alterando o fluxo de execução de forma compatível com as situações apresentadas.
+
+Verificar se um dos pneus esta furado
+Se o pneu estiver furado
+	Abrir o porta malas
+	Verificar se o pneu reserva está em boas condições
+		Se o pneu reserva estiver em condições de uso
+			Pegar o macaco
+			Afrouxar os parafusos do pneu furado
+			Erguer o carro com o macaco
+			Retirar o pneu furado
+			Colocar o pneu step e parafusa-lo
+			Descer o carro
+			Guardar o macaco
+		Senão
+			Ligar para o guincho
+
+
+ 
+
+
+Capítulo 1 – Exercício 4 – A partir do exercício de ficação 1.3, amplie a solução apresentada de maneira a completar a operação descrita, de troca dos discos da torre A para a torre B, considerando a existência de 4 discos.
+
+1-	Mover o disco 1 para a torre C
+2-	Mover o disco 2 para a torre B
+3-	Mover o disco 1 para a torre B
+4-	Mover o disco 3 para a torre C
+5-	Mover o disco 1 para a torre C
+6-	Mover o disco 2 para a torre A 
+7-	Mover o disco 1 para a torre B 
+8-	Mover o disco 2 para a torre C
+9-	Mover o disco 1 para a torre C
+10-	Mover o disco 4 para a torre B
+11-	Mover o disco 1 para a torre A
+12-	Mover o disco 2 para a torre B
+13-	Mover o disco 1 para a torre C
+14-	Mover o disco 2 para a torre A
+15-	Mover o disco 1 para a torre A
+16-	Mover o disco 3 para a torre B
+17-	Mover o disco 1 para a torre C
+18-	Mover o disco 2 para a torre B
+19-	Mover o disco 1 para a torre B
+ 
+
+
+Capítulo 1 – Exercício 5 – Considere que uma calculadora comum, de quatro operações está com as teclas de divisão e multiplicação inoperantes. Escreva algoritmos que resolvam as expressões matemáticas a seguir usando apenas as operações de adição e subtração.
+a.	12 x 4
+b.	23 x 11
+c.	10 / 2
+d.	175 / 7
+e.	28
+
+
+
+
+Algoritmo A
+Var  y  inteiro
+Inicio
+          Y <- 12
+          Escreva (x+x+x+x)
+fim
+
+
+
+Algoritmo B
+Var y  inteiro
+Inicio
+          Y <- 23               
+            Escreva(y+y+y+y+y+y+y+y+y+y+y)
+fim
+
+
+Algoritmo C
+Var y inteiro
+Inicio
+         Y <- 10
+          Escreva(y – 5)
+fim
+
+
+
+Algoritmo D
+Var y, x inteiro
+Inicio
+        Y <- 175
+         X <- 25
+         Escreva(y-x-x-x-x-x-x-x)
+fim
+
+
+
+Algoritmo E
+Var x, y, total, cont inteiro
+Inicio
+X<- 2
+Y<- 8
+Total<- x+x
+cont
+enquanto cont < (y-2):
+        total <- total+total
+        cont <- cont+1
+escreva(total)
+fim
+
+
+
+
+Capítulo 2 – Exercício 1 – Utilizando o seguinte trecho de algoritmo:
+.
+.
+Inteiro: x, y;  //Declara a variável x e y do tipo inteiro
+Real: z;        //Declara a variável z do tipo real
+Leia (x);      //grava o que o usuário digitar na variável x
+Escreva (x, “elevado ao cubo =”, pot(x,3));  //imprime na tela o valor de x, e o resultado dele elevado ao cubo
+Leia (y);   //grava o que o usuário digitar na variável y
+Escreva (x + y);   //imprime o resultado da soma de x com y
+Z <- x/y;   //o resultado da divisão de x por y é atribuído a variável Z
+Escreva (z);   // imprime o valor da variável z	 
+Z <- z  + 1;   //a variável z recebe ela mesma +1
+X < - (y + x) mod 2;    //o resto da divisão de y+x  por 2  é atribuído a variável y
+Escreva (x);   // escreve o valor de x na tela
+.
+.
+.
+Explique o que está acontecendo em cada linha e qual é o resultado de cada ação executada.
+ 
+
+
+Capítulo 2 – Exercício 2 – Cite e discorra sobre três exemplos de seu dia-a-dia nos quais você encontra explicitados entrada, saída e processamento
+
+Entrada: ingredientes para um bolo
+Processamento: mistura dos ingredientes e levar ao forno
+Saída: o bolo sai macio e cheiroso
+
+Entrada: leitura
+Processamento: analise e pesquisa
+Saída: relata e sintetiza o livro
+
+Entrada: chegada de um produto em uma loja
+ Processamento: etiquetar o produto, catalogar e colocar no setor correspondente
+Saída:venda
+ 
+
+
+Capítulo 3 – Exercício 1 – Construa um algoritmo que calcule a media ponderada entre 5 numeros quaisquer, sendo que os pesos a serem aplicados são 1, 2, 3, 4 e 5 respectivamente.
+
+Algoritmo “media_ponderada”
+Var nnum1, n2, n3, n4, n5, media  real
+Inicio
+              Para  cont de 0 até 5 faça
+                            Escreva(‘digite um numero’)
+                            Leia(num)
+                            Se cont == 10 entao
+                                          Media <- media + num * 1
+                            Senão se cont == 2	
+                                          Media <- media + num * 2
+                            Senão se cont ==3 entao
+                                          Media <- media + num *  3
+                            Senão se cont == 4 entao 
+                                          Media <- media + num  * 4
+                            Senão se cont == 5 então
+                                          Media <- media + num * 5
+                            Fim-se
+       escreva(media/15)
+fim	
+ 
+
+Capítulo 3 – Exercício 2 – Elabore um algoritmo que calcule a área de um circulo qualquer de raio fornecido.
+
+
+Algoritmo “área_circulo”
+Var area, raio    real
+Inicio
+        Escreva(‘digite o raio do circulo’)
+        Leia(raio)
+        area <- 3.14 * pot(raio, 2)
+       escreva(área)
+fim 
+
+        
+        
+        
+        
+ 
+
+        
+
+
+
+
+Capítulo 3 – Exercício 3 – Prepare um algoritmo capaz de inverter um numero, de 3 dígitos, fornecido, ou seja, apresentar primeiro a unidade, e,e depois, a dezena e a centena.
+Algoritmo “inverter_numero”
+Var num, d1, r2, d2
+Inicio
+       Escreva(‘digite um numero’)
+        Leia(num)
+        d1 <- num div 100
+         r1<- num mod 100
+         d2 <- r1 div 10
+         r2 <- r1 mod 10
+         escreva (r2, d2, d1)
+fim
+ 
+ 
+         
+Capítulo 3 – Exercício 4 – Ao completar o tanque de combustível de um automóvel, faça um algoritmo que calcule o consumo efetuado, assim como a autonomia que o carro ainda teria antes do abastecimento. Considere que o veiculo sempre seja abastecido ate encher o tanque e que são fornecidas apenas a capacidade do tanque, a quantidade de litros abastecidos e a quilometragem percorrida desde o ultimo abastecimento.
+
+Algoritmo “gasto_carro
+Var cap_tanque, qtd_litros, quil_percorrida, consumo, autonomia:  inteiro
+Inicio
+          Escreva(‘digite a capacidade do tanque’)
+          Leia(cap_tanque)
+          Escreva(‘digite a quantidade de litros abastecidos’)
+          Leia(qtd_litros)
+          Escrevav(‘digite a quilometragem percorrida’)
+          Leia(quil_percorrida)
+          Consumo <- (quil_percorrida / qtd_litros) 
+          Autonomia <- (consumo – qtd_litros) *cons_efet
+          Escreva(consumo, autonomia)
+fim
+ 
+
+Capítulo 3 – Exercício 5 – Dada uma determinada data de aniversario (dia, mês e ano separadamente). Elabore um algoritmo que solicite a data atual (dia, mês e ano separadamente) e calcule a idade em anos, em meses e em dias.
+
+Algoritmo “idade”
+Var dia, mes, ano, diaA, mesA, anoA, diaI, mesI, anoI: inteiro
+Inicio
+          Escreva(‘digite o dia do seu nascimento’)
+          Leia(dia)
+          Escreva(‘digite o mês do seu nascimento’)
+          Leia(mes)
+          Escreva(‘digite o ano do seu nascimento’)
+          Leia(ano)
+          Escreva(‘digite o dia atual’)
+          Leia(diaA)
+          Escreva(‘digite o mês atual’)
+          Leia(mesA)
+          Escreva(‘digite o ano atual’)
+          Leia(anoA)
+          anoI <- anoA - ano
+          mesI <- mesA - mes
+          diaI <- diaA - dia
+          escreva(diaI, ‘/’, mesI, ‘/’, anoI)
+fim 
+ 
+
+
+
+Capítulo 3 – Exercício 6 – Um dado comerciante maluco cobra 10% de acréscimo para cada prestação em atraso e depois da um desconto de 10% sobre esse valor. Faça um algoritmo que solicite o valor da prestação em atraso e apresente o valor final a pagar, assim como o prejuízo do comerciante na operação.
+
+Algoritmo “comerciante_maluco”
+Var valor_prestacao, valor_final, aumento, valor_aumento, prejuízo:  real
+Inicio
+          Escreva(‘digite o valor da prestação’)
+          Leia(valor_prestacao)
+          Aumento <- valor_prestacao * 0.10
+          Valor_aumento <- valor_prestacao + aumento
+          Falor_final <- valor_aumento * 0.90
+          Prejuízo <- valor_prestacao – valor_final
+          Escreva(valor_final, prejuízo)
+ 
+Capítulo 3 – Exercício 7 – Escreva um algoritmo que, a partir de um mês fornecido(numero inteiro de 1 a 12), apresente o nome dele por extenso ou uma mensagem de mês inválido.
+
+
+Algoritmo “mês”
+Var num
+inicio
+        escreva(‘digite um número de 1 a 12’)
+        leia(num)
+        se num == 1 então
+                 escreva(‘Janeiro’)
+        senão se num == 2 então
+                   escreva(‘Fevereiro’)
+        senão se num == 3 então
+                   escreva(‘Março’)
+       senão se num == 4 então
+                   escreva(“Abril’)	
+       senão se num == 5 então
+                    escreva(“Maio”)
+       senão se num == 6 então
+                     escreva(‘Junho’)
+       senão se num == 7 então
+                   escreva(‘Julho’)
+       senão se num == 8 então
+                   escreva(‘Sgosto’)
+       senão se num == 9 então
+                    escreva(‘Setembro’)
+       senão se num == 10 então
+                     escreva(‘Outubro’)
+       senão se num == 11 então
+                    escreva(‘Novembro’)
+       senão se num == 12 então
+                    escreva(‘Dezembro’)
+       senão
+                   escreva(‘número invalido’)
+       fim-se
+fim
+ 
+
+Capítulo 3 – Exercício 8 – Elabore um algoritmo que, a partir de um dia, mês e ano fornecidos, valide se eles compõem uma data valida. Não deixe de considerar os meses com 30 ou 31 dias, e o tratamento de ano bissexto.
+
+Algoritmo ‘validação de data’
+Var dia, mes, ano : inteiro
+        Bissexto  : lógico 
+Inicio
+            Escreva(‘digite o dia’)
+            Leia(dia)
+            Escreva(‘digite o mês’)
+            Leia(mes)
+            Escreva(‘digite o ano’)            
+            Leia(ano)
+           Se ano %  4 == 0 e ano % 100 != 0 ou ano % 400 == 0
+                           Se ano >0  então
+                                    Se mês == 2 então
+                                                Se dia >= 1 e dia <= 29 entãp
+                                                            Escreva(‘data válida’)
+                                                    Fim-se
+                                    Fim-se
+                        Fim-se
+            Senão
+                            Se ano >0 então
+                                    Se mês == 2 então
+                                                Se dia >=1 e dia <= 28 então
+                                                            Escreva(‘data válida’)
+                                                Fim-se
+                                    Fim-se
+                        Fim-se
+            Fim-se
+                      
+                          Se ano >0 então:
+                                    Se mes >= 1 e mes <= 12
+                                                Se mês == 1 ou mês == 3 ou mês == 5 ou mês == 7  
+                                                  ou mês == 8  ou mês == 10 ou mês == 11 então
+                                                            Se dia >= 1 e dia <= 31 então
+                                                                        Escreva(‘data válida’)
+                                                            Senão 
+                                                                        Escreva(‘data inválida’)
+                                                            Fim-se            
+                                                Fim-se
+                                    Senão se mês  == 4  ou mês == 6 ou mês ==  9 ou mês == 11         
+                                                                                                                       então
+                                                se dia >=1 e dia <= 30 então
+                                                            escreva(‘data válida’)
+                                                senão 
+                                                            escreva(‘data inválida’)
+                                                fim-se 
+fim
+ 
+Capítulo 3 – Exercício 9 – Escreva o signo do zodíaco correspondente ao dia e mês informado.
+
+
+Algoritmo ‘signo’
+Var dia, mês inteiro
+Inicio
+            Escreva(‘qual o dia do seu nascimento?’)
+            Leia(dia)
+            Escreva(‘qual o mês do seu nascimento? (utilize números)’)
+            Leia(mês)
+            Se mês == 1 e dia >= 20 e dia <= 31 ou mês == 2 e dia <=18 então
+                        Escreva(‘aquário’)
+              Fim-se
+              se mês == 2 e dia >= 19 e dia <= 29  ou mês == 3 e dia <= 20 então
+                           escreva(‘peixes’)	
+              Fim-se              
+               se mês == 3 e dia >= 21 e dia <= 31 ou mês == 4 e dia <= 19 então
+                        escreva(‘Áries’)
+              Fim-se
+               se mês == 4 e dia >=  20 e dia <= 30 ou mês == 5 e dia <= 20 então
+                            escreva(‘touro’)
+              Fim-se
+              se mês == 5 e dia >= 21 e dia <= 31 ou mês == 6 e dia <= 20 então
+                            escreva(‘gêmeos’)
+              Fim-se
+              se mês == 6 e dia >= 21  e dia <= 30 ou mês == 7 e dia <= 22 então
+                            escreva(‘câncer’)
+              Fim-se
+              se mês == 7 e dia >= 23 e dia <= 31 ou mês == 8 e dia <=22 então
+                            escreva(‘leão’)
+              Fim-se
+              se mês == 8 e dia >= 23 e dia <= 31 ou mês == 9 e dia <= 22 então
+                            escreva(‘virgem’)
+              Fim-se
+              se mês == 9 e dia >= 23 e dia <= 30 ou mês == 10 e dia <= 22 então
+                            escreva(‘libra’)	
+              Fim-se
+              se mês == 10 e dia >=23  e dia <= 31 ou mês == 11 e dia <= 21 então
+                            escreva(‘escorpião’)
+              Fim-se
+             se mês == 11 e dia >= 22 e dia <= 30 ou mês == 12 e dia <= 21 então
+                            escreva(‘sagitário’)
+              Fim-se
+              se mês == 12  e dia >= 22 e dia <= 31 ou mês == 1 e dia <= 19 então    
+                            escreva(‘capricórnio’)
+                senão
+                            escreva(‘data inválida’)
+              fim-se
+fim 
+ 
+Capítulo 3 – Exercício 10 – A partir da idade informada de uma pessoa, elabore um algoritmo que informe a sua classe eleitoral, sabendo que menores de 16 não votam (não votante), que o voto é obrigatório para adultos entre 18 e 65 anos (eleitor obrigatório) e que o voto é opcional para eleitores entre 16 e 18, ou maiores de 65 anos (eleitor facultativo)
+
+Algoritmo “classe eleitoral”
+Var idade inteiro
+Inicio
+              Escreva(‘digite sua idade’)
+              Leia(idade)
+              Se idade < 16 então
+                            Escreva(‘não votante’)
+              Fim-se
+              se idade == 16 e idade == 17 ou idade > 65 então
+                            Escreva(‘eleitor facultativo)
+              Fim-se
+              se idade >= 18 e idade <= 65 então
+                            Escreva(‘voto obrigatório’)
+              Fim-se 
+ 
+Capítulo 3 – Exercício 11 – Construa um algoritmo que seja capaz de dar a classificação olímpica de 3 países informados. Para cada pais e informado o nome  a quantidade de medalhas de ouro, prata e bronze. Considere que cada medalha de ouro tem peso 3, cada de prata tem peso 2 e cada bronze, peso 1.
+
+Algoritmo ‘classificação_olímpica’
+Var nome1, nome2, nome3  :caractere
+      Ouro1, ouro1, ouro3, prata1, prata2, prata3, bronze1, bronze2, bronze 3, total1, total2, total3 :inteiro
+Inicio
+              Escreva(‘qual o nome do pais 1?’)
+              Leia(nome1)
+              Escreva(‘quantas medalhas de ouro ele teve?’)
+              Leia(ouro1)
+              Escreva(‘quantas de prata?”)
+              Leia(prata1)
+              Escreva(‘quantas de bronze?’)
+              Leia(bronze1)              
+              Escreva(‘qual o nome do pais2?’)
+              Leia(nome2)
+              Escreva(‘quantas medalhas de ouro?’)
+              Leia(ouro2)
+              escreva(‘quantas de prata?’)
+              leia(prata2)
+              escreva(‘quantas de bronze?’)
+              leia(bronze2)
+              Escreva(‘qual o nome do pais 3?’)
+              Leia(nome3)
+              Escreva(‘quantas medalhas de ouro?’)
+              Leia(ouro3)
+              Escreva(‘quantas de prata?’)
+              Leia(prata3)
+              Escreva(‘quantas de bronze?’)
+              Leia(bronze3)
+              Total1 <- (ouro1 * 3) + (prata1 *2) + (bronze1 * 1)
+              Total2 <- (ouro2 * 3) + (prata2 *2) + (bronze2 * 1)
+              Total3 <- (ouro3 * 3) + (prata3 *2) + (bronze3 * 1)
+              Se total1 > total 2 e total1 > total3 então
+                            Escreva(‘1º’, nome1, ‘-‘, total1, ‘medalhas’)
+                            Se total2 > total3 então
+                                          Escreva(‘2º’, nome2, ‘-‘, total2, ‘medalhas’)
+                                          Escreva(‘3º’, nome3, ‘-‘, total3, ‘medalhas’)
+                            Senão
+                                          Escreva(‘3º’, nome3, ‘-‘, total3, ‘medalhas’)
+                                          Escreva(‘2º’, nome2, ‘-‘, total2, ‘medalhas’)
+                            Fim-se
+              Fim-se
+              Se total2 > total1 e total2 > total3 então
+                            Escreva(‘1º’, nome2, ‘-‘, total2, ‘medalhas’)
+                            Se total1 > total3 então
+                                          Escreva(‘2º’, nome1, ‘-‘, total1, ‘medalhas’)
+                                          Escreva(‘3º’, nome3. ‘-‘, total3, ‘medalhas’)
+                            Senão
+                                          Escreva(‘2º’, nome3, ‘-‘, total3, ‘medalhas’)
+                                          Escreva(‘3º’, nome1, ‘-‘, total1, ‘medalhas’)
+                            Fim-se
+              Fim-se
+              Se total3 > total2 então
+                            Escreva(‘’1º’, nome3, ‘-‘, total3, ‘medalhas’)
+                            Se total1 > total2 então
+                                          Escreva(‘2º’, nome1, ‘-‘, total1, ‘medalhas’)
+                                          Escreva(’3º’, nome2, ‘-‘, total3, ‘medalhas’)
+                            Senão
+                                          Escreva(‘2º’, nome2, ‘-‘, total2, ‘medalhas’)
+                                          Escreva(’3º’, nome1, ‘-‘, total1, ‘medalhas’)
+                            Fim-se
+              Fim-se
+fim
+
+
+	
+ 
+Capítulo 3 – Exercício 12 – construa um algoritmo que seja capaz de concluir qual dentre os seguintes animais foi escolhido, através de perguntas e respostas. Animais possíveis: leão, cavalo, homem, macaco, morcego, baleia, avestruz, pinguim, pato, águia, tartaruga, crocodilo e cobra.
+
+Algoritmo ‘adivinhação’
+Var resp : caractere
+Inicio
+           Escreva(‘é mamífero?’)
+           Leia(resp)
+           Se resp == ‘sim’ então
+                      Escreva(‘e quadrúpede?’)
+                      Leia(resp)
+                      Se resp == ‘sim’ então
+                                 Escreva(‘é carnivoro?’)
+                                 Leia(resp)
+                                 Se resp == ‘sim’ então
+                                            Escreva(‘leão’)
+                                 Senão
+                                            Escreva(‘é herbívoro?’)
+                                            Leia(resp)
+                                            Se resp == ‘sim’ então
+                                                       Escreva(‘cavalo’)
+                                            Senão
+                                                       Escreva(‘animal não está na lista’)
+                                            Fim-se
+                                 Fim-se
+                      Senão
+                                 Escreva(‘é bípede?’)
+                                 Leia(resp)
+                                 Se resp == ‘sim’ então
+                                            Escreva(‘é onívoro?’)
+                                            Leia(resp)
+                                            Se resp == sim então
+                                                       Escreva(‘homem’) 
+                                            Senão
+                                                       Escreva(‘é frutívoro?’)
+                                                       Leia(resp)
+                                                       Se resposta == ‘sim’ então
+                                                                  Escreva(‘macaco’)
+                                                       Senão
+                                                                  Escreva(‘animal não está na lista’)
+                                                       Fim-se
+                                            Fim-se
+                                 Senão
+                                          Escreva(‘é voador?’)
+                                           Leia(resp)
+                                           Se resp == ‘sim’ então
+                                                        Escreva(‘morcego’)
+                                           Senão
+                                                        Escreva(‘animal não está na lista’)
+                                            Fim-se
+                                            Escreva(‘é aquático?’)  
+                                                       Se resp == ‘sim’ então
+                                                                  Escreva(‘baleia’)
+                                                       Senão
+                                                                  Escreva(‘animal não está na lista’)
+                                                       Fim-se
+                                            Fim-se
+                                 Fim-se
+                      Fim-se
+           Senão
+                      Escreva(‘é ave?’)
+                      Leia(resp)
+                      Se resp == ‘sim’ então
+                                 Escreva(‘é voadora?’)
+                                 Leia(resp)
+                                 Se resp == ‘não’ então
+                                            Escreva(‘é tropical?’)
+                                            Leia(resp)
+                                            Se resp == ‘sim’ então
+                                                       Escreva(‘avestruz’)
+                                            Senão
+                                                       Escreva(‘é polar?’)
+                                                       Leia(resp)
+                                                        Se resp == ‘sim’ então
+                                                                  Escreva(‘pinguim’)
+                                                       Senão
+                                                                  Escreva(‘animal não está na lista’)
+                                                       Fim-se
+                                            Fim-se
+                                 Senão
+                                            Escreva(‘é nadadora?’)
+                                            Leia(resp)
+                                            Se resp == ‘sim’ então
+                                                       Escreva(´pato’)
+                                            Senão
+                                                       Escreva(‘de rapina?’)
+                                                       Leia(resp)
+                                                       Se resp == ‘sim’ então
+                                                                  Escreva(‘aguia’)
+                                                       Senão 
+                                                                  Escreva(‘animal não está na lista”)
+                                                       Fim-se
+                                            Fim-se
+                                 Fim-se
+                      Senão
+                                 Escreva(‘é reptil?’)
+                                 Leia(resp)
+                                 Se resp == ‘sim’ então
+                                            Escreva(‘com casco?’)
+                                            Se resp == ‘sim’ então
+                                                       Escreva(‘tartaruga’)
+                                            Senão
+                                                       Escreva(‘é carnívoro?’)
+                                                       Se resp == ‘sim’ então
+                                                                  Escreva(‘crocodilo’)
+                                                       Senão
+                                                                  Escreva(‘tem patas?’)
+                                                                  Se resp == ‘não’ então
+                                                                             Escreva(‘cobra’)
+                                                                  Senão
+                                                                             Escreva(‘animal não está na lista’)
+                                                                  Fim-se
+                                                       Fim-se
+                                            Fim-se
+                                 Fim-se
+                      Fim-se
+           Fim-se
+fim
+                                                                           
+                                                       
+           
+Capítulo 3 – Exercício 13 – Elabore um algoritmo que obtenha o mínimo múltiplo comum (MMC) entre dois números fornecidos.
+
+Algoritmo ‘MMC’
+Var y, x, mmc: inteiro
+Inicio 
+        Escreva (‘digite um numero’)
+        Leia(x)
+        Escreva(‘digite outro numero’)
+        Leia(y)
+        A <- 1
+        Se x mod a == 0
+                A <- 1
+                Mmc = mmc * a
+                X <- x / a
+        Fim-se
+        Se y mod a == 0
+                Se a != 1
+                        Mmc = mmc * a
+                        Y <- y / a
+                Fim-se
+        Fim-se
+Escreva(mmc)
+      fim         
+ 
+
+
+
+Capítulo 3 – Exercício 14 –  Elabore um algoritmo que obtenha o Maximo divisor comum (MDC) entre dois números fornecidos.
+
+Algoritmo ‘MDC’
+Var  n1, n2, resto, maior, menor: inteiro
+Inicio
+        Escreva(‘digite o primeiro numero’)
+        Leia(n1)      
+        Escreva(‘digite o segundo numero’)
+        Leia(n2)
+        Se n1 > n2
+                Maior <- n1
+                Menor <- n2
+        Senão
+                Maior <- n2
+                Menor <- n1
+        Enquanto maior % menor != 0 faça
+                Resto <- maior % menor
+                Maior <- menor
+                Menor <- resto
+        Fim-enquanto
+        Escreva(menor)	
+fim
+ 
+Capítulo 3 – Exercício 15 – Faça um algoritmo que seja capaz de obter o quociente inteiro da divisão de dois números fornecidos, sem utilizar a operação de divisão(/) e nem divisão inteira (div).
+
+Algoritmo “divisão’
+Var n1, n2 real
+      Cont: inteiro
+Inicio
+        Escreva(‘digite um numero’)
+        Leia(n1)
+        Escreva(‘por quanto deseja dividir? ‘)
+        Leia(n2)
+        Enquanto n1 >= n2 faça
+                n1 <- n1 – n2
+                Cont <- cont +1
+        Fim-enquanto
+        Escreva(cont)
+fim
+	
+ 
+Capítulo 3 – Exercício 16 – Faça um algoritmo  que seja capaz de obter o resultado de uma exponenciação para qualquer base e expoente inteiro fornecidos, sem utilizar a operação de exponenciação (pot).
+
+Algoritmo ‘exponenciação’
+Var num, exp, cont, result  int
+Inicio
+        Escreva(‘digite um numero’)
+        Leia(num)
+        Escreva(‘a quanto deseja elevar ele?’)
+        Leia(exp)
+        Result <- n1um * num
+         Para cont > 0 ate exp faça
+                Result <- result  * num                  
+        Fim-para
+       Escreva(result)
+fim
+ 
+Capítulo 3 – Exercício 17 – Construa um algoritmo que gere os 20 primeiros termos de uma serie tal qual a de Fibonacci, mas que cujos 2 primeiros termos são fornecidos pelo usuário.
+
+Algoritmo ‘fibonacci’
+Var cont, n1, n2, n3 : inteiro
+inicio
+        cont <- 2
+         escreva(‘1º numero’)
+         leia(n1)
+        escreva(‘2º numero’) 
+         leia(n2)
+         escreva(n1, n2)
+         enquanto cont != 20 faça
+                  n3 <- n1 + n2
+                  n1 <- n2
+                  n2 <- n3
+                  escreva(n3)
+                  cont <- cont + 1
+         fim-enquanto
+fim
+ 
+Capítulo 3 – Exercício 18  – Construa um algoritmo que, dado um conjunto de valores inteiros e positivos, determine qual o menor e o maior valor do conjunto. O final do conjunto de valores é conhecido pelo valor -1, que não deve ser considerado.
+
+Algoritmo ‘maior_e_menor’
+Var maior, menos, num, cont, c  : real	 
+Inicio
+       Num <- 0
+       Enquanto num != -1 faça:
+              Escreva(‘digite um numero’)
+              Leia(num)
+              Cont <- cont+1
+              Para c de 0 até cont faça
+                     Se c == 1
+                            Maior <- num
+                            Menor <- num
+                     Senão
+                            Se num > maior
+                                   Maior <- num
+                            Fim-se
+                            Se num < menor
+                                   Menor <- num
+                            Fim-se
+                     Fim-se
+                     Fim-para
+       Escreva(‘maior’, maior, ‘menor’, menor)
+fim
+ 
+ Capítulo 3 – Exercício 19 – A conversão de graus Fahrenheit para centigrados e obtida pela formula C = 5/9(F – 32). Escreva um algoritmo que calcule e escreva uma tabela de graus centigrados em função de graus Fahrenheit que variem de 50 a 150 de 1 em 1.
+
+Algoritmo ‘conversao’
+Var f, c, real
+Inicio
+         Para f de 50 até 150 faça
+                  C <- (5/9)*(f-32)
+                  Escreva(c)
+         Fim-para
+fim
+ 
+Capítulo 3 – Exercício 20 – Uma rainha requisitou os serviços de um monge e disse-lhe que pagaria qualquer preço. O monge, necessitando de alimentos, perguntou a rainha se o pagamento poderia ser feito com grãos de trigo dispostos em um tabuleiro de xadrez, de tal forma que o primeiro quadro contivesse apenas um grão e os quadros subsequentes, o dobro de qualquer anterior. A rainha considerou o pagamento barato e pediu que o serviço fosse executado, sem se dar conta de que seria impossível efetuar o pagamento. Faça um algoritmo para calcular o numero de grãos que o monge esperava receber.
+
+Algoritmo ‘monge_e_a_rainha’
+Var cont, total, soma : inteiro
+Inicio
+         cont <- 0
+         Total <- 1
+         Soma <- 0
+         Para cont de 1 ate <= 64 faça
+                  Se cont > 1 então
+                           Total <- total * 2
+                           Soma <- soma + total
+                        Fim-se
+                  
+         Fim-para
+         Escreva(soma)
+fim
+ 
+Capítulo 3 – Exercício 21 – Em uma eleição presidencial existem quatro candidatos. Os votos são informados por código. Os dados utilizados para e escrutinagem obedecem a seguinte codificação:
+•	1,  2, 3, 4 = voto para os respectivos candidatos;
+•	5 = voto nulo
+•	6 = voto em branco.
+Elabore um algoritmo que calcule e escreva:
+•	O total de votos para cada candidato e seu porcentual sobre o total;
+•	O total de votos nulos e seu porcentual sobre o total;
+•	O total de votos em branco e seu percentual sobre o total.
+Como finalizador do conjunto de votos, tem-se o valor 0.
+
+Algoritmo ‘eleição’
+Var num, cont, a,b,c,d,e,f, opção : inteiro
+      A1, b1, c1, d1 e1, f1 : real
+Inicio 
+         Escreva(‘[1]candidatoA; [2]candidatoB, [3]candidatoC, [4]candidatoD;   [5]nulo; [6]branco; [0]finalizar’)
+         Leia(opção)
+         Enquanto opção != 0 faça
+                  Cont <- cont +1
+                  Se num == 1 então
+                           A <- a + 1
+                  Senão se num == 2 então
+                           B <- b +1
+                  Senão se num == 3 entãp
+                           C <- c +1
+                  Senão se num == 4
+                           D <- d +1
+                  Senão se num == 5 então
+                           E <- e +1
+                  Senão se num == 6 então
+                           F <- f + 1
+                  Senão
+                           Escreva(‘opção invalida, tente novamente’)
+                  Fim-se
+         Fim-enquanto
+         A1 <- a * 100 / cont
+         B1 <- b * 100 / cont
+         C1 <- c * 100 / cont
+         D1 <- d * 100 / cont
+         E1 <- e * 100 / cont
+         F1 <- f * 100 / cont
+
+         Escreva(‘candidatoA recebeu’ , a, ‘votos’, a1 ‘%’)
+         Escreva(‘candidatoB recebeu ‘, b, ‘votos, b1, ‘%’)
+         Escreva(‘candidatoC recebeu ‘, c, ‘votos, c1, ‘%’)
+         Escreva(‘candidatoD recebeu ‘, d, ‘votos, d1, ‘%’)
+         Escreva(‘candidatoE recebeu ‘, e, ‘votos, e1, ‘%’)
+         Escreva(‘candidatoF recebeu ‘, f, ‘votos, f1, ‘%’)
+fim
+ 
+
+
+
+Capítulo 3 – Exercício 22 – Escreva um algoritmo que imprima todas as possibilidades de que no lançamento de dois dados tenhamos o valor 7 como resultado da soma dos valores de cada dado.
+Algoritmo ‘possibilidades_7’
+var   cont1, cont2 : inteiro
+inicio	  
+         para cont de 0 até 15 faça
+                  para cont1 de 0 até 15 faça
+                           se cont * cont1 == 7 então
+                                    escreva(cont, ‘x’, cont1)
+                           fim-se
+                           se cont / cont1 ==7 então
+                                    escreva(cont, ‘/’, cont1)
+                           fim-se
+                           se cont + cont1 == 7 entao
+                                    escreva(cont, ‘+’, cont1)
+                           fim-se
+                           se cont – cont1 ==7 entao
+                                    escreva(cont, ‘-‘, cont1
+                           fim-se
+                  fim-para
+         fim-para
+
+fim
+ 
+
+Capítulo 3 – Exercício 23 – Elabore um algoritmo que imprima todos os números primos existentes entre N1 e N2, em que N1 e N2 são números naturais fornecidos pelo usuário.
+
+Algoritmo ‘numeros_primos’
+var n1, n2, a, b : inteiro
+    primo : lógico
+inicio   
+          escreva ("digite um número")
+          leia(n1)
+          escreva ("digite outro número")
+          leia(n2)
+          para a de n1 até n2 passo 1 faça
+                  primo <- v
+                  para b de 2 até (a-1) passo 1 faça
+                          se(a mod b == 0  então
+                               primo <- f
+                          fim-se
+                   fim-para
+          se primo == v  então
+                      escreva ("os números primos são ")
+           fimse
+           fimpara
+ fim.
+                  	
+ 
+
+Capítulo 3 – Exercício 24 – Construa um algoritmo que leia um conjunto de dados contendo altura e sexo (‘M’ para masculino e ‘F’ para feminino) de 50 pessoas, e, depois, calcule e escreva:
+•	A maior e a menor altura do grupo;
+•	A média de altura das mulheres; 
+•	O numero de homens e a diferença porcentual entre eles e as mulheres.
+
+
+Algoritmo ‘dados_grupo’
+Var cont, altura, contF, contM, maior, menor, media, homem, mulher
+      sexo 
+Inicio
+           Homem <- 0
+           Media <- 0
+           Mulher <- 0
+           Para cont < 0 até 50 faça
+                      Escreva(‘qual seu sexo?’)
+                      Leia(sexo)
+                      Escreva(‘qual a sua altura?’)
+                      Leia(altura)
+                      Se cont == 1 então
+                                Maior <- altura
+                                 Menor <- altura
+                      Fim-se
+                      Se altura > maior então
+                                 Maior <- altura
+                      Fim-se
+                      Se altura < menor então
+                                 Menor <- altura
+                      Fim-se
+                      Se sexo == ‘F’ então
+                                 Media <- media + altura
+                                 Mulher <- mulher +1
+                      Fim-se
+                      Se sexo == ‘M’ então
+                                 Homem <- homem +1
+                      Fim-se
+           P <- homem + homem
+           Escreva(‘maior altura’, maior, ‘menor altura’, menor)
+           Escreva(‘media de altura das mulheres’, media / mulher)	
+           Escreva(homem, ‘homens’, homem * 50 / 100)
+fim
+
+           
+                      
+                      
+ 
+Capítulo 3 – Exercício 25 – Prepare um algoritmo que calcule o valor de H, sendo que ele é determinado pela série:
+  H = 1/1 + 3/2 + 5/3 + 7/4 + ... + 99/50.
+
+Algoritmo ‘valor de H’
+Var h, x, y, real
+Inicio
+       X <- 1
+      Y <- 1 
+       Enquanto x <= 99 faça
+              X <- x + 2
+              Y <- y + 1
+              h <- h + x / y
+       fim-enquanto
+escreva(h)
+
+ 
+     Capítulo 3 – Exercício 26 – Elabore um algoritmo que determine o valor de S, em que: S = 1/1 – 2/4 + 3/9 – 4/16 + 5/25 – 6/36 ... – 10/100.
+
+Algoritmo ‘valor_de_S’
+Var y, x, c, c1, c2, result, s, s1 : real
+Inicio
+        y <- 1
+        x <- 1
+        result = 0
+        para c de 1 até 11 faça
+                x <- c * c
+                para c1 de 1 até 11 passo 2 faça
+                        s <- s - result / result
+                fim-para
+                para c2 de 0 até 11 passo 2 faça
+                        s1 <- s1 +  result / result
+                fim-para
+        fim-para
+        escreva(s + s1)
+fim
+ 
+Capítulo 3 – Exercício 27 – Escreva um algoritmo que calcule e escreva a soma dos dez primeiros termos da seguinte serie:
+2/500 – 5/450 + 2/400 – 5/350 +...
+
+Algoritmo ‘soma_dos_termos’
+Var x, y, cont, r : real
+Inicio
+        X <- 500
+        R <- 0
+        Para cont de 500 até 0 passo -50 faça
+                X <- x - 50      
+	         se x % 2 == 0 então
+                        	R <- r - (x /5)
+                senão	      
+                              r <- r + (x / 2)
+                 fim-se
+        fim-para
+        escreva(r) 
+fim                    
+     
+ 
+Capítulo 3 – Exercício 28 – construa um algoritmo que calcule o valor dos dez primeiros termos da serie H, em que:
+A = 1/pot(1,3) – 1/pot(3,3) + 1/pot(5,3) – 1/pot(7,3) + 1/pot(9,3) - ...
+
+Algoritmo ‘dez_primeiros_termos’
+Var x, a, r : real
+    C, c1, c2 : inteiro
+Inicio
+        A <- 0
+        X <- 0
+        Para c de 0 até 20 faça
+                <- = x + 1
+                Se x % 3 == 0 então
+                        r <- r + pot(x,3)
+                Fim-se
+                Para c1 de 0 ate c passo 2 faça
+                        A <- a + r / 1 
+                Para c2 de 1 ate c passo 2 faça
+                        A <- a - r / 1   
+        Fim-para
+fim    
+
+
+ 
+Capítulo 3 – Exercício 29 – Uma agencia de publicidade quer prestar serviços somente para as maiores companhias – em numero de funcionários – em cada uma das classificações: grande, media, pequena e microempresa. Para tal, consegue um conjunto de dados com o código, numero de funcionários e o porte da empresa. Construa um algoritmo que liste o código da empresa com maiores recursos humanos dentro de sua categoria. Utilize como finalizador o código de empresa igual a 0
+
+Algoritmo ‘agencia’
+Var porte caractere
+Código, funcionários, codigoM, codigoG, codigoP, codigoMI,  funcionariosM, funcionariosG, funcionariosP, funcionariosMI inteiro
+        Código <- 1
+        Enquanto código != 0 faça
+                Escreva(‘digite o código da empresa’)
+                Leia(código)
+                Escreva(‘quantos funcionários ela tem?’)
+                Leia(funcionários)
+                Escreva(‘qual é o porte dela? ‘)
+                Leia(porte)
+                Cont <- cont+1
+
+                Se cont == 1 então
+                        funcionariosM = funcionários
+                        funcionariosG = funcionários
+                        funcionariosP = funcionários
+                        funcionariosM = funcionarios
+                fim-se
+                Se porte == grande então
+                        Se funcionários > funcionáriosG então:
+                                codigoG <- código
+                        fim-se
+                senão se porte == médio então
+                        se funcionários > funcionariosM então
+                                codigoM = código
+                         fim-se
+                senão se porte == pequena então
+                        se funcionários > funcionariosP então
+                                codigoP <- código 
+                        fim-se
+                senão se porte == microempresa então
+                        se funcionários > funcionariosMI então
+                                 codigoMI <- código
+                        fim-se
+                 fim-se
+         fim-enquanto
+              escreva(‘grande’, codigoG, ‘media’, codigoM, ‘pequena’, codigoP, ‘micro’, codigoP)
+fim
+ 
+Capítulo 3 – Exercício 30 – Calcule o imposto de renda de um grupo de dez contribuintes, considerando que os dados de cada contribuinte, numero de CPF, numero de dependentes e renda mensal são valores fornecidos pelo usuário. Para  cada contribuinte será feito um desconto de 5% no salário mínimo por dependente.
+Os valores da alíquota para calculo do imposto são:
+Renda liquida	Alíquota
+Até 2 salários mínimos	Isento
+2 a 3 salários mínimos	5%
+3 a 5 salários mínimos	10%
+5 a 7 salários mínimos	15%
+Acima de 7 salários mínimos	20%
+Observe que deve ser fornecido o valor atual do salário mínimo para que o algoritmo calcule os valores corretamente
+
+Algoritmo ‘imposto_de_renda’
+Var CPF  : caractere 
+       Salário : real
+       Cont  : inteiro
+Const salarioM : real
+Inicio
+         Cont <- 0
+         salarioM <- 954.00              
+              Escreva(‘digite seu cpf’)
+              Leia(CPF)
+              Esceva(‘renda liquida)
+              Leia(salário)
+              Enquanto salário – salárioM >= 0
+                            Cont <- cont+1
+              Fim-enquanto
+              Se cont <= 2 então
+                            Escreva(‘isento’)
+              Senão se cont  <= 3 então
+                            Escreva(‘taxa de 5%’, salário * 1,05)
+              Senão se cont <= 5 então
+                            Escreva(‘taxa de 10%’, salário *1.10)
+              Senão se cont <= 7 então
+                            Escreva(‘taxa de 15%’, salário * 1.15)
+              Senão
+                            Escreva(‘taxa de 20%’, salário * 1.20)
+              Fim-se
+fim
+              
+                            
+
+
+             
+ 
+Capítulo 3 – Exercício 31 – Foi realizada uma pesquisa sobre algumas características físicas da população de uma certa região, a qual coletou os seguintes dados referentes a cada habitante para analise:
+•	Sexo (‘M’ – masculino ou ‘F’ – feminino);
+•	Cor dos olhos (‘A’ – azuis, ‘V’ – verdes ou ‘C’ – castanhos);
+•	Cor dos cabelos (‘L’ – loiros, ‘C’ – castanhos ou ‘P’ – pretos);
+•	Idade.
+Faça um algoritmo que determine e escreva:
+•	A maior idade dos habitantes;
+•	A porcentagem entre os indivíduos do sexo masculino cuja idade está entre 18 e 35 anos, inclusive:
+•	A porcentagem do total de indivíduos do sexo feminino cuja idade está entre 15 e 35 anos, inclusive, e que tenham olhos verdes e cabelos loiros.
+o final do conjunto de habitantes é reconhecido pelo valor -1 entrando como idade.
+ 
+Algoritmo ‘características’
+Var idade, maior_idade, cont, contM
+       Sexo, olhos, cabelos
+Inicio
+        contM <- 0
+        contF <- 0
+        cont <- 0
+        Enquanto idade > -1 faça
+                Escreva(‘digite sua idade’)
+                Leia(idade)   
+                Escreva(‘qual seu sexo? ‘)
+                Leia(sexo)
+                Escreva(‘qual a cor dos seu olhos? ‘)
+                Leia(olhos)
+                Escreva(‘qual a cor dos seus cabelos? ‘)
+                Leia(cabelos)
+                Cont <- cont + 1
+                Se cont == 1 então
+                        Maior_idade = idade   
+                Fim-se   
+                Se sexo == ‘m’ então
+                        Se idade >= 18 e idade <= 35 então
+                                contM = contM +1   
+                        fim-se
+                fim-se           
+                se sexo == ‘f’ então
+                        se idade >= 15 e idade <= 35 então
+                                contF <- contF + 1
+                        fim-se
+                fim-se
+        escreva(‘a maior idade é’, maior_idade)
+        escreva(((cont / contF)*100), ‘mulheres entre 12 e 35 anos’)
+        escreva(((cont / contM) * 100) , ‘homens entre 18 e 35 anos’) 
+fim
+ 
+Capítulo 3 – Exercício 32 – Anacleto tem 1,50 metros e cresce 2 centímetros por ano, enquanto Felisberto tem 1,10 metro e cresce 3 centímetros por ano. Construa um algoritmo que calcule e imprima quantos anos serão necessários para que Felisberto seja maior que Anacleto.
+
+Algoritmo ‘anacleto_felisberto’
+Var Felisberto, Anacleto, cont : int
+Inicio 
+         Anacleto <- 150
+         Felisberto <- 110
+         Cont <- 0        
+         Enquanto Felisberto > Anacleto faça
+                  Cont <- cont +1
+                  Felisberto <- Felisberto + 3
+                  Anacleto <- Anacleto + 2
+         Fim-enquanto
+         Escreva(cont,’ anos’)]
+Fim
+
+
+ 
+Capítulo 3 – Exercício 33 – Realizou-se uma pesquisa para determinar alguns dados estatísticos em relação ao conjunto de crianças nascidas em um certo período de uma determinada maternidade. Construa um algoritmo que leia o numero de crianças nascidas nesse período e, depois, em um numero indeterminado de vezes, o sexo de um recém-nascido prematuro(‘M’ – masculino ou ‘F’ – feminino) e o numero de dias que este foi mantido na incubadora.
+Como finalizador, teremos a letra ‘X’ no lugar do sexo da criança. 
+Determine e imprima:
+•	A porcentagem de recém-nascidos prematuros;
+•	A porcentagem de recém-nascidos meninos e meninas do total de prematuros;
+•	A média de dias de permanência dos recém-nascidos prematuros na incubadora;
+•	O maior numero de dias que um recém-nascido prematuro permaneceu na incubadora.
+
+Algoritmo’recem-nascido’
+Var sexo : caractere
+       contP, contR, contTR, cont TP, tempo, x, contF, contM, mediaP, cont : inteiro
+Inicio
+         contP <- 0
+         contR <- 0
+         cont TR <-   0
+         contTP <- 0
+         contF <- 0
+         contM <- 0
+         cont <- 0
+
+         Enquanto sexo != x faça  
+                  Escreva(‘digite o sexo da criança’ )
+                  Leia(sexo)  
+                  Escreva(‘é prematura?’)
+                  Leia(x)
+                  Escreva(‘tempo na incubadora’)
+                  Leia(tempo)
+                  Cont <- cont + 1
+                  Se cont == 1 então
+                           Maior_tempo <- tempo 
+                           Maior_tempo1 <- tempo
+                  Fim-se
+                  Se maior_tempo < tem então
+                           Maior_tempo <- maior_tempo + tempo
+                           Maior_tempo1 <- tempo
+                  Fim-se
+                  Se x == ‘sim’ então
+                           Media <- media + tempo
+                           contP <- contP + 1
+                           se sexo == ‘feminino’ então
+                                    contF <- contF + 1
+                           fim-se
+                           se sexo == ‘masculino’ então
+                                    contM <- contM + 1
+                           fim-se                  
+                  fim-se
+         escreva(‘recem nascidos prematuros’, (contP / cont)*100)
+         escreva(‘recem nascidos prematuros femininos’, (contP / contF)*100)
+         escreva(‘recem nascidos prematuros masculinos’, (contP / contM) *100)
+         escreva(‘media de dias de permanencia’, maior_tempo/contP)
+         escreva(‘maior tempo na incubadora’, maior_tempo’)
+fim
+ 
+
+
+Capítulo 3 – Exercício 34 – um cinema possui capacidade de 100 lugares e esta sempre com ocupação total. Certo dia, cada espectador respondeu a um questionário no qual constava:
+Sua idade;
+Sua opinião em relação ao filme, segundo as seguintes notas;
+Nota	Significado
+A	Ótimo
+B	Bom
+C	Regular
+D	Ruim
+E	Péssimo
+Elabore um algoritmo que, lendo esses dados, calcule e imprima:
+•	A quantidade de respostas Ótimo;
+•	A diferença porcentual entre respostas Bom e Regular;
+•	A média de idade das pessoas que responderam Ruim;
+•	A porcentagem de respostas Péssimo e a maior idade que utilizou essa opção;
+•	A diferença de idade entre a maior idade que respondeu Ótimo e a maior idade que respondeu Ruim,
+
+Algoritmo’cinema’
+Var a, b, c, d, e, maior, maiorD, maior_idade, inteiro
+Inicio
+         Para c de 0 até 100 faça
+                  Escreva(‘qual sua idade? ’)
+                  Leia(idade)
+                  Escreva(‘o que achou do filme? ‘)
+                  Leia(opinião)
+                  Se opinião == ‘a’ então
+                           A <- a + 1
+                           Se a == 1 então
+                                    Maior <- idade
+                           Fim-se
+                           Se maior < idade então
+                                    Maior <- idade
+                           Fim-se
+                  Senão se opinião == ‘b’ então
+                           B <- b +1
+                  Senão se opinião == ‘c’ então
+                           C <- c + 1
+                  Senão se opinião == d então
+                           Media = media + idade
+                           d  <- d + 1
+                           se d == 1 entao
+                                    maiorD = idade
+                           fim-se
+                           se maiorD < idade
+                                    maiorD = idade
+                           fim-se
+                  senão se opinião == e então
+                           e <- e + 1
+                           se c == 1 então
+                                    maior_idade <- idade
+                           fim-se
+                           se maior_idade < idade então
+                                    maior_idade <- idade
+                           fim-se
+                  fim-se
+                  
+         fim-para
+         escreva(‘otimo’, a)
+         escreva(((b / 100) * 100), ((c / 100) * 100))
+         escreva(media/d)
+         escreva(((e/100)*100), maior_idade)
+         escreva(‘diferença de idade entre  ótimo e ruim’, maior – maiorD)
+fim
+ 
+Capítulo 3 – Exercício 35 – Em um prédio, há três elevadores denominados A, B, C. Para otimizar o sistema de controle dos elevadores, foi realizado um levantamento no qual cada usuário respondia:
+•	O elevador que utilizava com mais frequência;
+•	O período em que utilizava o elevador, entre:
+       *   ‘M’ = matutino;
+       *   ‘V’ = vespertino
+       *   ‘N’ = noturno
+Construa um algoritmo que calcule e imprima:
+•	Qual é o elevador mais frequentado e em que período se concentra o maior fluxo;
+•	Qual o período mais usado de todos e a que elevador pertence;
+•	Qual a diferença porcentual entre o mais usado dos horários e o menos usado;
+•	Qual a porcentagem sobre o total de serviços prestados do elevador de media utilização.
+
+
+
+Algoritmo ‘elevador’
+Var elevador, AM, av, an ,BM, bv, BN, cm, cv, cn,, mais, F. A. b. c, R, mais, menos : inteiro
+       Período, período1, periodo2, periodoM, periodoN, periodoV período, : caractere
+Inicio
+         Enquanto elevador != 0 faça
+                  Escreva(‘qual elevador  você utilizou? ‘)
+                  Leia(elevador)
+                  Escreva(‘em qual período? ’)
+                  Leia(período)
+                  Se elevador == ‘A’ então
+                           A <- a + 1
+                           Se período == ‘m’ então
+                                    AM <- AM +1
+                            Senao se período == ‘v’ então 
+                                    Av <- av + 1
+                             Senao se periodo == ‘n’ então
+                                    an <- an +1
+                             Senão
+                                     Escreva(‘opção invalida’)
+                           Fim-se
+                  Fim-se
+                           
+                  Se elevador == ‘B’ então
+                           B <- b + 1
+                           Se período == ‘m’ então
+                                    BM = BM +1
+                           Senão se período == ‘v’ então
+                                    Bv = bv + 1
+                           Fim-se
+                  Senão se período == ‘n’ então
+                                    BN = BN +1
+                  Senão
+                                    Escreva(‘opção invalida’)
+                           Fim-se
+                  Fim-se
+
+
+                  Se elevador == ‘C’ então
+                           C <- c + 1
+                           Se período == ‘m’ então
+                                    Cm <- cm + 1
+                           Senão se período == ‘v’ então
+                                    Cv <- cv + 1
+                           Senão se período == ‘n’ então
+                                    Cn  <- cn + 1
+                           Fim-se
+                  Fim-se
+         Fim-enquanto
+         Se a > b e a > c então
+                  Mais <- a
+                  Se am > an e an > av entao
+                           Periodo1 <- AM
+                  Semão se an > AM e an > av então 
+                           Periodo1 <- an
+                  Senão se av > an e av > AM então
+                           Periodo1 <- an     
+                  Fim-se                      
+         Senão se b > a e b > c então                  
+                  Mais <- b
+                  Se BM > BN e BM > bv então
+                           Periodo1 <- BM
+                  Senão se BN > BM e BN > bv então
+                           Periodo1 <- BN
+                  Senão se bv > BN e bv > BM então
+                           Periodo1 <- bv
+                  Fim-se
+         Se c > a e c > b então
+                  Mais <- c
+                   Se cm > cn e cm > cv então
+                           Periodo1 <- cm
+                  Senão se cn > cm e cn > cv então
+                           Periodo1 <- cn
+                  Senão se cv > cn e cv > cm então
+                           Periodo1 <- cv
+                  Fim-se
+         Fim-se
+
+         periodoM <- AM + BM + cm
+         periodoN <- an + BN + cn
+         periodoV <- av + bv + cv
+         periodoT <- periodoM + periodoN + periodoV
+
+         se períodoM < periodoN e periodoM < periodoV então 
+                 escreva(‘o período menos usado foi o matutino, com’, (periodoM * 100) / periodoT, ‘% das viagens’)
+         senão se periodoN < períodoM e periodoN < periodoV então
+                  escreva(‘o período menos usado foi o noturno, com ‘ , (periodoM * 100) / periodoT, ‘% das viagens’)
+         senão se periodoV < periodoN e periodoV < periodoM então
+                  escreva(‘o período menos usado foi o noturno, com ‘, (‘periodoV * 100) / periodoT, ‘% das viagens’)
+         fim-se
+         
+
+         se periodoM > periodoN e periodoM > periodoV então
+                  escreva(‘o período mais usado foi o matutino, com’, (periodoM * 100) / periodoT, ‘% das viagens’)
+                  se am > BM e am > cm então 
+                           escreva(‘periodo mais movimentado: matutino, elevador A’)
+                  senão se bm > am e BM > cm então
+                           escreva(‘período mais movimentado: matutino, elevador B’)
+                  senão se cm > am e cm > BM então
+                           escreva(‘periodo mais movimentado: matutino, elevador C’)
+                  fim-se
+         fim-se         
+         
+ 
+         se periodoN > periodoM e periodoN > periodoV então
+                  escreva(‘o período mais usado foi o noturno, com’, (periodoN * 100) / periodoT, ‘% das viagens’) 
+                  se an > BN e an > cn então
+                           escreva(‘periodo mais movimentado: noturno, elevador A’)
+                  senão se BN > an e BN > cn então
+                           escreva(‘periodo mais movimentado: noturno, elevador B’)
+                  senão se cn > an e cn > BN então
+                           escreva(‘periodo mais movimentado: noturno, elevador C’)
+                  fim-se
+         fim-se	         
+
+         se periodoV > períodoN e periodoV > periodoM então
+                  escreva(‘o período mais usado foi o Vespertino, com’, (periodoV * 100)/ periodoT, ‘% das viagens’)
+                   se av > BN e an > cn então
+                            escreva(‘periodo mais movimentado: vespertino, elevador A’)
+                   senão se BN > an e BN > cn então
+                            escreva(‘periodo mais movimentado: vespertino, elevador B’)
+                   senão se cn > an e cn > BN então
+                            escreva(‘periodo mais movimentado: vespertino, elevador C’)
+                  fim-se
+         fim-se
+
+         se a > b e a > c então
+                  mais <- a
+         senão se b > a e b > c enão
+                  mais <- b
+         senão se c > a e c > b então
+                  mais <- c
+         fim-se
+         se a < b e a < c então
+                  menos <- a
+         senão se b < a e b < c então
+                  menos <- b
+         senão se c < b e c < a então
+                  menos <- c
+         fim-se
+
+         tot <- = a + b + c
+         se mais == a e menos== b então
+                  escreva(‘o elevador de media duração é o C, com ’, (c/100)*tot, ‘% dos usos’)
+          senão se mais == a e menos == c então
+                  escreva(‘o elevador de media duração é o B, com ’, (b/100)*tot, ‘% dos usos’)
+
+           senão se mais == b e menos == c então
+                  escreva(‘o elevador de media duração é o A, com ’, (a/100)*tot, ‘% dos usos’)
+             fim-se
+           fim
+
+
+
+
+
+
