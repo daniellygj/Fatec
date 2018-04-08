@@ -1,0 +1,53 @@
+o que é linguagem de programação?
+-conjuntos de regras utilizadas para criar um programa
+-os algoritmos sao escritos em uma lingagem de programação, gerando o código fonte
+-há tres niveis principais de lingagens de programação:
+	-linguagem de maquina
+	-linguagem de baixo nivel
+	-linguagem de alto nivel
+
+o que é interpretador e compilador
+interpretador - o código é executado assim que é traduzido, é necessaria a interpretação toda vez que for rodar o programa
+compilador - traduz todo o código para um ou mais arquivos que podem ser executado quantas vezes forem necessarias sem necessidade de uma nova compilação
+hibrido - traduz o codigo fonte para pseudocodigo, que é executado por um interpretador
+
+
+estruturas de repetição
+-para cont de 1 até 10 faça:
+	<código>
+fim-para
+
+-enquanto x < y faça
+	<código>
+fim-enquanto
+
+
+estrutura de decisão
+-se <condição> faça
+	<codigo>
+senão
+	<codigo>
+fim-se
+
+
+-se <condição> faça
+	<codigo>
+senão se <>condição> faça
+	<codigo>
+fim-se
+
+
+estrutura de seleção multipla
+-caso <condição> faça
+	<valor1>: <comandos1>
+	<valor2>: <comandos2>
+senão <comandos3>
+fim-caso
+
+
+vetores
+
+operadores
+mod = resto da divisão
+div = quociente da divisão
+** = exponenciação
