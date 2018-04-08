@@ -12,16 +12,47 @@ compilador - traduz todo o código para um ou mais arquivos que podem ser executa
 hibrido - traduz o codigo fonte para pseudocodigo, que é executado por um interpretador
 
 
+
 estruturas de repetição
--para cont de 1 até 10 faça:
+-para cont de x até x faça:
 	<código>
 fim-para
+
+
+Algoritmo ‘tabuada’
+var
+inicio
+	escreva('digite um número para ver sua tabuada')
+	leia(numero)
+	para contador de 0 até 10 faça:
+		result = numero * contador
+		escreva (numero, 'x', contador, '=', result)
+	fim-para
+
+fim
+
+==========================================================================================================================================================
 
 -enquanto x < y faça
 	<código>
 fim-enquanto
 
 
+Algoritmo ‘anacleto_felisberto’
+Var Felisberto, Anacleto, contador : int
+Inicio 
+         Anacleto <- 150
+         Felisberto <- 110
+         Cont <- 0        
+         Enquanto Felisberto > Anacleto faça
+                  Contador <- contador +1
+                  Felisberto <- Felisberto + 3
+                  Anacleto <- Anacleto + 2
+         Fim-enquanto
+         Escreva(cont,' anos')]
+Fim
+
+==========================================================================================================================================================
 estrutura de decisão
 -se <condição> faça
 	<codigo>
@@ -29,14 +60,64 @@ senão
 	<codigo>
 fim-se
 
+algoritmo 'idade'
+var
+inicio
+	escreva('digite sua idade')
+	leia(idade)
+	se idade < 18:
+		escreva('o usuário é menor de idade')
+	senão
+		escreva('o usuário já é de maior')
+	fim-se
+fim
 
+==========================================================================================================================================================
 -se <condição> faça
 	<codigo>
 senão se <>condição> faça
 	<codigo>
 fim-se
 
+algoritmo 'soma e subtração'
+varescolha, numero1, numero2, resultado : real
+inicio
+	escreva('escolha [1] para soma e [2] para subtração')
+	leia(escolha)
+	escreva('digite um numero')
+	leia(numero1)
+	escreva('digite outro numero')
+	leia(numero2)
+	se escollha == 1 então:
+		resultado <- numero1 + numero2
+	senão se escolha == 2 então:
+		resultado <- numero1 - numero2
+	senão
+		escreva('opção inválida')
+	escreva(resultado)
+	fim-se
+fim
+	
+==========================================================================================================================================================
 
+repita
+	<comandos>
+até que <condição)
+
+
+
+algoritmo 'nome'
+var nome : caractere
+inicio
+	repita
+		escreva('digite x para sair do loop')
+		escreva('digite seu nome')
+		leia(nome)
+
+	até que nome == x
+fim
+	
+==========================================================================================================================================================
 estrutura de seleção multipla
 -caso <condição> faça
 	<valor1>: <comandos1>
@@ -45,7 +126,29 @@ senão <comandos3>
 fim-caso
 
 
-vetores
+
+
+algoritmo "homem ou mulher"
+var
+inicio
+	escreva('Você é homem ou mulher?')
+	leia(resp)
+	escreva('1 = homem')
+	escreva('2 = mulher')
+	caso opcao faça:
+		1: escreva('sexo masculino')
+		2: escreva('sexo feminino')
+	senão
+		escreva('opção invalida')
+	fim-caso
+fim
+
+==========================================================================================================================================================vetores
+
+IDENTAÇÃO!!!!
+
+
+
 
 operadores
 mod = resto da divisão
