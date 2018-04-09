@@ -46,7 +46,6 @@ while p == 1:
     if x == 4:
         if vet[0] in 'Vv' and vet[1] in 'Vv' and vet[2] in 'Vv' and vet[3] in 'Vv':
             print('é uma tautologia, pois todos os são verdadeiros')
-            vet = []
             sep()
         elif vet[0] in 'Ff' and vet[1] in 'Ff' and vet[2] in 'Ff' and vet[3] in 'Ff':
             print('é uma contradição, pois todos os valores são falsos')
@@ -54,20 +53,16 @@ while p == 1:
             sep()
         else:
             print('é uma contingencia, pois existem valores verdadeiros e falsos ')
-            vet = []
             sep()
     if x == 8:
         if vet[0] in 'Vv' and vet[1] in 'Vv' and vet[2] in 'Vv' and vet[3] in 'Vv' and vet[4] in 'Vv' and vet[5] in 'Vv' and vet[6] in 'Vv' and vet[7] in 'Vv':
             print('é uma tautologia, pois todos os são verdadeiros')
-            vet = []
             sep()
         elif vet[0] in 'Ff' and vet[1] in 'Ff' and vet[2] in 'Ff' and vet[3] in 'Ff' and vet[4] in 'Ff' and vet[5] in 'Ff' and vet[6] in 'Ff' and vet[7] in 'Ff':
             print('é uma contradição, pois todos os valores são falsos')
-            vet = []
             sep()
         else:
             print('é uma contingencia, pois existem valores verdadeiros e falsos ')
-            vet = []
             sep()
 
 
