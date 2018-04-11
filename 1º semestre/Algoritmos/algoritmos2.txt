@@ -1,0 +1,254 @@
+
+Capítulo 4 - Exercício 1 - Crie um vetor de 30 números inteiros que gere um segundo vetor cujas posições pares são o dobro do vetor original e as ímpares o triplo.
+
+algoritmo ‘dobro’
+tipo
+vetor = [1..30] de inteiros
+var  vet, vet1 <- vetor
+ c <- inteiro
+
+inicio
+	para c de 1 até 30 faça:
+		escreva(‘digite um numero’)
+		leia(vet[c])
+		se vet[c] mod 2 == 0 então:
+			vet1[c] <- vet[c] * 2
+		senão
+			vet1[c] <- vet[c] * 3		
+		fim-se	   
+	fim-para	
+fim	
+  	             
+=========================================================================================================================================================================================================================================================================
+ 
+Capítulo 4 – Exercício 2 – Desenvolva um algoritmo que permita a leitura de um vetor de 30 números inteiros, e gere um segundo vetor com os mesmos dados, só que de maneira invertida, ou seja, o primeiro elemento ficara na última posição, o segundo na penúltima e assim por diante.
+Algoritmo ‘inverter’
+Tipo
+Vetor : [1..30] de inteiros
+Var  vet, vet1 <- vetor
+        C, c1, x = inteiro
+Inicio
+      X = 0
+	para c de 1 até 30 faça
+		escreva(‘digite um numero’)
+		leia(vet[c])
+     fim-para
+	       para c1 de 30 até 1 passo -1 faça
+		x = x + 1
+		vet1[x] = vet[c1]
+	       fim-para
+fim
+	
+ =========================================================================================================================================================================================================================================================================
+Capítulo 4 – Exercício 3 – Elabore um algoritmo que leia 50 números inteiros e obtenha qual o tamanho da maior sequência consecutiva de números em ordem crescente.
+
+Algoritmo ‘ordem crescente’
+tipo
+vetor : [1..50] de inteiros
+var   vet <-= vetor
+inicio
+	
+        sequencia <- 1
+	          para c de 1 até 50 faça
+                    escreva(‘digite um numero’)
+                    leia(vet[c])	
+                    se vet[c] + 1 == vet[c] então
+                              sequencia <- sequencia + 1
+                    fim-se
+                              se sequencia > resultado
+                                        resultado <- sequencia
+                              senão
+                                        sequencia <- 0
+                              fim-se	
+	       	       
+	          fim-para
+fim
+========================================================================================================================================================================================================================================================================= 
+Capítulo 4 – Exercício 4 – Elabore um algoritmo que leia uma série de 50 notas, e calcule quantas são 10% acima da média e quantas são 10% abaixo.
+
+Algoritmo ‘media’
+tipo
+vetor : [1..50] de inteiros
+var   vet <- vetor
+       maior, menor : inteiro
+constante  media = 6 inteiro
+inicio
+	          para c de 1 até 50 faça:
+                    escreva(‘digite a nota’)
+                    leia(vet[c])	
+		   se vet[c] * 1.10 >= media
+			maior <- maior + 1
+		    senão se vet[c] *1.10 < media
+			menor <- menor + 1
+		    fim-se			
+          	fim-para
+fim
+ 
+========================================================================================================================================================================================================================================================================= 
+Capítulo 4 – Exercício 5 – Faça um algoritmo que leia o nome, custo e preço de 50 produtos. Ao final deverá relacionar os produtos que:
+a)	Tem lucro menor que 10%
+b)	Tem lucro entre 10% e 30%
+c)	Tem lucro maior que 30%
+
+Algotimo ‘produtos’
+Tipo
+Vetor : [0..50] de caracteres
+Vetor1 : [0..50] de reais	
+
+Var  nome <- vetor	
+        Custo, preço <- vetor1
+          Result <- real
+Inicio
+	Para c de 1 até 50 faça:
+		Escreva(‘digite o nome do produto’)
+		Leia(nome[c])
+		Escreva(‘digite o valor do produto’)
+		Leia(valor[c]
+		Escreva(‘digite o preço do produto’)
+		Leia(preço[c]
+		Result = (valor * 100) / preço
+		Se result < 10 então
+			Escreva(nome[c])
+		Senão se result > 10 e result < 30 então
+			Escreva(nome[c])
+		Senão 
+			Escreva(nome[c])
+		Fim-se
+	Fim-para
+Fim	
+=========================================================================================================================================================================================================================================================================
+
+Capítulo 4 – Exercício 6 – Construa um algoritmo que permita informar dados para dois vetores inteiros de 20 posições, e apresente a intersecção dos vetores. Lembrando que as intersecções são repetidas em ambos os vetores, mas sem repetição (cada número pode aparecer uma única vez no resultado).
+Algoritmo ‘intersecção’
+Tipo
+Vetor : [0..20] de caracteres
+Var  elem, elem1 <- vetor
+     C, c1 <- inteiro
+Inicio
+             Para c de 0 até 20 faça:
+		Escreva(‘digite os elementos do conjunto A’)
+		Leia(elem[c])
+		Escreva(‘digite os elementos do conjunto B’)
+		Leia(elem1[c])
+		Para c1 de 0 até 20 faça:
+			 Se elem[c] == elem[c1] então
+				Escreva(elem[c])
+			Fim-se
+		Fim-para
+	Fim-para
+fim 
+=========================================================================================================================================================================================================================================================================
+
+Capítulo 4 –Exercício 7 – Construa um algoritmo que permita informar dados para dois vetores inteiros de 20 posições, e apresente o conjunto união dos vetores. Lembrando que conjunto união são todos os números que existem em ambos os vetores, mas sem repetição (cada número pode aparecer uma única vez no resultado). 
+
+Algoritmo ’união’
+Tipo
+Vetor = [0..20] de inteiros
+Var  num, num1 = vetor
+Inicio
+	       Para c de 0 até 20 faça
+		Escreva(‘digite um numero inteiro’)
+		Leia(num)
+		Escreva(‘digite outro numero inteiro’)
+		Leia(num1)
+		Para c1 de 0 até 20 faça
+			Se elem[c] != elem1[c1] então
+				Escreva(elem[c])
+			se elem1[c] != elem[c1] então
+				escreva(elem1[c])
+			fim-se
+		fim-para
+          fim-para
+fim
+	
+=========================================================================================================================================================================================================================================================================		
+ 
+Capítulo 4 – Exercício 8 - Crie um algoritmo que leia a pontuação final de 200 provas de um concurso e os nomes dos respectivos participantes, e apresente um ranking dos colocados que obtiverem mais de 70 pontos.
+
+Algoritmo ‘ranking’
+Tipo
+Vetor : [1..200] de reais
+Vetor1 : [1..20] de caracteres
+Var nome >- vetor1
+         Pontuação <- vetor	
+Inicio
+	         Para c de 1 até 200 faça
+		Escreva(‘digite seu nome’)
+		Leia(nome[c])
+		Escreva(‘qual sua pontuação?’)
+		Leia(pontuação[c])	
+		Se pontuação > 70 então
+			Escreva(nome, pontuação)
+		Fim-se
+	                  Fim-para
+fim
+			
+
+=========================================================================================================================================================================================================================================================================		
+ 
+Capítulo 4 – Exercício 9 – Dado um vetor com dados de 50 alturas, elabore um algoritmo que permita calcular:
+a)	XA média das alturas 
+b)	XO desvio padrão das alturas. Lembrando que desvio padrão é dado por                 (?(alturas²)/número de alturas)-média² 
+c)	A moda das alturas. Lembrando que a moda é o valor que tem mais incidências de repetições.
+d)	A mediano das alturas. Lembrando que é o elemento central de uma lista ordenada.
+
+Algoritmo ‘negocio’
+Tipo
+Vetor = [1..50] de inteiros
+Var altura, Amoda : vetor
+      C, c1 : inteiro
+       Media, moda, somaDesvio, moda, : real
+Inicio
+	           Total <- 0
+		Para c de 1 até 50 faça
+			 Escreva(‘digite a altura’)
+	           	 Leia(altura[c])
+	          	 total <- total  + altura[c]
+		fim-para
+           media <- soma / 50
+           	  c = 0
+           para c de 1 até 50 faça
+                      desvio[c] <- (((altura[x]**2)/50) -  media **2)
+                      somaDesvio <- somaDesvio + desvio[x]
+           para c de 1 até 50 faça
+	                      para c1 de 1 até 50 faça	
+                                 se altura[c] > altura[c1+1] então	
+                                            aux <- altura [c1]
+                                            altura[c1] <- altura[c1+1]
+		                 altura[j+1] <- aux
+                                 fim-se
+                      fim-para
+           fim-para
+           escrava(‘a mediana das altura é ‘, altura[26])
+           c = 0
+           c1 = 0
+           para c de 1 até 50 faça
+                      modaA[c] <- 1
+                      para c1 de 1 até 49 passo 1 faça
+                                 se altura[c1] == altura [c] então
+                                            modaA[c] <- modaA[c+1]
+                                 fim-se
+                      fim-para
+           fim-para
+           c = 0
+           c1 = 0
+           para c de 1 até 50 faça
+                      para c1 de 1 até 50 faça
+                                 se altura[c1] > altura [c1 + 1] então
+                                            aux <- moda[c1]
+                                            moda[c1] <- moda[c1 + 1]
+                                            moda[c1+1] < aux
+                                            aux < altura[c1]
+                                            altura[c1] <- altura[c1 + 1]
+                                            altura[c1+1]  <-  aux
+                                 fim-se
+                      fim-para
+           fim-para
+           escreva(‘a moda é’, moda[50]
+fim
+           
+
+
+
+
+
