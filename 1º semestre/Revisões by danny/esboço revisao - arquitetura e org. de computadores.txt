@@ -1,0 +1,131 @@
+um computador, é uma maquina que recebe dados atraves de um meio de entrada, processa-os através de um programa, e retorna uma saída
+a representação das informações são por:
+-bit
+-caractere
+-byte
+-palavra
+
+bit e byte
+BIT 
+-MENOR UNIDADE DE MEDIDA DE UMA INFORMAÇÃO.
+-É UM DADO BINÁRIO, OU SEJA, 0 OU 1.
+-Cada Sistema define como cada conjunto de BITS irá representar um determinado caractere
+
+BYTE
+ -Primeira definição formal atribuída a um grupo ordenado de bits. São 8 bits tratados de forma individual. 
+
+caractere e palavra
+-menor elemento disponivel em uma linguagem humana ('a', 'b', 'c')
+
+grandezas
+-1K = 1024
+-1M = 1024k = 1024 x 1024 = 1.048.576
+1G = 1024 = 10.048.576 x 1024 = 1.073.741.824
+
+256k = 256 x 1024 = 262.144
+64M = 64 x 1024k  x 1024k = 67.108.864
+16G =
+16 x 1024 = 16.384M
+16.384M x 1024 = 16.777.216K
+16.777.216K x 1024 = 17.179.869.184
+
+hardware e software
+hardware - parte física do computador
+software - são os programas, que são necessarios para o funcionamento do hardware
+
+UCP - unidade central de processamento
+-mais conhecida como cpu é o cerebro do computador;
+-é a responsavel pelo processamento e execução dos programas
+- executa instruções internas de acordo com as instruções externas que recebe dos programas;
+- a CPU gerencia todos os recursos disponiveis ao processamento dos dados
+
+Constituição da CPU
+- UC > unidade de controle que tem por funcoes busca, interpretacao e controle de execução das intruções, e o controle dos demais componentes do computador;
+- ULA > unidade logica aritmetica que tem por função efetiva a execucao das instruções
+- CI, contador de instuções > armazena o endereço da proxima isntrução a ser executada
+- RI registrador de isntrução > armazena a isntrução a ser executada
+- ACC acumu > armazena os dados para as operações na UAL, o acumulador e um dos principais elementos qu definem o tamanho da palavra do computador - o tamanho da palavara e igual ao tamanho do acumulador
+- a CPU tem a logica e os circuitos para fazer o computador funcionar, mas nao possu espaço para armazenar programas e dados
+
+Registradores
+-Para auxiliar a UC e ULA no processamento das instruções a CPU possui internamente REGISTRADORES, que são as memórias mais rápidas e mais caras disponíveis no computador;
+-O Registradores são usados para armazenamento temporário dos dados; 
+-A maioria das operações é realizada nos registradores;
+-o tamanho dos registradores da CPU determina a quantidade de dados que ela pode processar ao mesmo tempo e a velocidade que realiza as operações
+-qunto maior o registrador e maior sua quatidade numa cpu, mais flexibilidade terao os programadores e maior capacidade de procesamento
+-processador de 32 ou 64 bits indica que o tamanho dos registradores é de 32 ou 64 bits
+
+
+Memória
+- sao dispositivos eletronicos, magnetis ou opticos, capazes de armazenar dados em forma digital ou binaria
+- os programs e dados para serem executados pelo processador, devem estar armazenados na memoria
+-memorias sao basicamente
+--registradores
+--cache
+--memoria principal
+--memoria secundaria ou auxiliar
+
+-a memoria principal, ou memoria centra, composta por RAM (random access memory) e ROM (Read only memory) são dispositivos eletronicos para armazenamento temporario de informação
+-todas informações acessadas e processadas pelo processador devem estar na memoria prinncipal
+
+memoria ram
+-realiza operações tanto de leitura como gravação de dado (0 e 1)
+-necessita de energia eletrica para manter as informações armazenadas
+-possui alta velocidade
+-organizada por posições numeradas, formadas por grupos de 8, 16, 32 ou 64 bits
+-se o computador possuir pouca memoria ram e o usuario abrir varios programas ao mesmo tempo ou utulizar programas pesados, é possivel que o desempenho fique prejudicado. o processador tera que usar a memoria auxiliar (disco rigido) para guardar os dados e programas que deveriam ser armazenados na memoria principal, tornando o sistema lento
+
+memória rom
+-memomria apenas para leitura
+-menor e mais lenta que a RAM
+-gravada de forma permanente pelo fabricante
+-não precisa de energia para ser preservada
+-lida pela cpu para fins especificos
+
+
+memoria cache
+-memoria volatil de alta velocidade e pequena capacidade de armazenamento, localizada dentro do processador ou proximo
+- utilizada para melhorar a perfomance do sistema quando da execucao de calculos com os mesmos valores repetidas vezes
+-possui alto custo
+-cache hit: quando solicitado, está na memoria cache;
+-cache miss ou fault: quando o dado nao esta na cache
+
+memoria secundaria, auxiliar ou de massa
+-capacidade para armazenar grandes quantidades de informações
+-não volatil (o dado nao e perdido ao desligar)
+-possui velocidade de acesso inferios a memoria principal
+-custo relativamente mais baixo do que a memoria principal
+- Exemplos: discos rígidos (HD), fitas magnéticas (DAT, DLT) e compact disks (CD), DVD, Bluray, Flash, etc.
+
+
+memoria virtual e paginação
+Os sistemas operacionais atuais (incluindo a família Windows) utilizam o disco rígido para gravar dados ou programas caso a memória RAM se esgote. 
+Utilizando este recurso, mesmo que a memória RAM esteja completamente ocupada, o programa será executado, porém mais lentamente, devido à baixa velocidade de acesso ao disco rígido.
+Essa utilização de memória de massa (principalmente HD) para guardar temporariamente informações que não cabem na RAM e depois recuperá-las é chamada de Paginação ou swap de disco.
+
+
+relação entre dispositivos de armazenamento (imagenzinha)
+
+
+sistemas de numeração:
+binário = base 2
+decimal = base 10
+octal = base 8
+hexadecimal = base 16
+
+(tabelinha)
+
+para converter de binario para octal, basta separar de os numeros de 3 em 3 e olhar na tabela.
+binaria para hexadecimal, separa os numeros de 4 em 4 e olha na tabela qual ele representa em hexadecimal
+octal ou hexadecimal para binario: a conversao inversa de octal ou hexadecimal para binario deve ser feita a partir da representacao binaria de cada algarismo do numero, seja octal ou hexadecimal
+octal para hexadecimal : Para realizar essa conversão deve-se antes converter o número octal (Base 8) ( para a Base 2 ( binário ) e então para Hexadecimal (Base 16)
+
+
+
+
+
+
+
+
+
+
