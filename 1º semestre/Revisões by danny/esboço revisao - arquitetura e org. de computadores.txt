@@ -120,6 +120,78 @@ binaria para hexadecimal, separa os numeros de 4 em 4 e olha na tabela qual ele 
 octal ou hexadecimal para binario: a conversao inversa de octal ou hexadecimal para binario deve ser feita a partir da representacao binaria de cada algarismo do numero, seja octal ou hexadecimal
 octal para hexadecimal : Para realizar essa conversão deve-se antes converter o número octal (Base 8) ( para a Base 2 ( binário ) e então para Hexadecimal (Base 16)
 
+=================================================================================================================================================================================================================================
+linguagens de programação
+é um conjunto de palavras e regras gramaticais que servem para construir programas que instruirão o sistema de computação a realizar tarefas. cada linguagem tem seu conjunto de palavras-chave e sua sintaxe.
+
+
+como criar um programa?
+de uma forma dimples e sem preocupação, o processo de criar programas deve seguir alguns passos:
+-entender op problema e pensar em uma solução adequada
+-em seguida, criar a logica de funcionamento da solução passo a passo
+-escrever de forma organizada em pseudocodigo
+-passar a limpo em uma linguagem de programação, gerando o codigo-fonte
+-o codigo fonte, é constituido, via de regra, de comandos em linguagem humana, e deve ser traduzido pelo compilador ou interpretador para uma linguagem compreensivel pela cpu, gerando um codigo em binario
+
+
+compilação e interpretação
+copilador lê o código inteiro antes de executar. se não tiver nenhum erro, gera um executavel e roda o programa.
+intepretador - executa o ccodigo enquanto o lê. se tiver um erro na ultima linha, ele só para de executar na ultima linha (a não ser que seja erro de sintaxe).
+
+
+passos para gerar um programa compilado:
+
+
+
+como escolher uma lp: 
+a escolha de uma linguagem de programação depende de varios fatores:
+-area de aplicação do programa
+-complexidade do programa
+-tipo de sistema no qual o programa será executado
+-desempenho
+-conhecimento da equipe de programadores
+-disponibilidade da LP
+
+gerações de linguagens de programação
+existem varias classificacções de lp's e uma bastante aceita é:
+1- linguagens de 1ª geração
+lingugagem de mais baixo nivel, praticamente no nivel da maquina. é usada quando outras linguagens nao cosnsegueem cumprir os requisistos de velocidade de exacução ou utilização de memot
+2- linguagens de 2ª geração
+apresenta um avançõ em relação ao assembly. comandos feitos com palavras utilizadas no dia a dia (ingles)
+3- linguagens de 3ª geração (Estruturadas)
+elas seguem de alguma forma, tecnicas de programação estruturada, e dividem-se em:
+-linguagem de alto nivel de uso geral;
+-lingugagens orientadas a objeto;
+-linguagens especializadas
+4- linguagens de 4ª geração
+são as lps que apresentam mais alto nivel de abstração.
+classificam-se em tres categorias:
+-linguagem de consulta;
+	- criadas para trabalhar em conjunto com banco de dados
+-linguagens geradoras de programa;
+	- permitem que os programadores criem programas inteiros, usando apenas declarações baseadas nos modelos gerados na fase de projeto do sistema.
+-linguagem de prototipação.
+ 	- facilitam a criação da interface com o usuario, conhecidas como linguagens visuais.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
