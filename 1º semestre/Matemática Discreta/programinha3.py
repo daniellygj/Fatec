@@ -60,7 +60,7 @@ def continencia():
     print('''A continência só existe se todos elementos de A existirem em B.
     Podem ter elementos de B que não existem em A, mas não podem existir elementos de A que não existem em B
     A = {1, 2, 3}
-    B = {1, 2, 3, 4, 5}
+    B = {1, 2, 3, 4, 5}  
     então podemos dizer que A está contido em B ''')
     print('=-' * 30)
 def escolha():
