@@ -126,7 +126,7 @@ linguagens de programação
 
 
 como criar um programa?
-de uma forma dimples e sem preocupação, o processo de criar programas deve seguir alguns passos:
+de uma forma simples e sem preocupação, o processo de criar programas deve seguir alguns passos:
 -entender op problema e pensar em uma solução adequada
 -em seguida, criar a logica de funcionamento da solução passo a passo
 -escrever de forma organizada em pseudocodigo
@@ -140,6 +140,10 @@ intepretador - executa o ccodigo enquanto o lê. se tiver um erro na ultima linha
 
 
 passos para gerar um programa compilado:
+Durante a compilação a LP realiza alguns check ins para detectar se os comandos escritos pelo programador utilizaram as palavras-chave válidas e se essas palavras estão dispostas na ordem correta e desse modo, garantir que o programador atendeu as regras da LP. Para isso realiza as análises:
+Léxica (letras – Read x Raed); 
+Sintática (organização da palavras – Read (A) x (A) Read); e
+Semântica (coerência de tipos de dados, multiplicar A por 5!!).
 
 
 
