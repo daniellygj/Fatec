@@ -1,0 +1,120 @@
+1- Construa um algoritmo que calcule a média aritmética entre quatro notas bimestrais quaisquer fornecidas por um aluno (usuário).
+
+notas = []
+for c in range(1, 5):
+	notas.append(float(input(f"digite a {c}ª nota ")))
+print("Média: ", (notas[0] + notas[1] + notas[2] + notas[3]) / 4)
+====================================================================================================================================================================================================
+
+2- Construa um algoritmo que, tendo como dados de entrada dois pontos quaisquer do plano, P(x,y)  e Q(x,y), imprima o resultado do cálculo da distância entre eles.
+
+import math
+
+x1 = float(input("entre com o valor de x1 "))
+x2 = float(input("entre com o valor de x2 "))
+y1 = float(input("entre com o valor de y1 "))
+y2 = float(input("entre com o valor de y2 "))
+
+print("A distância é de %.2f" % math.sqrt((x2-x1)*(x2-x1)+((y2-y1)*(y2-y1))))
+====================================================================================================================================================================================================
+
+3- Construa um algoritmo para calcular o volume de uma esfera de raio R, em que R é um dado fornecido pelo usuário. Forneça como saída o resultado do cálculo executado.
+
+raio = int(input("Qual o raio da esfera? "))
+volume = ((4*3.1416)*raio**3) / 3
+print("O volume da esfera é: %.2f metros cubicos" % volume)
+====================================================================================================================================================================================================
+
+4- Construa um algoritmo que converta uma temperatura fornecida em graus Celsius para Fahrenheit. 
+
+temperatura = float(input("Digite a temperatura em Celsius para converte-la para fahrenheit "))
+print(f"{temperatura}ºC em Fahrenheit fica: ", (9*temperatura+160)/5)
+====================================================================================================================================================================================================
+
+5- Construa um algoritmo que leia as variáveis C e N, respectivamente código e número de horas trabalhadas de um operário. E calcule o salário sabendo-se que ele ganha R$ 10,00 por hora. Quando o número de horas exceder a 50 calcule o excesso de pagamento armazenando-o na variável E, caso contrário zerar tal variável. A hora excedente de trabalho vale R$ 20,00. No final do processamento imprimir o salário total e o salário excedente.
+
+c = input("Digite seu codigo ")
+n = int(input("Digite a quantidade de horas trabalhadas "))
+print("Salário: ", n * 10)
+if n > 50:
+    aux = n - 50
+    print("Salario excedente: ", (aux * 20))
+====================================================================================================================================================================================================
+
+Capitulo 3 - exercicio 1 - Construa um algoritmo que calule a media ponderada entre 5 numeros quaisquer, sendo que os pesos a serem aplicados sao 1,2,3,4 e 5 respectivamente
+
+for c in range(0, 5):
+    num = int(input("Digite um número "))
+    if c == 0:
+        media = num * 1
+    elif c == 1:
+        media = media + num * 2
+    elif c == 2:
+        media = media + num * 3
+    elif c == 3:
+        media = media + num * 4
+    elif c == 4:
+        media = media + num * 5
+print("A média ponderada é: %.2f" % (media / 15))
+====================================================================================================================================================================================================
+
+Capitulo 3 = Exercicio 2 - Elabore um algorutmo que calcule a area de um circulo qualquer de raio fornecido.
+
+raio = float(input("digite o raio do circulo "))
+print("A area do circulo é %.2f" % (3.1416 * raio**2))
+====================================================================================================================================================================================================
+
+Capítulo 3 - Exercício 3 - Prepare u algoritmo capaz de inverter um numero, de 3 digitos fornecidos, ou seja, apresentar primeiro a unidade, depois a dezena e a centena
+
+num = int(input("digite um número"))
+d1 = num // 100
+r1 = num % 100
+d2 = r1 // 10
+r2 = r1 % 10
+
+print(r2,d2,d1)
+====================================================================================================================================================================================================
+
+Capítulo 3 - Exercicio 5 -Dada uma determinada data de aniversario (dia, mês e ano separadamente) elabore um algoritmo que solicite a data atual (dia, mes e ano separadamente) e calgule a idade em anos, meses e em dias.
+
+import datetime #da pra pegar a data do pc assim. mas...
+
+dia = int(input("Digite o dia do seu nascimento "))
+mes = int(input("Digite o mes do seu nascimento "))
+ano = int(input("Digite o ano do seu nascimento "))
+
+
+diaA = int(input("Digite o dia atual "))
+mesA = int(input("Digite o mes atual "))
+anoA = int(input("Digite o ano atual "))
+
+if mes < mesA:
+    mesI = mesA - mes
+else:
+    mesI = mes - mesA
+if dia < diaA:
+    diaI = diaA - dia
+else:
+    diaI = dia - diaA
+
+anoI = anoA - ano
+
+
+print(f"{anoI} anos, {mesI} meses e {diaI} dias")
+====================================================================================================================================================================================================
+
+Capítulo 3 - Exercicio 6 - Um dado comerciante maluco cobra 10% de acréscimo para cada prestação em atraso e depois da um desconto de 10% sobre esse valor. faça um algoritmo que solicite o valor da prestação em atraso e apresente o valor final a pagar, assim como o prejuizo do comerciante na operação.
+
+prestacao = float(input("digite o valor da prestação "))
+aumento = prestacao * 0.10 # 20
+total = aumento + prestacao # 200 + 200 = 2420
+desconto = total * 0.10 # 22
+if desconto < aumento:
+    prejuizo = aumento - desconto
+else:
+    prejuizo = desconto - aumento
+
+
+print(f"total a pagar: R${total}\nprejuizo: R${prejuizo}")
+
+

@@ -106,7 +106,7 @@ Inicio
 		Leia(valor[c]
 		Escreva(‘digite o preço do produto’)
 		Leia(preço[c]
-		Result = (valor * 100) / preço
+		Result = (((valor - peço) / preço) * 100)
 		Se result < 10 então
 			Escreva(nome[c])
 		Senão se result > 10 e result < 30 então
