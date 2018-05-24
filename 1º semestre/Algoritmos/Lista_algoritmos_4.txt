@@ -1,0 +1,752 @@
+'''
+ Elabore um algoritmo que obtenha o mínimo múltiplo comum (MMC) entre dois números fornecidos
+'''
+num1 = int(input("Digite o 1º numero: "))
+num2 = int(input("Digite o 2º numero: "))
+
+if num1 > num2:
+    maior = num1
+else:
+    maior = num2
+while True:
+    if maior % num1 == 0 and maior % num2 == 0:
+        print(maior)
+        break
+    else:
+        maior += 1
+
+#==============================================================
+'''
+Elabore um algoritmo que obtenha o Maximo divisor comum (MDC) entre dois números fornecidos
+'''
+f1 = int(input('Digite o 1º numero: '))
+f2 = int(input('Digite o 2º numero: '))
+while f1 != 0:
+    aux = f1
+    f1 = f2 % f1
+    f2 = aux
+print(f2)
+
+#==============================================================
+'''
+Faça um algoritmo que seja capaz de obter o quociente inteiro da divisão de dois números fornecidos, sem utilizar a operação de divisão(/) e nem divisão inteira (div
+'''
+n1 = int(input('Digite um número inteiro: '))   
+n2 = int(input('Por quanto deseja dividir? '))
+x = n1
+while n1 >= n2:
+    n1 -= n2
+    cont += 1
+print(f'O resto da divisão entre {x} e {n2} é {cont}')
+
+#==============================================================
+'''
+Faça um algoritmo  que seja capaz de obter o resultado de uma exponenciação para qualquer base e expoente inteiro fornecidos, sem utilizar a operação de exponenciação (pot).
+'''
+num = int(input('Digite um número inteiro: '))
+exp = int(input('Qual a exponenciação? '))
+
+result = 1
+for c in range(0,exp):
+    result *= num
+print(result)
+
+#==============================================================
+'''
+Construa um algoritmo que gere os 20 primeiros termos de uma serie tal qual a de Fibonacci, mas que cujos 2 primeiros termos são fornecidos pelo usuário.
+'''
+t1 = int(input('Entre com o primeiro termo: '))
+t2 = int(input('Entre com o segundo termo: '))
+
+while t1 > t2:
+    print("o primeiro termo deve ser maior do que o segundo. tente novamente.")
+    t1 = int(input('Entre com o primeiro termo: '))
+    t2 = int(input('Entre com o segundo termo: '))
+
+vet = [t1, t2]
+for c in range(t1, t2):
+    t3 = t1 + t2
+    vet.append(t3)
+    t1 = t2
+    t2 = t3
+
+for c in range(0, len(vet)):
+    print(vet[c])
+
+#==============================================================
+'''
+Construa um algoritmo que, dado um conjunto de valores inteiros e positivos, determine qual o menor e o maior valor do conjunto. O final do conjunto de valores é conhecido pelo valor -1, que não deve ser considerad
+'''
+c = 0
+num = 0
+while True:
+    c += 1
+    num = int(input(f'Digite o {c}º numero: '))
+    if num == -1:
+        break
+    if c == 1:
+        maior = num
+        menor = num
+    if num > maior:
+        maior = num
+    elif num < menor:
+        menor = num
+print(f'O maior número é
+
+#==============================================================
+'''
+A conversão de graus Fahrenheit para centigrados e obtida pela formula C = 5/9(F – 32). Escreva um algoritmo que calcule e escreva uma tabela de graus centigrados em função de graus Fahrenheit que variem de 50 a 150 de 1 em 1
+'''
+for f in range(50,150):
+    ce = (5/9)*(f-32)
+    print('%dºF corresponde a %.1fºC' %(f,ce))
+
+#==============================================================
+'''
+Uma rainha requisitou os serviços de um monge e disse-lhe que pagaria qualquer preço. O monge, necessitando de alimentos, perguntou a rainha se o pagamento poderia ser feito com grãos de trigo dispostos em um tabuleiro de xadrez, de tal forma que o primeiro quadro contivesse apenas um grão e os quadros subsequentes, o dobro de qualquer anterior. A rainha considerou o pagamento barato e pediu que o serviço fosse executado, sem se dar conta de que seria impossível efetuar o pagamento. Faça um algoritmo para calcular o numero de grãos que o monge esperava receber. 
+'''
+n3 = 1
+n2= 2
+
+for c in range(1, 64):
+   n3 *= n2
+
+print(n3)
+
+
+#==============================================================
+'''
+Em uma eleição presidencial existem quatro candidatos. Os votos são informados por código. Os dados utilizados para e escrutinagem obedecem a seguinte codificação: 
+	• 1,  2, 3, 4 = voto para os respectivos candidatos; 
+	• 5 = voto nulo 
+	• 6 = voto em branco. 
+Elabore um algoritmo que calcule e escreva: 
+	• O total de votos para cada candidato e seu porcentual sobre o total;
+	• O total de votos nulos e seu porcentual sobre o total; 
+	• O total de votos em branco e seu percentual sobre o total. 
+Como finalizador do conjunto de votos, tem-se o valor 0
+'''
+opc = 0
+
+cont = a = b = c = d = nulo = branco = 0
+
+def pedir_opc():
+    x = input('''
+[ 0 ] finalizar
+[ 1 ] candidatoA
+[ 2 ] candidatoB
+[ 3 ] candidatoC
+[ 4 ] candidato D
+[ 5 ] nulo
+[ 6 ] branco
+''')
+    return x
+
+while True:
+    opc = pedir_opc()
+    print('=-' * 30)
+    if opc == '0':
+        print('entrou')
+        break
+    while opc not in '1234560':
+        print('Opção inválida, tente novamente.')
+        print('=-' * 30)
+        opc = pedir_opc()
+        print('=-' * 30)
+    cont += 1
+    if opc == '1':
+        a += 1
+    elif opc == '2':
+        b += 1
+    elif opc == '3':
+        c += 1
+    elif opc == '4':
+        d += 1
+    elif opc == '5':
+        nulo += 1
+    elif opc == '6':
+        branco += 1
+
+print(f'O candidatoA recebeu {a} voto(s), o que corresponde a {int(a*100/cont)}% do total')
+print(f'O candidatoB recebeu {b} voto(s), o que corresponde a {int(b*100/cont)}% do total')
+print(f'O candidatoC recebeu {c} voto(s), o que corresponde a {int(c*100/cont)}% do total')
+print(f'O candidatoD recebeu {d} voto(s), o que corresponde a {int(c*100/cont)}% do total')
+print(f'Houveram {nulo} voto(s) nulo(s), o que corresponde a {int(nulo*100/cont)}% do total')
+print(f'Houveram {branco} voto(s) em branco, o que corresponde a {int(branco*100/cont)}% do total')
+
+#==============================================================
+'''
+Escreva um algoritmo que imprima todas as possibilidades de que no lançamento de dois dados tenhamos o valor 7 como resultado da soma dos valores de cada dado.
+'''
+
+for c in range(1, 7):
+    for c1 in range(1, 7):
+        if c + c1 == 7:
+            print(f'{c} + {c1} = {c+c1}')
+
+#==============================================================
+'''
+Construa um algoritmo que leia um conjunto de dados contendo altura e sexo (‘M’ para masculino e ‘F’ para feminino) de 50 pessoas, e, depois, calcule e escreva: 
+	• A maior e a menor altura do grupo; 
+	• A média de altura das mulheres;  
+	• O numero de homens e a diferença porcentual entre eles e as mulheres
+'''
+homem = soma = maior = menor = mulher = 0
+
+for c in range(0, 50):
+    sexo = input("Digite seu sexo: [M][F]").lower()
+
+    while sexo[0] not in 'mf':
+        print('Informção inválida, tente novamente2.')
+        sexo = input("Digite seu sexo: [M][F]").lower()
+
+    altura = float(input('Digite sua altura: '))
+    while altura < 0:
+        print('Informção inválida, tente novamente3.')
+        altura = float(input('Digite sua altura: '))
+
+    while altura > 3:
+        resp = input('Tem certeza de que entrou com os dados corretamente? ').lower()
+        if resp == 'n':
+            altura = float(input('Digite sua altura: '))
+        elif resp == 's':
+            break
+        else:
+            print('Opção inválida, tente novamente.')
+            resp = input('Tem certeza de que entrou com os dados corretamente? ').lower()
+    if c == 1:
+        maior = altura
+        menor = altura
+
+    if altura > maior:
+        maior = altura
+    elif altura < menor:
+        menor = altura
+
+    if sexo[0] == 'f':
+        soma += altura
+        mulher += 1
+    elif sexo[0] == 'm':
+        homem += 1
+
+soma /= mulher
+
+print('sla', sla)
+print(f'A maior altura do grupo é %.2f, a menor é %.2f' %(maior, menor))
+print(f'A media de altura entre as mulheres é de %.2f' %soma)
+print(f'Foram cadastrados {homem} homens. A diferença percentual entre os homens e as mulheres é de {int((homem*100/50))}%')
+
+#==============================================================
+'''
+Prepare um algoritmo que calcule o valor de H, sendo que ele é determinado pela série:
+'''
+x = y = 1
+h = 0
+while x < 99:
+    x += 2
+    y += 1
+    h += x / y
+print(h)
+
+#==============================================================
+'''
+Elabore um algoritmo que determine o valor de S, em que: S = 1/1 – 2/4 + 3/9 – 4/16 + 5/25 – 6/36 ... – 10/100
+'''
+x = y = 1
+result = 0
+2
+for c in range(1, 11):
+    x += 1
+    y = x ** 2
+    if x == 11:
+        x = 0
+    if x % 2 == 0:
+        result += x/y
+    elif x % 2 != 0:
+        result -= x/y
+print(result)
+
+#==============================================================
+'''
+Escreva um algoritmo que calcule e escreva a soma dos dez primeiros termos da seguinte serie: 
+2/500 – 5/450 + 2/400 – 5/350 +..
+'''
+a = 2
+b = 5
+r = 0
+
+for x in range(500, 0, -50):
+    x = str(x)
+    if '500' in x:
+        x = int(x)
+        r += a/x
+        print(f'{a} / {x} = {r}')
+    elif '50' in x:
+        x = int(x)
+        r -= b/x
+        print(f'{b} / {x} = {r}')
+    else:
+        x = int(x)
+        r += a/x
+        print(f'{a} / {x} = {r}')
+print(r)
+
+#==============================================================
+construa um algoritmo que calcule o valor dos dez primeiros termos da serie H, em que: 
+A = 1/pot(1,3) – 1/pot(3,3) + 1/pot(5,3) – 1/pot(7,3) + 1/pot(9,3) - ... '''
+
+'''
+a = 1
+b = 3
+r = 0
+for c in range(1, 11):
+    if c % 2 == 0:
+        r += 1/(a**b)
+    else:
+        r -= 1/(a**b)
+    a += 2
+print(r)
+
+#==============================================================
+'''
+Uma agencia de publicidade quer prestar serviços somente para as maiores companhias – em numero de funcionários – em cada uma das classificações: grande, media, pequena e microempresa. Para tal, consegue um conjunto de dados com o código, numero de funcionários e o porte da empresa. Construa um algoritmo que liste o código da empresa com maiores recursos humanos dentro de sua categoria. Utilize como finalizador o código de empresa igual a 0
+'''
+codigo = 1
+cont = 0
+while codigo != 0:
+    codigo = input('Entre com o código da empresa: ')
+    funcionarios = int(input('Entre com a quantidade de funcionarios que ela possui: '))
+    porte = input('Qual o porte da empresa?').lower()
+    porte = porte[0:2]
+    while porte not in 'grmepemi':
+        print('Informação inválida. Tente novamente.')
+        porte = input('Qual o porte da empresa?').lower()
+    cont += 1
+    if cont == 1:
+        me = funcionarios
+        gr = funcionarios
+        pe = funcionarios
+        mi = funcionarios
+    if porte == 'gr':
+        if funcionarios > gr:
+            codigoGR = codigo
+    elif porte == 'me':
+        if funcionarios > me:
+            codigoME = codigo
+    elif porte == 'pe':
+        if funcionarios > pe:
+            codigoPE = codigo
+    elif porte == 'mi':
+        if funcionarios > mi:
+            codigoMI = codigo
+print(f'Grande: {codigoGR}\nMedia: {codigoME}\nPequena: {codigoPE}\nMicro: {codigoMI}')
+
+#==============================================================
+'''
+ Calcule o imposto de renda de um grupo de dez contribuintes, considerando que os dados de cada contribuinte, numero de CPF, numero de dependentes e renda mensal são valores fornecidos pelo usuário. Para  cada contribuinte será feito um desconto de 5% no salário mínimo por dependente. 
+
+Renda liquida Alíquota 
+Até 2 salários mínimos Isento 
+2 a 3 salários mínimos 5% 
+3 a 5 salários mínimos 10% 
+5 a 7 salários mínimos 15% 
+Acima de 7 salários mínimos 20% 
+
+'''
+cont = 0
+bunita = 954.00
+
+cpf = input('Digite seu CPF: ')
+x = salario = float(input("Entre com sua renda liquida: "))
+
+while x - bunita >= 0:
+    x -= bunita
+    cont += 1
+    
+if cont <= 2:
+    print('Isento')
+elif cont <= 3:
+    print(f'Taxa de 5% R${salario * 0.05}')
+elif cont <= 5:
+    print(f'Taxa de 10% R${salario * 0.10}')
+elif cont <= 7:
+    print(f'Taxa de 15% R${salario * 0.15}')
+else:
+    print(f'Taxa de 20% R${salario * 0.20}')
+
+#==============================================================
+'''
+Foi realizada uma pesquisa sobre algumas características físicas da população de uma certa região, a qual coletou os seguintes dados referentes a cada habitante para analise: 
+	• Sexo (‘M’ – masculino ou ‘F’ – feminino); 
+	• Cor dos olhos (‘A’ – azuis, ‘V’ – verdes ou ‘C’ – castanhos); 
+	• Cor dos cabelos (‘L’ – loiros, ‘C’ – castanhos ou ‘P’ – pretos); 
+	• Idade. 
+Faça um algoritmo que determine e escreva:
+	 • A maior idade dos habitantes;
+	 • A porcentagem entre os indivíduos do sexo masculino cuja idade está entre 18 e 35 anos, inclusive: 
+	• A porcentagem do total de indivíduos do sexo feminino cuja idade está entre 15 e 35 anos, inclusive, e que tenham olhos verdes e cabelos loiros. 
+o final do conjunto de habitantes é reconhecido pelo valor -1 entrando como idade
+'''
+m = f = cont = 0
+idade = 1
+
+while True:
+    cont += 1
+    idade = int(input('Digite sua idade: '))
+
+    if idade <= 0:
+        break
+
+    if idade > 100:
+        opc = input('Tem certeza de que a idade está correta? ').lower()
+        while opc not in 'sn':
+            print('Informação inválida, tente novamente. ')
+            opc = input('Tem certeza de que a idade está correta? ').lower()
+        if opc == 'n':
+            idade = int(input('Digite sua idade: '))
+
+    sexo = input('Digite seu sexo: ').lower()
+    sexo = sexo[0:2]
+
+    while sexo not in 'mafe':
+        print('Dado incorreto, tente novamente.')
+        sexo = input('Digite seu sexo: ').lower()
+        sexo = sexo[0:2]
+
+    olhos = input('Qual a cor dos seus olhos? ').lower()
+    olhos = olhos[0]
+
+    if olhos not in 'avc':
+        print('Informação incorreta, tente novamente.')
+        olhos = input('Qual a cor dos seus olhos? ').lower()
+        olhos = olhos[0]
+
+    cabelo = input('Qual a cor dos seus cabelos?').lower()
+    cabelo = cabelo[0]
+
+    if cabelo not in 'lcp':
+        print('Informação incorreta, tente novamente.')
+        cabelo = input('Qual a cor dos seus cabelos?').lower()
+        cabelo = cabelo[0]
+
+    if cont == 1:
+        maior_idade = idade
+
+    if idade > maior_idade:
+        maior_idade = idade
+
+    if sexo == 'ma':
+        if idade >= 18 and idade <= 35:
+            m += 1
+    elif sexo == 'fe':
+        if idade >= 15 and idade <= 35:
+            f += 1
+
+print(f"A maior idade do grupo é: {maior_idade}")
+print(f'{int((f * 100)/cont)}% são mulheres com idade entre 12 e 35 anos')
+print(f'{int((m * 100)/cont)}% sao homens com idade entre 18 e 35 anos')
+
+#==============================================================
+'''
+Anacleto tem 1,50 metros e cresce 2 centímetros por ano, enquanto Felisberto tem 1,10 metro e cresce 3 centímetros por ano. Construa um algoritmo que calcule e imprima quantos anos serão necessários para que Felisberto seja maior que Anacleto. 
+'''
+anacleto = 150
+felisberto = 110
+cont = 0
+while felisberto < anacleto:
+    felisberto += 3
+    anacleto += 2
+    cont += 1
+
+print(f'{cont} anos')
+
+#==============================================================
+'''
+Realizou-se uma pesquisa para determinar alguns dados estatísticos em relação ao conjunto de crianças nascidas em um certo período de uma determinada maternidade. Construa um algoritmo que leia o numero de crianças nascidas nesse período e, depois, em um numero indeterminado de vezes, o sexo de um recém-nascido prematuro(‘M’ – masculino ou ‘F’ – feminino) e o numero de dias que este foi mantido na incubadora. 
+Como finalizador, teremos a letra ‘X’ no lugar do sexo da criança.  
+Determine e imprima: 
+	• A porcentagem de recém-nascidos prematuros; 
+	• A porcentagem de recém-nascidos meninos e meninas do total de prematuros; 
+	• A média de dias de permanência dos recém-nascidos prematuros na incubadora;
+	 • O maior numero de dias que um recém-nascido prematuro permaneceu na incubadora
+'''
+
+contp = contr = conttr = conttp = contf = contm = cont = 0
+sexo = ''
+while True:
+x = ma or fe
+
+    cont += 1
+
+    sexo = input('Qual o sexo da criança? ').lower()
+
+    if sexo == x:
+        break
+    sexo = sexo[0:2]
+
+    while sexo not in 'mafe':
+        print("Informação inválida, tente novamente. ")
+        sexo = input('Qual o sexo da criança? ').lower()
+        sexo = sexo[0:2]
+
+    x = input('É prematura? ').lower()
+    x = x[0]
+
+    if x not in 'sn':
+        print("Informação inválida, tente novamente. ")
+        x = input('É prematura? ').lower()
+        x = x[0]
+
+    tempo = int('Tempo na incubadora: ')
+
+    if cont == 1:
+        maior_tempo = tempo
+        maior_tempo1 = tempo
+
+    if maior_tempo < tempo:
+        maior_tempo = maior_tempo + tempo
+        maior_tempo1 = tempo
+    if x == 's':
+        media += tempo
+        contp += 1
+        if sexo == 'fe':
+            contf += 1
+        elif sexo == 'ma':
+            contm += 1
+
+print(f'{int(contp*100/cont)}% são recem nascidos prematuros')
+print(f'{int(contf*100/contp)}% são recem nascidos prematuros femininos do total de prematuros')
+print(f'{int(contm*100/contp)}% são recem nascidos prematuros masculinos do total de prematuros')
+print(f'A média de dias de permanencia dos prematuros na incubadora é de {int(maior_tempo1/contp)} dias')
+print(f'O maior tempo na incubadora é {maior_tempo}')
+
+#==============================================================
+'''
+um cinema possui capacidade de 100 lugares e esta sempre com ocupação total. Certo dia, cada espectador respondeu a um questionário no qual constava: 
+Sua idade; Sua opinião em relação ao filme, segundo as seguintes notas; 
+'''
+a = b = c = d = e = media = 0
+
+def opiniaoo():
+    x = input(''' Sua opinião em relação ao filme, segundo as seguintes notas
+[a] Otimo
+[b] Bom
+[c] Regular
+[d] Ruim
+[e] Pessimo
+''').lower()
+    return x
+
+
+for c in range(0, 101):
+    idade = int(input('Sua idade: '))
+    while idade < 0:
+        print('Dado inválido, tente novamente.')
+        idade = int(input('Sua idade: '))
+    if idade > 100:
+        resp = input('Tem certeza de que a idade está correta? ').lower()
+        resp = resp[0]
+        if resp not in 'sn':
+            print("Informação inválida, tente novamente. ")
+            resp = input('Tem certeza de que a idade está correta? ').lower()
+            resp = resp[0]
+        if resp == 'n':
+            idade = int(input('Sua idade: '))
+
+    opiniao = opiniaoo()
+    opiniao = opiniao[0]
+    if opiniao not in 'abcde':
+        print('Informação inválida, tente novamente.')
+        opiniao = opiniaoo()
+        opiniao = opiniao[0]
+
+    if opiniao == 'a':
+        a += 1
+        if a == 1:
+            maiorA = idade
+        if idade > maiorA:
+            maiorA = idade
+    elif opiniao == 'b':
+        b += 1
+    elif opiniao == 'c':
+        c += 1
+    elif opiniao == 'd':
+        d += 1
+        media += idade
+        if d == 1:
+            maiorD = idade
+        elif idade > maiorD:
+            maiorD = idade
+    elif opiniao == 'e':
+        e += 1
+        if e == 1:
+            maiorE = idade
+        elif idade > maiorE:
+            maiorE = idade
+
+if maiorA > maiorE:
+    bunita = maiorA - maiorE
+else:
+    bunita = maiorB - maiorA
+
+print(f'{a} pessoas acharam o filme ótimo')
+print(f'A diferença percentual entre as resposta Bom e Regular é de {int((b*100/100) - (c*100/100))}')
+print(f'A média de idade das pessoas que respoderam ruim é de {media / d}')
+print(f'A diferença de idade entre a maior idade que rspondeu Ótimo e a maior idade que respondeu Ruim é {bunita}')
+
+#==============================================================
+'''
+Capítulo 3 – Exercício 35 – Em um prédio, há três elevadores denominados A, B, C. Para otimizar o sistema de controle dos elevadores, foi realizado um levantamento no qual cada usuário respondia: 
+	• O elevador que utilizava com mais frequência; 
+	• O período em que utilizava o elevador, entre:        
+		• ‘M’ = matutino;        
+		• ‘V’ = vespertino       
+		• ‘N’ = noturno Construa um algoritmo que calcule e imprima: 
+	• Qual é o elevador mais frequentado e em que período se concentra o maior fluxo; 
+	• Qual o período mais usado de todos e a que elevador pertence; 
+	• Qual a diferença porcentual entre o mais usado dos horários e o menos usado; 
+	• Qual a porcentagem sobre o total de serviços prestados do elevador de media utilização. 
+'''
+a = b = c = am = av = an = bm = bv = bn = cn = cm = cv = 0
+
+while True:
+    elevador = input('Qual elevador você utilizou? (digite X para encerrar o programa)').lower()
+    elevador = elevador[0]
+
+    if elevador == 'x':
+        break
+
+    while elevador not in 'abc':
+        print('Informação inválida, tente novamente. ')
+        elevador = input('Qual elevador você utilizou? (digite X para sair do programa)').lower()
+        elevador = elevador[0]
+
+    periodo = input('Em que período? ').lower()
+    periodo = periodo[0]
+
+    while periodo not in 'mvn':
+        print('Informação inválida, tente novamente.')
+        periodo = input('Em que período? ').lower()
+        periodo = periodo[0]
+
+    if elevador == 'a':
+        a += 1
+        if periodo == 'm':
+            am += 1
+        elif periodo == 'v':
+            av += 1
+        elif periodo == 'n':
+            an += 1
+    elif elevador == 'b':
+        b += 1
+        if periodo == 'm':
+            bm += 1
+        elif periodo == 'v':
+            bv += 1
+        elif periodo == 'n':
+            bn += 1
+    elif elevador == 'c':
+        c += 1
+        if periodo == 'm':
+            cm += 1
+        elif periodo == 'v':
+            cv += 1
+        elif periodo == 'n':
+            cn += 1
+if a > b and a > c: #A é o mais utilizado
+    mais = 'A'
+    if am > an and an > av:
+        periodo1 = 'Matutino'
+    elif an > am and an > av:
+        periodo1 = 'Noturno'
+    elif av > an and av > am:
+        periodo1 = 'Vespertino'
+elif b > a and b > c: # B é o mais utilizado
+    mais = 'B'
+    if bm > bn and bm > bv:
+        periodo1 = 'Matutino'
+    elif bn > bm and bn > bv:
+        periodo1 = 'Noturno'
+    elif bv > bn and bv > bm:
+        periodo1 = 'Vespertino'
+elif c > a and c > b: # C é o mais utilizado
+    mais = 'C'
+    if cm > cn and cm > cv:
+        periodo1 = 'Matutino'
+    elif cn > cm and cm > cv:
+        periodo1 = 'Noturno'
+    elif cv > cn and cv > cm:
+        periodo1 = 'Vespertino'
+
+m = am + bm + cm
+n = an + vn + cn
+v = av + bv + cv
+total = periodoM + periodoN + periodoV
+
+print(f'O elevador mais frequentado foi o {mais}, no período {periodo1}')
+
+if m > v and m > n:
+    periodo1 = 'Matutino'
+    if am > bm and am > cm:
+        mais = 'A'
+    elif bm > am and bm > bn:
+        mais = 'B'
+    else:
+        mais = 'C'
+elif v > m and v > m:
+    periodo1 = 'Vespertino'
+    if ab > bm and am > cm:
+        mais = 'A'
+    elif bm > am and bm > bn:
+        mais = 'B'
+    else:
+        mais = 'C'
+elif n > v and n > m:
+    periodo1 = 'Vespertino'
+    if ab > bm and am > cm:
+        mais = 'A'
+    elif bm > am and bm > bn:
+        mais = 'B'
+    else:
+        mais = 'C'
+
+print(f'O período mais frequentado foi o {periodo1} no elevador {mais}')
+
+periodo1 = periodo1[0]
+
+if periodo1 == 'm':
+    x = total - m
+    print(f'A diferença percentual entre o horario mais e menos usado é de {x*100/total}%')
+elif periodo == 'n':
+    x = total - n
+    print(f'A diferença percentual entre o horario mais e menos usado é de {x*100/total}%')
+elif periodo == 'v':
+    x = total - v
+    print(f'A diferença percentual entre o horario mais e menos usado é de {x*100/total}%')
+
+if a > b and a > c:
+    mais = 'a'
+    if b < c:
+        menos = 'b'
+    else:
+        menos = 'c'
+elif b > a and b > c:
+    mais = 'b'
+    if a < c:
+        menos = 'a'
+    else:
+        menos = 'c'
+elif c > a and c > b:
+    mais = 'c'
+    if a < b:
+        menos = 'a'
+    else:
+        menos = 'b'
+tot = a + b + c
+
+if mais == 'a' and menos == 'b':
+    print(f'O elevador de media utilização é o C, com {(c*100)/tot}%')
+elif mais == 'a' and menos == 'c':
+    print(f'O elevador de media utilização é o B, com {(b*100)/tot}%')
+elif mais == 'b' and menos == 'c':
+    print(f'O elevador de media utilização é o A, com {(a*100)/tot}%')
