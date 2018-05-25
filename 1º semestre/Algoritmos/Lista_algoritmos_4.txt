@@ -1,13 +1,14 @@
 '''
  Elabore um algoritmo que obtenha o mínimo múltiplo comum (MMC) entre dois números fornecidos
 '''
+
 num1 = int(input("Digite o 1º numero: "))
 num2 = int(input("Digite o 2º numero: "))
 
 if num1 > num2:
     maior = num1
 else:
-    maior = num2
+    maior = num2 
 while True:
     if maior % num1 == 0 and maior % num2 == 0:
         print(maior)
@@ -19,6 +20,7 @@ while True:
 '''
 Elabore um algoritmo que obtenha o Maximo divisor comum (MDC) entre dois números fornecidos
 '''
+
 f1 = int(input('Digite o 1º numero: '))
 f2 = int(input('Digite o 2º numero: '))
 while f1 != 0:
@@ -31,6 +33,7 @@ print(f2)
 '''
 Faça um algoritmo que seja capaz de obter o quociente inteiro da divisão de dois números fornecidos, sem utilizar a operação de divisão(/) e nem divisão inteira (div
 '''
+
 n1 = int(input('Digite um número inteiro: '))   
 n2 = int(input('Por quanto deseja dividir? '))
 x = n1
@@ -43,6 +46,7 @@ print(f'O resto da divisão entre {x} e {n2} é {cont}')
 '''
 Faça um algoritmo  que seja capaz de obter o resultado de uma exponenciação para qualquer base e expoente inteiro fornecidos, sem utilizar a operação de exponenciação (pot).
 '''
+
 num = int(input('Digite um número inteiro: '))
 exp = int(input('Qual a exponenciação? '))
 
@@ -55,6 +59,7 @@ print(result)
 '''
 Construa um algoritmo que gere os 20 primeiros termos de uma serie tal qual a de Fibonacci, mas que cujos 2 primeiros termos são fornecidos pelo usuário.
 '''
+
 t1 = int(input('Entre com o primeiro termo: '))
 t2 = int(input('Entre com o segundo termo: '))
 
@@ -77,6 +82,7 @@ for c in range(0, len(vet)):
 '''
 Construa um algoritmo que, dado um conjunto de valores inteiros e positivos, determine qual o menor e o maior valor do conjunto. O final do conjunto de valores é conhecido pelo valor -1, que não deve ser considerad
 '''
+
 c = 0
 num = 0
 while True:
@@ -97,6 +103,7 @@ print(f'O maior número é
 '''
 A conversão de graus Fahrenheit para centigrados e obtida pela formula C = 5/9(F – 32). Escreva um algoritmo que calcule e escreva uma tabela de graus centigrados em função de graus Fahrenheit que variem de 50 a 150 de 1 em 1
 '''
+
 for f in range(50,150):
     ce = (5/9)*(f-32)
     print('%dºF corresponde a %.1fºC' %(f,ce))
@@ -105,6 +112,7 @@ for f in range(50,150):
 '''
 Uma rainha requisitou os serviços de um monge e disse-lhe que pagaria qualquer preço. O monge, necessitando de alimentos, perguntou a rainha se o pagamento poderia ser feito com grãos de trigo dispostos em um tabuleiro de xadrez, de tal forma que o primeiro quadro contivesse apenas um grão e os quadros subsequentes, o dobro de qualquer anterior. A rainha considerou o pagamento barato e pediu que o serviço fosse executado, sem se dar conta de que seria impossível efetuar o pagamento. Faça um algoritmo para calcular o numero de grãos que o monge esperava receber. 
 '''
+
 n3 = 1
 n2= 2
 
@@ -112,7 +120,6 @@ for c in range(1, 64):
    n3 *= n2
 
 print(n3)
-
 
 #==============================================================
 '''
@@ -126,6 +133,7 @@ Elabore um algoritmo que calcule e escreva:
 	• O total de votos em branco e seu percentual sobre o total. 
 Como finalizador do conjunto de votos, tem-se o valor 0
 '''
+
 opc = 0
 
 cont = a = b = c = d = nulo = branco = 0
@@ -191,6 +199,7 @@ Construa um algoritmo que leia um conjunto de dados contendo altura e sexo (‘M’ 
 	• A média de altura das mulheres;  
 	• O numero de homens e a diferença porcentual entre eles e as mulheres
 '''
+
 homem = soma = maior = menor = mulher = 0
 
 for c in range(0, 50):
@@ -240,6 +249,7 @@ print(f'Foram cadastrados {homem} homens. A diferença percentual entre os homens
 '''
 Prepare um algoritmo que calcule o valor de H, sendo que ele é determinado pela série:
 '''
+
 x = y = 1
 h = 0
 while x < 99:
@@ -252,6 +262,7 @@ print(h)
 '''
 Elabore um algoritmo que determine o valor de S, em que: S = 1/1 – 2/4 + 3/9 – 4/16 + 5/25 – 6/36 ... – 10/100
 '''
+
 x = y = 1
 result = 0
 2
@@ -271,6 +282,7 @@ print(result)
 Escreva um algoritmo que calcule e escreva a soma dos dez primeiros termos da seguinte serie: 
 2/500 – 5/450 + 2/400 – 5/350 +..
 '''
+
 a = 2
 b = 5
 r = 0
@@ -296,6 +308,7 @@ construa um algoritmo que calcule o valor dos dez primeiros termos da serie H, e
 A = 1/pot(1,3) – 1/pot(3,3) + 1/pot(5,3) – 1/pot(7,3) + 1/pot(9,3) - ... '''
 
 '''
+
 a = 1
 b = 3
 r = 0
@@ -311,6 +324,7 @@ print(r)
 '''
 Uma agencia de publicidade quer prestar serviços somente para as maiores companhias – em numero de funcionários – em cada uma das classificações: grande, media, pequena e microempresa. Para tal, consegue um conjunto de dados com o código, numero de funcionários e o porte da empresa. Construa um algoritmo que liste o código da empresa com maiores recursos humanos dentro de sua categoria. Utilize como finalizador o código de empresa igual a 0
 '''
+
 codigo = 1
 cont = 0
 while codigo != 0:
@@ -351,8 +365,8 @@ Até 2 salários mínimos Isento
 3 a 5 salários mínimos 10% 
 5 a 7 salários mínimos 15% 
 Acima de 7 salários mínimos 20% 
-
 '''
+
 cont = 0
 bunita = 954.00
 
@@ -387,6 +401,7 @@ Faça um algoritmo que determine e escreva:
 	• A porcentagem do total de indivíduos do sexo feminino cuja idade está entre 15 e 35 anos, inclusive, e que tenham olhos verdes e cabelos loiros. 
 o final do conjunto de habitantes é reconhecido pelo valor -1 entrando como idade
 '''
+
 m = f = cont = 0
 idade = 1
 
@@ -450,6 +465,7 @@ print(f'{int((m * 100)/cont)}% sao homens com idade entre 18 e 35 anos')
 '''
 Anacleto tem 1,50 metros e cresce 2 centímetros por ano, enquanto Felisberto tem 1,10 metro e cresce 3 centímetros por ano. Construa um algoritmo que calcule e imprima quantos anos serão necessários para que Felisberto seja maior que Anacleto. 
 '''
+
 anacleto = 150
 felisberto = 110
 cont = 0
@@ -525,6 +541,7 @@ print(f'O maior tempo na incubadora é {maior_tempo}')
 um cinema possui capacidade de 100 lugares e esta sempre com ocupação total. Certo dia, cada espectador respondeu a um questionário no qual constava: 
 Sua idade; Sua opinião em relação ao filme, segundo as seguintes notas; 
 '''
+
 a = b = c = d = e = media = 0
 
 def opiniaoo():
@@ -607,6 +624,7 @@ Capítulo 3 – Exercício 35 – Em um prédio, há três elevadores denominados A, B, C
 	• Qual a diferença porcentual entre o mais usado dos horários e o menos usado; 
 	• Qual a porcentagem sobre o total de serviços prestados do elevador de media utilização. 
 '''
+
 a = b = c = am = av = an = bm = bv = bn = cn = cm = cv = 0
 
 while True:
