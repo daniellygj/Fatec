@@ -21,17 +21,22 @@ soma = contvalido = continvalido = tot = 0
 for linha in arquivo:
     for telefone in linha.strip('\n').split(' '):
         telvalido = True
+        soma = 0
         if len(telefone) != 6:
             telvalido = False
         for c in range(0, len(telefone)-1):
-            if telefone[c] == telefone[c+1] or soma % 2 != 0 or telefone[0] == telefone[5]:
+            soma += int(telefone[c])
+            if telefone[c] == telefone[c+1]:
                 telvalido = False
-                soma += int(telefone[c])
+        if (soma + int(telefone[len(telefone) - 1])) % 2 != 0 or telefone[0] == telefone[5]:
+            telvalido = False
+
         if telvalido:
             contvalido += 1
             valido.write(telefone + '\n')
         else:
             invalido.write(telefone + '\n')
+            continvalido += 1
 
 valido.write(str(contvalido))
 invalido.write(str(continvalido))
