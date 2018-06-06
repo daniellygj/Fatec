@@ -17,9 +17,10 @@ Dadas essas regras perfeitamente razoáveis, bem projetadas e maduras, criar um 
 arquivo = open('telefones.txt')
 invalido = open('tel_invalidos.txt', 'w')
 valido = open('tel_validos.txt', 'w')
-soma = contvalido = continvalido = tot = 0
+soma = contvalido = total = 0
 for linha in arquivo:
     for telefone in linha.strip('\n').split(' '):
+        total += 1
         telvalido = True
         soma = 0
         if len(telefone) != 6:
@@ -36,10 +37,8 @@ for linha in arquivo:
             valido.write(telefone + '\n')
         else:
             invalido.write(telefone + '\n')
-            continvalido += 1
 
-valido.write(str(contvalido))
-invalido.write(str(continvalido))
+valido.write(str(contvalido) + '|' + str(total))
 invalido.close()
 valido.close()
 arquivo.close()
