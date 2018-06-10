@@ -62,7 +62,8 @@ while opc == 's':
         for c in range(0, 3):
             if matriz[c][c] != 1:
                 matriz[c][c] = 1
-            if f'{c+1};{c+1}' not in relacoes:
+                temp = f'{c+1};{c+1}'
+            if temp not in relacoes:
                 print(f"A relação ({c+1};{c+1}) foi adicionada.")
                 relacoes.append(temp)
             else:
