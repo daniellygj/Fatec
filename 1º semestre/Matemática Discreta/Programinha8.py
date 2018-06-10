@@ -15,11 +15,11 @@ def validacao(qtd):
         qtd = int(qtd)
         while qtd > 10:
             print('Digite um número menor que 10')
-            qtd = input('2Quantas relações deseja adicionar? (MAX 10)')
+            qtd = input('Quantas relações deseja adicionar? (MAX 10)')
             validacao(qtd)
     except ValueError:
         print('Informação inválida, tente novamente.')
-        qtd = input('3Quantas relações deseja adicionar? (MAX 10)')
+        qtd = input('Quantas relações deseja adicionar? (MAX 10)')
         validacao(qtd)
     return int(qtd)
 
@@ -29,9 +29,9 @@ opc = 's'
 print("Fecho Reflexivo")
 
 while opc == 's':
-    qtd = input('1Quantas relações deseja adicionar?')
+    qtd = input('Quantas relações deseja adicionar?')
     qtd = validacao(qtd)
-    print("1Entre com a relação (Utilize apenas 1 2 e 3)")
+    print("Entre com a relação (Utilize apenas 1 2 e 3)")
 
     relacoes = []
 
@@ -62,8 +62,7 @@ while opc == 's':
         for c in range(0, 3):
             if matriz[c][c] != 1:
                 matriz[c][c] = 1
-                temp = f'{c+1};{c+1}'
-            if temp not in relacoes:
+            if f'{c+1};{c+1}' not in relacoes:
                 print(f"A relação ({c+1};{c+1}) foi adicionada.")
                 relacoes.append(temp)
             else:
