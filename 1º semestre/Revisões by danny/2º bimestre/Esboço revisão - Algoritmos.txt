@@ -1,0 +1,113 @@
+funções
+em python, para definirmos uma função, utilizamos o def
+quando devemos utilizar uma função? para que ela serve?
+funções são rotinas que são capazes de executar instruções e retornar um resultado.
+
+uma função serve para deixar o codigo mais organizado. Em codigos muito grandes, ela gera uma facilidade, pois se precisamos mudar alguma coisa, basta irmos ate a função e alterar apenas la.
+ela pode ser chamada N vezes em um código. ou seja, função tambem serve para encurtar um código
+
+Em python, a sintaxe é a seguinte:
+def nomefuncao():
+	<código>
+
+uma função pode conter outra função dentro dela
+def <nomefuncao():
+	def<nomefuncao2():
+		<codigo>
+	<codigo>
+
+quando você declara uma variável dentro de uma função, ela não é visto fora dela. por exemplo
+def epar(x):
+	if x % 2 == 0:
+		par = True
+	else:
+		par = False
+	return par
+
+Se eu tentar usar a variavel par fora da função, não terá nada armazenado nela, pois ela existe apenas dentro da função
+então se
+
+x = 20
+
+def sla():
+    x = 10
+    x *= 3
+    return x
+sla()
+print(x)
+
+Que número ele irá imprimir?
+
+irá imprimir o 20!
+pois dentro da função, o x é uma variavel local, ou seja, ela não é visivel de fora da função
+
+agora se eu fizer assim...
+		
+x = 20
+
+def sla():
+    global x
+    x = 10
+    x *= 3
+    return x
+
+sla()
+print(x)
+
+ele irá retornar o número 30! pois x agora é uma variavel global, ou seja, todo o código vai ter acesso a ele
+
+
+
+DICIONARIO
+
+Podemos entender o dicionário como uma lista, onde ao invés de ter uma chave fixa, nós a escolhemos.
+em uma lista, para acessarmos um determinado elemento, utilizamos os numeros de 0 a N.
+Já em um dicionário, nós escolhemos como iremos acessar os elementos
+
+por exemplo:
+dicionario = {1: 'janeiro', 2: 'fevereiro', 3: 'março', 4: abril}
+
+Dessa maneira, se colocarmos um print(dicionario[1]) a saída será 'janeiro'
+
+podemos fazer o contrario tambem
+dicionario = {'janeiro': 1, 'feveriro': 2}
+então, se colocarmos um print(dicionario['janeiro'], ele irá retornar 1
+
+podemos utilizar strings ou números, varia de acordo com o que você quiser fazer
+
+é possivel tambem criar listas e outros dicionarios dentro do dicionario (aninhamento de dicionarios).
+
+dic = {'nome': 'danizera', 'notas': [7.5, 8.0, 7.0], 'atividades': {'lista':{1: 1.5, 2: 4.25, 3: 3.0}}}
+
+para acessar os elementos desse dicionario, é bem simples. basta continuar com o que estavamos fazendo antes
+dic['nome']
+>>> danizera
+
+dic['notas'][1]
+>>> 7.5
+
+dic['atividades']['lista'][2]
+>>> 4.25
+
+é possivel tambem fazer operações matematicas utilizando dicionarios!!
+
+dic = {'borracha': 1.00, 'caneta': 3.50, 'lapiseira': 5.00}
+dic[borracha] += 2
+print(dic)
+>>> dic = {'borracha': 3.00, 'caneta': 3.50, 'lapiseira': 5.00}
+
+
+para adicionar mais um elemento nesse dicionario, basta fazermos o seguinte:
+
+dic['apontador'] = 0.50
+print(dic)
+>>> {'borracha': 3.00, 'caneta': 3.50, 'lapiseira': 5.00, 'apontador': 0.50} 
+
+Para visualizar uma todas as chaves do dicionario, utilizamos o comando
+print(dic.keys())
+>>> dict_keys(['borracha', 'caneta', 'lapiseira', 'apontador'])
+
+e para visualizar todos os valores:
+print(dic.values())
+>>>dict_values([3.0, 3.5, 5.0, 0.5])
+
