@@ -1,0 +1,170 @@
+SEGURANÇA DA INFORMAÇÃO
+A informação é essencial para os negócios de uma organização e consequentemente necessita ser adequadamente protegida. isto é especialmente importante no ambiente dos negocios, cada vez mais interconectado.
+A informação pode existir em diversas formas: Ela pode ser impressa ou escrita em papel; armazenada eletronicamente; transmitida pelo correio ou por meios eletronicos, apresentada em filmes ou falada em conversas. Seja qual for a forma apresentada ou o meio atraves do qual a informação é compartilhada ou armazenada, é recomendado que ela seja sempre protegida adequadamente.
+
+SEGURANÇA E INFORMAÇÃO
+Segurança da informação é a proteção da informação de varios tipos de ameaças para garantir a continuidade do negocio, minimizar o risco, maximizar o retorno sobre os rendimentos e as oportunidades.
+A segurança de informação é obtida a aprtir da implementação de um conjunto de controles adequados, incluindo politicas, processos, procedimentos, estruturas organizacionais e funções de software e hardware.
+
+PONTO DE PARTIDA
+Os controles considerados essenciais para uma organização, sob o ponto de vista legal, incluem:
+ Proteção de dados e privacidade de informações pessoais
+ Proteção de registros organizacionais
+ Direitos de propriedade intelectual
+
+Os controles considerados praticas para a segurança da informação incluem:
+ Documento da Política de segurança da informação
+ Atribuição de responsabilidades para a segurança da informação
+ Conscientização, educação e treinamento em segurança da informação
+ Processamento correto das aplicações
+ Gestão de Vulnerabilidades técnicas
+ Gestão da Continuidade do Negócio
+ Gestão de incidentes de segurança da informação e melhorias
+
+PILARES DA SEGURANÇA DA INFORMAÇÃO
+Segurança da informação é dever de todos! É uma ação constante dentro da empresa. Segurança da informação é gestão.
+Segurança da informação é a preservação da confidencialidade, disponivilidade, integridade
+
+CONFIDENCIALIDADE
+ Criptografia
+ Controle de acesso
+ Acordo de confidencialidade
+ Treinamentos/conscientização
+ Profissionalmente esta ligado a principios eticos 
+
+INTEGRIDADE
+ Atenção ao ciclo de vida da informação
+ Uso de hash
+ Assinatura digital
+ Controle de acesso
+
+DISPONIBILIDADE
+ Controle em segurança fisica
+ Monitoramento
+ Controle de ativos
+ Planos de contingencia
+ Rotinas de backup e de restauração
+ Uso de soluções em nuvem
+
+CLOUD COMPUTING
+É um desafio para os gestores de TI por alguns motivos:
+ Entendimento da tecnologia
+ Confiança e segurança
+ Quebra de paradigmas
+ Profissionais REALMENTE capacidatos
+
+Computação em nuvem nada mais é do que o uso sob demanda da computação (processamento e armazenamento), sem a preocupação do gerenciamento fisico e em algum nivel, até mesmo lógico.
+
+CUSTOS
+ Redução de custos é um dos principais motivos para o uso de computação em nuvem
+
+FLEXIBILIDADE
+ Na nuvem, os sitemas rodam em servidores remotos, que podem ser acessado via itnernet. Além disso, a elasticidade de oferta de maquinas caracteristica-chave da nuvem, permite a alocação automática de um número maior de servidores caso aumente a demanda por processamento
+
+CONTATO COM O CONSUMIDOR
+ Os sistemas em nuvem podem ajudar empresas a aprofundar a relação com o cliente. A arquitetura facilita a integração com a WEB e as redes sociais
+
+ANALISE DE DADOS
+ A nuvem facilita a apuração e a analise de dados de um sistema, processo conhecido como data analytics. Os chefes de tecnologia podem fazer diagnosticos mais precisos e estudar os numeros do negocio, o que melhora a toamda de decisões e oferece insights sobre o futuro da impresa.
+
+ACESSO A INOVAÇÃO
+ O quinto item mais importante é o acesso a tecnologias inovadoras. Isso porque o cliente nao se preocupa em atualizar seus sistemas, pois isso acontece automaticamente.
+
+TIPOS DE COMPUTAÇÃO EM NUVEM
+SaaS - Software as a Service 
+ É a disponibilização apenas do Software. O cliente 'aluga o software, ou seja, o software é oferecido como um serviço, assim, o usuario não precisa adquirir licença e paga somente o que utiliza ou pelo tempo de utilização, como uma assinatura. Todos os recursos de hardware ficam por conta do fornecedor, aonde rodam os servidores que fornecerão o serviço
+IaaS - Infrastructure as a Service
+ É a disponibilização de máquinas virtuais para o cliente, com recursos de processamento, armazenamento de dados, servidores e componentes de rede. O fornecedor 'aluga' suas maquinas para o cliente, que apga por utilização ou tempo de utilização 
+PaaS - Plataform as a Service
+ Neste conceito é fornecida toda a plataforma e ambiente de desenvolvimento para o cliente. ou seja, são fornecidos os recursos de codificação, debug, compilação, testes, entre outros, fechando todo o ciclo de desenvolvimento.
+ O cliente apga ou aloca somente os recursos necessários, sem desperdicio de hardware ou limites de processamento, para o desenvolvimento de seus softwares. São alugados servidores e serviços associados como maquinas virtuais para executar aplicações existentes ou desenvolver e testar novas.
+
+TIPOS DE NUVEM
+ Pública
+ Privada
+ Hibrida
+
+CARACTERISTICAS
+ Auto-atendimento sob demanda
+ Amplo acesso a rede
+ Pool de recursos
+ Elasticidade
+ Mensuravel
+
+POR QUE USAR NUVEM?
+ Orçamento de TI
+  Os usuarios precisam de rempo de resposta. Diminuit o custo, principalmente com o gerencimento
+ Custo de gerenciamento
+  O custo de gerenciamento é bem melhor do que se utilizar um servidor físico
+
+VIRTUALIZAÇÃO
+ Teve inicio com mainframes na decada de 60
+ O conceito era dividir o computador em varias maquinas virtuais
+ Nos dias de hoje, os computadores são potentes o suficiente para lidar com múltiplas tarefas
+ A VMware é pioneira no desenvolvimento inicial e permanece como lider na tecnologia de maquinas virtuais x86
+
+EXPLICANDO A VIRTUALIZAÇAO
+ Funciona dividindo um recurso de hardware físico em partes, que podem ser usadas para fins distintos
+ Tipos de virtualização
+  A virtualização de aplicação permite executar aplicações no desktop do usuário, isolando a aplicação do Sistema Operacional;
+  Virtualização de Desktop consiste na execução de múltiplos sistemas operacionais em um servidor.
+  Virtualização de Apresentação — permite manter o armazenamento das aplicações em servidores centralizados, enquanto provê uma interface familiar para o usuário em sua estação.
+  Virtualização de perfil permite que os usuários tenham documentos e perfis centralizados no servidor, o que facilita a movimentação do usuário para novas estações.
+ 
+ ISOLAMENTO
+  Máquinas virtuais na mesma máquina fisica são executadas de modo independente, protegidas uma da outra
+ 
+ ENCAPSULAMENTO
+  O provisionamento de servidores é semelhante a copia de um arquivo
+  A migração de servidores torna-se semelhante a migração de dados
+  É possivel utilizar tecnicas de gerenciamento de dados para o gerenciamento de servidores
+   Pendrive
+   DVD
+   Disco rígido
+   NAS
+   SAN
+
+ INDEPENDETE DE HARDWARE
+  Uma máquina virtual sempre vê o mesmo conjunto de hardware, independente do hardware físico
+  Os drivers de hardware são independentes do hardware da maquina em que se localizam
+  Podem ser movidas para um hardware direrente, sem qualquer alteração
+  
+ OTIMIZAÇÃO DE ENERGIA
+  um servidor fisico utiliza muita energia, ou seja, se você utilizar um servidor na nuvem, haverá uma grande economia de energia
+ 
+ PROVISIONAMENTO
+  Os discos de maquinas virtuais consomem somente a quantidade do espaço físico em uso
+   A maquina virtual vê sempre o tamanho total do disco virtual
+   Relatórios e alertas completos na alocação e no consumo
+  Aumenta consideravelmente o uso do armazenamento
+  Elimina a necessidade de provisionar discos virtuais em excesso
+  Reduz os custos de armazenamento em até 50%
+
+ TOLERANCIA A FALHAS
+  Maquinas virtuais identicas em execução lenta em hosts separados
+  Tempo de inatividade zero, failover de perda de dados zeros para todas as máquinas virtuais em caso de falhas de hardware
+  Tempo de inatividade zero, perda de dados zero
+  Sem necessidade de cluster complexo ou hardware especializado
+  Mecanismo comum para todos os aplicativos e SOs
+
+ CAPACIDADE SOB DEMANDA
+  Redução e expansãode aplicativos com base na demanda e prioridade
+  Balanceamento de carga dinamico e com capacidade de resposta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
