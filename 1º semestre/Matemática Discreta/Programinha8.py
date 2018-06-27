@@ -1,80 +1,159 @@
-from TheDoctor import imprimir
-from console import readsite
+def validaropc(opc):
+    try:
+        opc = opc.lower()
 
-imprimir(readsite('http://dontpad.com/TheDoctor/md/fechoreflexivo.txt'))
+    except ValueError:
+        print("Opção inválida, tente novamente.")
+        print('=-' * 35)
+        opc = input('\nDeseja adicionar outra relação? ')
+        opc = validaropc(opc)
+
+    while opc[0] not in 'sn':
+        print("Opção inválida, tente novamente.")
+        print('=-' * 35)
+        opc = input('\nDeseja adicionar outra relação? ')
+        opc = validaropc(opc)
+
+    return opc[0]
 
 
 def namatriz(matriz):
     print('\nNa matriz:')
     for c in matriz:
-        print(c)
+        for c2 in range(0, len(c)):
+            print(c[c2], end=' ')
+            if c2 == len(matriz) - 1:
+                print(end='\n')
 
 
-def validacao(qtd):
+def validarint(var):
     try:
-        qtd = int(qtd)
-        while qtd > 10:
-            print('Digite um número menor que 10')
-            qtd = input('Quantas relações deseja adicionar? (MAX 10)')
-            validacao(qtd)
+        var = int(var)
+
     except ValueError:
         print('Informação inválida, tente novamente.')
-        qtd = input('Quantas relações deseja adicionar? (MAX 10)')
-        validacao(qtd)
-    return int(qtd)
+        print('=-' * 30)
+        var = input('\nQuantas relações deseja adicionar? ')
+        var = validarint(var)
+
+    return var
+
+
+def validarelem(var):
+    while ';' not in var or var.count(';') > 1:
+        print('Utilize apenas um ; para separar os elementos. Exemplo: 2;5')
+        print('=-' * 30)
+        var = (input(f'\n{c+1}º '))
+        var = validarelem(var)
+
+    while var[:var.find(';')] not in lista or var[var.find(';') + 1:] not in lista:
+        print(f'\nUtilize apenas números de {lista[0]} a {lista[-1]}. Digite novamente.')
+        print('=-' * 30)
+        var = (input(f'{c+1}º '))
+        var = validarelem(var)
+    return var
+
+
+def criarmatriz(qtd):
+    matriz = []
+    for c in range(qtd):
+        matriz.append([])
+    return matriz
 
 
 opc = 's'
-
-print("Fecho Reflexivo")
+lista = []
+print("Fecho Reflexivo\n")
 
 while opc == 's':
-    qtd = input('Quantas relações deseja adicionar?')
-    qtd = validacao(qtd)
-    print("Entre com a relação (Utilize apenas 1 2 e 3)")
+    qtd = input('Quantas relações deseja adicionar? ')
+    qtd = validarint(qtd)
+    matriz = criarmatriz(qtd)
+    for c in range(0, qtd):
+        lista.append(str(c + 1))
+        for c2 in range(0, qtd):
+            matriz[c].append(0)
+
+    print("Entre com a relação")
 
     relacoes = []
+    relacoesdigitadas = []
 
     for c in range(0, qtd):
         temp = input(f'{c+1}º ')
+        temp = validarelem(temp)
+        if temp not in relacoesdigitadas:
+            relacoesdigitadas.append(temp)
         while temp in relacoes:
-            print('Relação já adicionada. Entre com outra')
+            print('\nRelação já adicionada. Entre com outra')
+            print('=-' * 30)
+            print('\n')
             temp = input(f'{c+1}º ')
-            while temp not in '123':
-                print('Utilize apenas os números 1, 2, 3 e 4. Digite novamente.')
-                temp = (input(f'{c+1}º '))
+            validarelem(temp)
+            if temp not in relacoesdigitadas:
+                relacoesdigitadas.append(temp)
             if temp not in relacoes:
                 break
         relacoes.append(temp)
 
-    matriz = [[0, 0, 0],
-              [0, 0, 0],
-              [0, 0, 0]]
+    if len(relacoes) > 1:
+        for c2 in relacoes:
+            aux = c2.find(';')
+            matriz[int(c2[:aux]) - 1][int(c2[aux + 1:]) - 1] = 1
 
-    for c2 in relacoes:
-        matriz[int(c2[:1]) - 1][int(c2[2:]) - 1] = 1
 
-    if matriz[0][0] == 1 and matriz[1][1] == 1 and matriz[2][2] == 1:
-        print("A relação que você digitou já é reflexiva, então o fecho é a própria relação")
 
+        aux1 = []
+        aux = ''
+        RD = ''
+
+        for c in range(0, qtd):
+            aux1.append(matriz[c][c])
+
+        refl = True
+        for c in aux1:
+            if c != 1:
+                refl = False
+
+        for c in range(0, len(relacoesdigitadas)):
+            RD = RD + f'({relacoesdigitadas[c]})'
+            if c != len(relacoesdigitadas) - 1:
+                RD = RD + ';'
+
+        if refl:
+            print("\nA relação que você digitou já é reflexiva, então o fecho é a própria relação.")
+            print(f"Relação digitada: {RD}")
+
+        else:
+            print('A relação que você digitou, não é reflexiva.\n')
+            for c in range(0, qtd):
+                if matriz[c][c] != 1:
+                    matriz[c][c] = 1
+                    temp = f'{c+1};{c+1}'
+                    temp = validarelem(temp)
+
+                    if temp not in relacoes:
+                        print(f"A relação ({c+1};{c+1}) foi adicionada.")
+                        relacoes.append(temp)
+                    else:
+                        print(f'A relação ({c+1};{c+1}) seria adicionada, mas ela já existe.')
+
+            relacoes = sorted(relacoes)
+            for c in range(0, len(relacoes)):
+                aux = aux + f'({relacoes[c]})'
+                if c != len(relacoes) - 1:
+                    aux = aux + ';'
+
+            print(f"\nRelação digitada: {RD}")
+            print(f'O fecho reflexivo da endorrelação é: {aux}')
+            namatriz(matriz)
     else:
-        print('A relação que você digitou, não é reflexivo.')
-        for c in range(0, 3):
-            if matriz[c][c] != 1:
-                matriz[c][c] = 1
-                temp = f'{c+1};{c+1}'
-            if temp not in relacoes:
-                print(f"A relação ({c+1};{c+1}) foi adicionada.")
-                relacoes.append(temp)
-            else:
-                print(f'A relação ({c};{c}) seria adicionada, mas ela já existe.')
-        print(f'O fecho reflexivo da endorrelação é: {relacoes}')
-        namatriz(matriz)
+        print("\nA relação que você digitou já é reflexiva, então o fecho é a própria relação.")
+        print(f"Relação digitada: {relacoes[0]}")
 
-        opc = input('\nDeseja adicionar outra relação? ').lower()
-        opc = opc[0]
-        while opc not in 'ns':
-            print("Opção inválida, tente novamente.")
-            opc = input('Deseja adicionar outra relação? ').lower
+
+    opc = input('\nDeseja adicionar outra relação? ').lower()
+    opc = validaropc(opc)
 
 # By Danny
+
