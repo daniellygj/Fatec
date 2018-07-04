@@ -1,3 +1,5 @@
+# Meu objetivo era fazer o codigo com a menor quantidade de linhas possiveis, para ganhar uma nota extra
+
 def alphabet(palavra):
     aux = []
     for c in palavra:
