@@ -3,7 +3,7 @@
 #include <math.h>
 
 /* 1. Crie  um algoritmo e um programa a em C que leia o tamanho do lado de um
-quadrado e calcule o perímetro e área, imprimindo o resultado na tela
+quadrado e calcule o perímetro e área, imprimindo o resultado na tela */
 
 
 int main(){
@@ -17,11 +17,12 @@ int main(){
     printf("\nPerímetro: %.2f\nÁrea %.2f\n", tamanho * 4, pow(tamanho, 2));
 
     return 0;
-} */
+}
 
 
 /* 2. Crie um algoritmo e um programa em C que leia a largura e o comprimento de
-um retângulo e calcule o perímetro e área, imprimindo o resultado na tela.
+um retângulo e calcule o perímetro e área, imprimindo o resultado na tela.*/
+
 
 int main(){
     setlocale(LC_ALL, "portuguese");
@@ -37,10 +38,9 @@ int main(){
     printf("\nPerimetro: %.2f\nArea: %.2f\n", (base + altura) * 2, base * altura);
 
     return 0;
-}*/
-
+}
 /* 3. Crie um algoritmo e um programa em C que leia a medida de tres lados de um triangulo e calcule o
-perimetro e area e imprima o resultado na tela
+perimetro e area e imprima o resultado na tela */
 
 int main(){
     setlocale(LC_ALL, "portuguese");
@@ -60,7 +60,7 @@ int main(){
 
     printf("\nPerimetro: %.2f\nArea: %.2f\n", a+b+c, sqrt(((a+b+c)/2)*(((a+b+c)/2)-a)*(((a+b+c)/2)-b)*(((a+b+c)/2)-c)));
     return 0;
-} */
+}
 
 /* 4. Crie um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e
 determine se o perímetro é maior que 10, imprimindo o resultado na tela. */
@@ -82,10 +82,10 @@ int main(){
     else printf("\nO perímetro(%.2f) do triângulo é menor que 10.\n", perimetro);
 
     return 0;
-} */
+}
 
 /* 5. Crie um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e
-determine se o triângulo é equilátero, isósceles ou escaleno, imprimindo o resultado na tela
+determine se o triângulo é equilátero, isósceles ou escaleno, imprimindo o resultado na tela*/
 
 int main(){
     setlocale(LC_ALL, "portuguese");
@@ -113,10 +113,10 @@ int main(){
 
 
     return 0;
-}*/
+}
 
 /* 6. Crie um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e
-determine se o triângulo é acutângulo, obtusângulo ou retângulo, imprimindo o resultado na tela
+determine se o triângulo é acutângulo, obtusângulo ou retângulo, imprimindo o resultado na tela */
 
 int main(){
     setlocale(LC_ALL, "portuguese");
@@ -144,10 +144,10 @@ int main(){
 
 
     return 0;
-} */
+}
 
 /* 7. Crie   um algoritmo e um programa em C que leia peso e altura de uma pessoa e calcule o IMC,
-imprimindo o resultado na tela.
+imprimindo o resultado na tela. */
 
 int main(){
     setlocale(LC_ALL, "portuguese");
@@ -163,10 +163,10 @@ int main(){
     printf("Seu IMC é: %.2f", peso / pow(altura, 2));
 
     return 0;
-} */
+}
 
 /* 8. Crie um algoritmo e um programa em C que leia os coeficientes a e b de uma função de 1º grau
-e calcule x para y=0 (y = ax + b), imprimindo o resultado na tela.
+e calcule x para y=0 (y = ax + b), imprimindo o resultado na tela. */
 
 int main(){
     int a, b;
@@ -180,10 +180,10 @@ int main(){
     printf("%d", -b / a);
 
     return 0;
-} */
+}
 
 /* 9. Crie um algoritmo e um programa em C que leia os coeficientes a, b e c de uma função de 2º grau
-e calcule x para y=0, imprimindo o resultado na tela.
+e calcule x para y=0, imprimindo o resultado na tela. */
 
 int main(){
     float a, b, c;
@@ -202,10 +202,10 @@ int main(){
     printf("%.2f, %.2f", (-b + sqrt(delta))  /(2 * a), (-b - sqrt(delta)) / (2 * a))
 
     return 0;
-} */
+}
 
 /* 10. Crie o fluxograma e o programa em C que leia o tamanho do raio de um círculo do e calcule o
-perímetro e área, imprimindo o resultado na tela.
+perímetro e área, imprimindo o resultado na tela. */
 
 #define PI 3.14
 
@@ -220,7 +220,4 @@ int main(){
     printf("Perímetro: %.1f\nÁrea: %.1f\n", 2.0 * PI * raio, PI * pow(raio, 2));
 
     return 0;
-} */
-
-
-
+}
