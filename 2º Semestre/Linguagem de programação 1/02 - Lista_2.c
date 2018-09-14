@@ -788,7 +788,7 @@ int main(){
     printf("\nAcertos: %d\nErros: %d", acertos, erros);
 } */
 
-/* 30. Faca um programa que receba tres numeros e mostre-os em ordem crescente.
+/* 30. Faca um programa que receba tres numeros e mostre-os em ordem crescente.*/
 
 void BubbleSort(int *vet);
 
@@ -825,7 +825,7 @@ void BubbleSort(int *vet){
     if (!troca) return;
     }
 }
-*/
+
 
 /* 31. Faca um programa que receba a altura e o peso de uma pessoa. Deacordo com a tabela a seguir, veriﬁque e mostra qual a classiﬁcac¸˜ao dessa pessoa.
 Altura                                                Peso

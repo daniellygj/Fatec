@@ -37,8 +37,8 @@ void emagrecer(float kg);
 void engordar(float kg);
 void crescer();
 
-int _idade;
 float _peso, _altura;
+int _idade;
 
 // Exercicio 6
 void alterarQuantidadeCombustivel();

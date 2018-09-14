@@ -301,7 +301,8 @@ void OcorrenciaCaractere(char *str1){
             if (str1[c] == car) ocorrencias += 1;
     }
 
-    printf(ocorrencias != 0 ? "O caractere \"%c\" aparece %d vez(es) na string1.\n", car, ocorrencias : "Caractere não encontrado.\n");
+    if (ocorrencias != 0) printf("O caractere \"%c\" aparece %d vez(es) na string1.\n", ocorrencias);
+    else printf("nCaractere não encontrado.\n");
 }
 
 void SubstituirOcorrencia(char *str1){
@@ -319,8 +320,6 @@ void SubstituirOcorrencia(char *str1){
 
     printf("Por qual? ");
     *endereco = getche();
-    printf("%c", endereco);
-    printf("\n");
 
     printf("\nNova string: %s", str1);
 }

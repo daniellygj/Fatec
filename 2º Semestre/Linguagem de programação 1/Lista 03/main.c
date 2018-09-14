@@ -426,7 +426,7 @@ int main(){
 (d) Concatenar a string S1 com uma nova string S2 e imprimir na tela o resultado da concatenação;
 (e) Imprimir a string S1 de forma reversa;
 (f) Contar quantas vezes um dado caractere aparece na string S1. Esse caractere desse ser informado pelo usuário;
-(g) Substituir a primeira ocorrência do caractere C1 da string S1 pelo caractere C2. Os caracteres C1 e C2 serão lidos via teclado.
+(g) Substituir a primeira ocorrência do caractere C1 da string S1 pelo caractere C2. Os caracteres C1 e C2 serão lidos via teclado. */
 
 int main(){
     setlocale(LC_ALL, "portuguese");
@@ -485,7 +485,7 @@ int main(){
     system("CLS");
     }
     return 0;
-} */
+}
 
 
 
