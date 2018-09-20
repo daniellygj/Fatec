@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1537482642 source:c:\users\dany\desktop\lista\programa_8\funcoes.c
+	<stdio.h>
+	<string.h>
+
+1537482542 source:c:\users\dany\desktop\lista\programa_8\main.c
+	<stdio.h>
+
