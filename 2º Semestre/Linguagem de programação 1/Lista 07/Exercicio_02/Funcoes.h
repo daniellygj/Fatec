@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <locale.h>
 
-typedef struct {
-    int valor;
-    char carta[2];
-} carta;
+typedef struct  {
+    int baralho;
+    int valor_total;
+} Baralho;
 
 #endif // FUNCOES_H_INCLUDED

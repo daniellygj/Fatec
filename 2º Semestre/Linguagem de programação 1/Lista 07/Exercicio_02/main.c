@@ -2,7 +2,7 @@
 
 /* O mágico descobre, com a força do seu pensamento, duas cartas escolhidas aleatoriamente pelo espectador.
 MATERIAL NECESSÁRIO
-Um baralho retirando-se do maço as cartas dez, valete, dama e rei de todos os nipes.
+Um cartas retirando-se do maço as cartas dez, valete, dama e rei de todos os nipes.
 SEGREDO
     a- Peça para o espectador escolher uma carta qualquer e memorizá-la.
     b- Peça para ele multiplicar por dois o valor da carta, mentalmente.
@@ -18,24 +18,34 @@ Elabore um programa, usando Linguagem de Programação C, que simule o truque de i
 programa dará as instruções ao usuário e lerá via teclado apenas o valor_total, apresentando, em seguida, os dois números
 escolhidos pelo usuário. */
 
-int main(int argc, char const *argv[]) {
-	carta cartas;
+int main() {
+    Baralho cartas;
 
-	printf("Escolha uma carta e memorize-a\n");
+    printf("Escolha uma carta\n");
     system("pause");
-	printf("\nMultiplique por dois\n");
+    printf("\nMultiplique o numero da carta por 2\n");
     system("pause");
-	printf("\nSome cinco e depois multiplique por cinco\n");
+    printf("\nAgora some 5 ao resultado\n");
     system("pause");
-	printf("\nPegue outra carta e some o valor dela\n");
+    printf("\nAgora multiplique por 5 o resultado\n");
     system("pause");
-	printf("\nInforme o total: ");
-	scanf("%d", &cartas.valor);
+    printf("\nMemorize o resultado\n");
+    system("pause");
+    printf("\nEscolha outra carta e some seu valor ao resultado memorizado\n");
+    system("pause");
+    printf("\nEscreva o resultado obtido ");
+    scanf("%d", &cartas.baralho);
 
-	cartas.valor = cartas.valor - 25;
-	sprintf(cartas.carta, "%d", cartas.valor);
+    cartas.valor_total = cartas.baralho - 25;
 
-	printf("%c, %c\n", cartas.carta[0], cartas.carta[1]);
+    char carta[3];
+    itoa(cartas.valor_total, carta, 10);
 
-	return 0;
+    if (carta[0] == '1')
+        printf("As ");
+    else printf("%c ", carta[0]);
+
+    if (carta[1] == '1')
+        printf("As\n");
+    else printf("%c\n", carta[1]);
 }
