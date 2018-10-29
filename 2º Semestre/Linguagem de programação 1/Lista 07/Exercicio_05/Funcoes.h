@@ -28,5 +28,4 @@ void listarPorData(Crianca *criancas, int qtd);
 void listarPorMassaAcima(Crianca *criancas, int qtd);
 void listarPorMassaAbaixo(Crianca *criancas, int qtd);
 
-
 #endif // FUNCOES_H_INCLUDED
