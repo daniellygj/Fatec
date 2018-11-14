@@ -6,7 +6,7 @@ import java.util.Date;
 public class Cliente {
 	private String nome, sexo, email, telefone, RG, CPF, medida;
 	
-	private LocalDate Data_nascimento;
+	private LocalDate dataNascimento;
 	Boolean desabilitar;
 	
 	public Boolean getDesabilitar() {
@@ -25,7 +25,7 @@ public class Cliente {
 		this.RG = RG;
 		this.CPF = CPF;
 		this.medida = medida;
-		Data_nascimento = data_nascimento;
+		dataNascimento = data_nascimento;
 		
 	}
 	public String getNome() {
@@ -70,11 +70,11 @@ public class Cliente {
 	public void setMedida(String medida) {
 		this.medida = medida;
 	}
-	public LocalDate getData_nascimento() {
-		return Data_nascimento;
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
 	}
-	public void setData_nascimento(LocalDate data_nascimento) {
-		Data_nascimento = data_nascimento;
+	public void setDataNascimento(LocalDate dataNascimento) {
+		dataNascimento = dataNascimento;
 	}
 
 }

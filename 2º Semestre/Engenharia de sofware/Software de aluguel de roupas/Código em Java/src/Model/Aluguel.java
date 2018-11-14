@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Aluguel {
 	private String nome, documento, clienteCPF;
-	private int n_parcelas;
-	private float valor_aluguel;
-	private Date data_retirada, data_entrega, data_locucao;
+	private int nParcelas;
+	private float valorAluguel;
+	private Date dataRetirada, dataEntrega, dataLocacao;
 	private List <Roupa> roupa = new LinkedList <Roupa> ();
 	
 	public String getNome() {
@@ -29,35 +29,35 @@ public class Aluguel {
 	public void setClienteCPF(String clienteCPF) {
 		this.clienteCPF = clienteCPF;
 	}
-	public int getN_parcelas() {
-		return n_parcelas;
+	public int getNParcelas() {
+		return nParcelas;
 	}
-	public void setN_parcelas(int n_parcelas) {
-		this.n_parcelas = n_parcelas;
+	public void setNParcelas(int nParcelas) {
+		this.nParcelas = nParcelas;
 	}
-	public float getValor_aluguel() {
-		return valor_aluguel;
+	public float getValorAluguel() {
+		return valorAluguel;
 	}
-	public void setValor_aluguel(float valor_aluguel) {
-		this.valor_aluguel = valor_aluguel;
+	public void setValor_aluguel(float valorAluguel) {
+		this.valorAluguel = valorAluguel;
 	}
-	public Date getData_retirada() {
-		return data_retirada;
+	public Date getDataRetirada() {
+		return dataRetirada;
 	}
-	public void setData_retirada(Date data_retirada) {
-		this.data_retirada = data_retirada;
+	public void setData_retirada(Date dataRetirada) {
+		this.dataRetirada = dataRetirada;
 	}
-	public Date getData_entrega() {
-		return data_entrega;
+	public Date getDataEntrega() {
+		return dataEntrega;
 	}
-	public void setData_entrega(Date data_entrega) {
-		this.data_entrega = data_entrega;
+	public void setData_entrega(Date dataEntrega) {
+		this.dataEntrega = dataEntrega;
 	}
-	public Date getData_locucao() {
-		return data_locucao;
+	public Date getDataLocacao() {
+		return dataLocacao;
 	}
-	public void setData_locucao(Date data_locucao) {
-		this.data_locucao = data_locucao;
+	public void setData_locucao(Date dataLocacao) {
+		this.dataLocacao = dataLocacao;
 	}
 	public List<Roupa> getRoupa() {
 		return roupa;
@@ -65,17 +65,17 @@ public class Aluguel {
 	public void setRoupa(List<Roupa> roupa) {
 		this.roupa = roupa;
 	}
-	public Aluguel(String nome, String documento, String clienteCPF, int n_parcelas, float valor_aluguel,
-			Date data_retirada, Date data_entrega, Date data_locucao, List<Roupa> roupa) {
+	public Aluguel(String nome, String documento, String clienteCPF, int nParcelas, float valorAluguel,
+			Date dataRetirada, Date dataEntrega, Date dataLocacao, List<Roupa> roupa) {
 		super();
 		this.nome = nome;
 		this.documento = documento;
 		this.clienteCPF = clienteCPF;
-		this.n_parcelas = n_parcelas;
-		this.valor_aluguel = valor_aluguel;
-		this.data_retirada = data_retirada;
-		this.data_entrega = data_entrega;
-		this.data_locucao = data_locucao;
+		this.nParcelas = nParcelas;
+		this.valorAluguel = valorAluguel;
+		this.dataRetirada = dataRetirada;
+		this.dataEntrega = dataEntrega;
+		this.dataLocacao = dataEntrega;
 		this.roupa = roupa;
 	}
 }

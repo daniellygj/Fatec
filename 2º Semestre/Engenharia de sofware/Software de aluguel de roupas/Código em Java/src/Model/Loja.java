@@ -23,37 +23,87 @@ public class Loja {
 	
 	public Aluguel buscaAluguel(String nomeCliente, String cpfCliente) {
 		for(Aluguel aluguel:alugueis) {
-			if(aluguel.getNome().equals(nomeCliente) || aluguel.getDocumento().equals(cpfCliente))return aluguel;
+			if(aluguel.getNome().equals(nomeCliente) || aluguel.getDocumento().equals(cpfCliente)) return aluguel;
 		}
 		return null;
 	}
 	
-	public void alterarCliente(String novoNome, String sexo, String cpfCliente,String medida ,String email, String telefone) {
+	public void alterarCliente(String novoNome, String novoSexo, String cpfCliente,String novoMedida ,String novoEmail, String novoTelefone) {
 		for(Cliente cliente:clientes) {
 			
 			if(cliente.getCPF().equals(cpfCliente)) {
+				
 				if(!novoNome.isEmpty()) {
 					cliente.setNome(novoNome);
 				}
-				if(!sexo.isEmpty()) {
-					cliente.setSexo(sexo);			
+				
+				if(!novoSexo.isEmpty()) {
+					cliente.setSexo(novoSexo);			
 				}
+				
 				if(!cpfCliente.isEmpty()) {
 					cliente.setCPF(cpfCliente);
 				}
-				if(medida.isEmpty()) {
-					cliente.setMedida(medida);				
+				
+				if(novoMedida.isEmpty()) {
+					cliente.setMedida(novoMedida);				
 				}
-				if(!email.isEmpty()) {
-					cliente.setEmail(email);
+				
+				if(!novoEmail.isEmpty()) {
+					cliente.setEmail(novoEmail);
 				}
-				if(!telefone.isEmpty()) {
-					cliente.setTelefone(telefone);
+				
+				if(!novoTelefone.isEmpty()) {
+					cliente.setTelefone(novoTelefone);
+				}
+			}
+		}		
+	}
+	
+	public void alterarRoupa(String codigo, String novoTipoRoupa, String novoMarca, int novoTamanho, String novoCor, String novoEstacao, String novoOcasiao, int novoFaixaEtaria, String novoTipoTecido, int novoQuantidade ) {
+		
+		for(Roupa roupa:roupas) {				
+			if(roupa.getCodigo().equals(codigo)) {
+				
+				if(!novoTipoRoupa.isEmpty()) {
+					roupa.setTipoRoupa(novoTipoRoupa);
+				}	
+				
+				if(!novoMarca.isEmpty()) {
+					roupa.setMarca(novoMarca);
+				}	
+				
+				if(novoTamanho != 0) {
+					roupa.setTamanho(novoTamanho);
+				}		
+				
+				if(!novoCor.isEmpty()) {
+					roupa.setCor(novoCor);
+				}			
+				
+				if(!novoEstacao.isEmpty()) {
+					roupa.setEstacao(novoEstacao);
+				}			
+				
+				if(!novoOcasiao.isEmpty()) {
+					roupa.setOcasiao(novoOcasiao);
+				}				
+				
+				if(novoFaixaEtaria != 0) {
+					roupa.setFaixaEtaria(novoFaixaEtaria);
+				}				
+				
+				if(!novoTipoTecido.isEmpty()) {
+					roupa.setTipoTecido(novoTipoTecido);
+				}
+				
+				if(novoQuantidade != 0) {
+					roupa.setQuantidade(novoQuantidade);
 				}
 			}
 		}
-		
 	}
+	
 	public void desabilitarCliente(Cliente cliente) {
 		cliente.setDesabilitar(true);
 	}
