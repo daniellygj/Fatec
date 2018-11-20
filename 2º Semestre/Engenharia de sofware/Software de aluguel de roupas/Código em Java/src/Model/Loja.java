@@ -1,17 +1,15 @@
 package Model;
 
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
+
 
 public class Loja {
 	private List <Roupa> roupas = new LinkedList <Roupa> ();
 	private List <Aluguel> alugueis = new LinkedList <Aluguel> ();
 	private List <Cliente> clientes = new LinkedList <Cliente> ();
-	
-	
-	public List<Roupa> getRoupa() {
-		return roupas;
-	}
+	private List <Roupa> selectedRoupa = new LinkedList <Roupa> ();
 	
 	public Cliente buscaCliente(String nome, String cpf) {
 		for(Cliente cliente:clientes) {
@@ -19,51 +17,57 @@ public class Loja {
 		}
 		return null;
 	}
-	
+	//Adicionar na documentação
+	public List<Roupa> selecionaRoupa(int codigo) {
+		for(Roupa roupa:roupas) {
+			if(roupa.getCodigo() == codigo) {
+				selectedRoupa.add(roupa);
+			}
+		}return selectedRoupa;
+	}
 	
 	public Aluguel buscaAluguel(String nomeCliente, String cpfCliente) {
 		for(Aluguel aluguel:alugueis) {
-			if(aluguel.getNome().equals(nomeCliente) || aluguel.getDocumento().equals(cpfCliente)) return aluguel;
+			if(aluguel.getNome().equals(nomeCliente) || aluguel.getDocumento().equals(cpfCliente))return aluguel;
 		}
 		return null;
 	}
 	
-	public void alterarCliente(String novoNome, String novoSexo, String cpfCliente,String novoMedida ,String novoEmail, String novoTelefone) {
+	public Roupa buscaRoupa(int codigoRoupa) {
+		for(Roupa roupa:roupas) {
+			if(roupa.getCodigo() == codigoRoupa) return roupa;
+		}	
+		return null;
+	}
+	
+	public void alterarCliente(String cpfClientedeBusca, String novoNome, String sexo,String medida ,String email, String telefone) {
 		for(Cliente cliente:clientes) {
 			
-			if(cliente.getCPF().equals(cpfCliente)) {
-				
+			if(cliente.getCPF().equals(cpfClientedeBusca)) {
 				if(!novoNome.isEmpty()) {
 					cliente.setNome(novoNome);
 				}
-				
-				if(!novoSexo.isEmpty()) {
-					cliente.setSexo(novoSexo);			
+				if(!sexo.isEmpty()) {
+					cliente.setSexo(sexo);			
 				}
-				
-				if(!cpfCliente.isEmpty()) {
-					cliente.setCPF(cpfCliente);
+				if(medida.isEmpty()) {
+					cliente.setMedida(medida);				
 				}
-				
-				if(novoMedida.isEmpty()) {
-					cliente.setMedida(novoMedida);				
+				if(!email.isEmpty()) {
+					cliente.setEmail(email);
 				}
-				
-				if(!novoEmail.isEmpty()) {
-					cliente.setEmail(novoEmail);
-				}
-				
-				if(!novoTelefone.isEmpty()) {
-					cliente.setTelefone(novoTelefone);
+				if(!telefone.isEmpty()) {
+					cliente.setTelefone(telefone);
 				}
 			}
-		}		
+		}
+		
 	}
 	
-	public void alterarRoupa(String codigo, String novoTipoRoupa, String novoMarca, int novoTamanho, String novoCor, String novoEstacao, String novoOcasiao, int novoFaixaEtaria, String novoTipoTecido, int novoQuantidade ) {
+public void alterarRoupa(int codigo, String novoTipoRoupa, String novoMarca, String novoTamanho, String novoCor, String novoEstacao, String novoOcasiao, int novoFaixaEtaria, String novoTipoTecido, int novoQuantidade ) {
 		
 		for(Roupa roupa:roupas) {				
-			if(roupa.getCodigo().equals(codigo)) {
+			if(roupa.getCodigo() == codigo) {
 				
 				if(!novoTipoRoupa.isEmpty()) {
 					roupa.setTipoRoupa(novoTipoRoupa);
@@ -73,7 +77,7 @@ public class Loja {
 					roupa.setMarca(novoMarca);
 				}	
 				
-				if(novoTamanho != 0) {
+				if(!novoTamanho.isEmpty()) {
 					roupa.setTamanho(novoTamanho);
 				}		
 				
@@ -103,9 +107,21 @@ public class Loja {
 			}
 		}
 	}
-	
-	public void desabilitarCliente(Cliente cliente) {
-		cliente.setDesabilitar(true);
+
+	public void alterarAluguel(int codigoAluguel, float valor_aluguel, LocalDate data_retirada, LocalDate data_entrega, List<Roupa> roupa) {
+		for(Aluguel aluguel:alugueis) {
+			if(aluguel.getCodigoAluguel() == codigoAluguel) {
+				if(valor_aluguel != 0) {
+					aluguel.setValor_aluguel(valor_aluguel);
+				}if(!aluguel.getData_retirada().equals(data_retirada)) {
+					aluguel.setData_retirada(data_retirada);
+				}if(!aluguel.getData_entrega().equals(data_entrega)) {
+					aluguel.setData_entrega(data_entrega);
+				}if(!roupa.isEmpty()) {
+					aluguel.setRoupa(roupa);
+				}
+			}
+		}
 	}
 	
 	public void cadastrarCliente(Cliente cliente) {
@@ -116,17 +132,53 @@ public class Loja {
 		roupas.add(roupa);
 	}
 	
-	public void roupaRoupa(Roupa roupa) {
-		roupas.remove(roupa);
-	}
-	
 	public void cadastrarAluguel(Aluguel aluguel) {
 		alugueis.add(aluguel);
 	}
 	
-	public void roupaAluguel(Aluguel aluguel) {
-		alugueis.remove(aluguel);
+	public void removeRoupa(int codigoRoupa) {
+		for(Roupa roupa:roupas) {
+			if(roupa.getCodigo() == codigoRoupa) {
+				roupas.remove(roupa);
+			}
+		}
+		
 	}
+	
+	public void desabilitarCliente(String cpf) {
+		for(Cliente cliente:clientes) {
+			if(cliente.getCPF() == cpf) {
+				cliente.setDesabilitar(true);
+			}
+		}
+	}
+	public void desabilitarAluguel(int codigoAlu) {
+		for(Aluguel aluguel:alugueis) {
+			if(aluguel.getCodigoAluguel() == codigoAlu) {
+				aluguel.setDesabilitar(true);
+			}
+		}
+	}
+	
+	public void aprovarPagamentoParcela(int codigoAluguel) {
+		for(Aluguel aluguel:alugueis) {
+			if(aluguel.getCodigoAluguel() == codigoAluguel) {
+				aluguel.setN_parcelas(aluguel.getN_parcelas() - 1);
+				if(aluguel.getN_parcelas() <= 0) {
+					aluguel.setDesabilitar(true);
+				}
+			}
+		}
+	}
+	
+	public List<Cliente> getClientes(){
+		return this.clientes;
+	}
+	
+	public List<Roupa> getRoupa() {
+		return roupas;
+	}
+	
 	
 	
 }

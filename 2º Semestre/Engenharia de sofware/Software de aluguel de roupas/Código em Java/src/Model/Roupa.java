@@ -1,8 +1,28 @@
 package Model;
 
 public class Roupa {
-	private String tipoRoupa, marca, sexo, cor, estacao, ocasiao, tipoTecido, codigo;
-	private int faixaEtaria, qtd, id, tamanho, quantidade;
+	private String tipoRoupa, marca, sexo, cor, estacao, ocasiao, tipoTecido, tamanho;
+	int codigo;
+	public int getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+
+	public String getTamanho() {
+		return tamanho;
+	}
+
+
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
+	}
+
+	private int faixaEtaria, id, quantidade;
 	
 	public int getQuantidade() {
 		return quantidade;
@@ -11,14 +31,6 @@ public class Roupa {
 	
 	public void setQuantidade (int quantidade) {
 		this.quantidade = quantidade;
-	}
-	
-	public String getCodigo() {
-		return codigo;
-	}
-	
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
 	}
 	
 	public String getTipoRoupa() {
@@ -77,13 +89,6 @@ public class Roupa {
 		this.tipoTecido = tipoTecido;
 	}
 	
-	public int getTamanho() {
-		return tamanho;
-	}
-	
-	public void setTamanho(int tamanho) {
-		this.tamanho = tamanho;
-	}
 	
 	public int getFaixaEtaria() {
 		return faixaEtaria;
@@ -93,24 +98,8 @@ public class Roupa {
 		this.faixaEtaria = faixaEtaria;
 	}
 	
-	public int getQtd() {
-		return qtd;
-	}
-	
-	public void setQtd(int qtd) {
-		this.qtd = qtd;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-	
 	public Roupa(String tipoRoupa, String marca, String sexo, String cor, String estacao, String ocasiao,
-			String tipoTecido, int tamanho, int fachetaria, int qtd, int id, int quantidade, String codigo) {
+			String tipoTecido, String tamanho, int faixaEtaria, int quantidade, int codigoRoupa) {
 		super();
 		this.tipoRoupa = tipoRoupa;
 		this.marca = marca;
@@ -121,10 +110,8 @@ public class Roupa {
 		this.tipoTecido = tipoTecido;
 		this.tamanho = tamanho;
 		this.faixaEtaria = faixaEtaria;
-		this.qtd = qtd;
-		this.id = id;
 		this.quantidade = quantidade;
-		this.codigo = codigo;
+		this.codigo = codigoRoupa;
 
 	}
 }
