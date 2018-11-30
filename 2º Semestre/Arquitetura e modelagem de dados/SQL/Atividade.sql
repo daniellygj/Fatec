@@ -3,7 +3,7 @@
     são numéricos (2 dígitos inteiros e 1 casa decimal para o primeiro e 4 dígitos
     inteiros para o segundo). Foto contém um texto indicando a localização no
     disco da foto. Com exceção de Foto e Sinopse, o preenchimento dos demais
-    dados é obrigatório 
+    dados é obrigatório. 
 */
  
 CREATE TABLE FIL_FILME (
@@ -45,7 +45,7 @@ CREATE TABLE AST_ASSISTE (
     2. Inserir 3 registros de usuário (um deles com nome Jack) e 6 filmes (associar 2
     filmes a cada pessoa). Ao menos um usuário não deve possuir foto. Dois filmes
     devem possuir o mesmo nome, sendo o mais recente baseado no mais antigo.
-    Algum usuário deve ser amigo de Jack;
+    Algum usuário deve ser amigo de Jack.
 */ 
  
 -- Filme
