@@ -1,5 +1,9 @@
 package Alunos;
+import lombok.Setter;
+import lombok.Getter;
 
+@Getter
+@Setter
 public class Nota {
 
     private double nota;
@@ -7,22 +11,6 @@ public class Nota {
 
     public Nota (double nota, int peso) {
         this.nota = nota;
-        this.peso = peso;
-    }
-
-    public double getNota() {
-        return nota;
-    }
-
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
-
-    public int getPeso() {
-        return peso;
-    }
-
-    public void setPeso(int peso) {
         this.peso = peso;
     }
 }

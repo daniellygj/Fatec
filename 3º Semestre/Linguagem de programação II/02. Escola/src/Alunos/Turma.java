@@ -1,5 +1,9 @@
 package Alunos;
+import lombok.Setter;
+import lombok.Getter;
 
+@Getter
+@Setter
 public class Turma {
     private String nomeTurma;
     private Aluno alunos[];
@@ -32,25 +36,12 @@ public class Turma {
         return false;
     }
 
-//    public boolean alterarDados(Aluno aluno, Aluno novosDados) {
-//        for (int i=0; i<qtd; i++) {
-//            if (alunos[i].getMatricula() == novosDados.getMatricula() || alunos[i].getNome().equals(novosDados.getNome())) {
-//                alunos[i].setCurso(novosDados.getCurso());
-//                alunos[i].setNome(novosDados.getNome());
-//                System.out.println("Dados alterados");
-//                return true;
-//            }
-//        }
-//        System.out.println("Aluno não encontrado.");
-//        return false;
-//    }
-
-    public boolean alterarDados(int matricula, String bunita, String valor) {
+    public boolean alterarDados(int matricula, String nomeDado, String valor) {
         for (int i=0; i<qtd; i++) {
             if (alunos[i].getMatricula() == matricula) {
-                if (bunita.equals("nome")) {
+                if (nomeDado.equals("nome")) {
                     alunos[i].setNome(valor);
-                } else if (bunita.equals("curso")){
+                } else if (nomeDado.equals("curso")){
                     alunos[i].setCurso(valor);
                 } else {
                     System.out.println("Ta errado");
