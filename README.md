@@ -2,7 +2,7 @@
 
 O objetivo desse repositório, é guardar todo o progresso que tive na Fatec, do inicio ao fim.
 
-### Primeiro semestre: 
+#### Primeiro semestre: 
   * Algoritmos
   * Matemática discreta
 
@@ -11,7 +11,7 @@ O objetivo desse repositório, é guardar todo o progresso que tive na Fatec, do
   * Engenharia de software
   * Linguagem de programação I
 
-##### Terceiro semestre:
+#### Terceiro semestre:
   * Estrutura de dados
   * Laboratório de desenvolvimento em Banco de Dados
   * Linguagem de programação II
