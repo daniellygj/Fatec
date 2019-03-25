@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 2ª Lista de Eestrutura de Dados: Lista Encadeada
+/* 1ª Lista de Eestrutura de Dados: Lista Encadeada
  *
  * 3 - Faça uma função que converta um vetor em lista encadeada (mantenha a ordem)
  */

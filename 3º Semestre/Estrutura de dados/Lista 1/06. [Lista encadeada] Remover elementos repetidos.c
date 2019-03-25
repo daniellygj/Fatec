@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 2ª Lista de Eestrutura de Dados: Lista Encadeada
+/* 1ª Lista de Eestrutura de Dados: Lista Encadeada
  *
  * 2 - Faça uma função para remover elementos repetidos de uma lista encadeada, considerando que a lista esteja ordenada (apenas uma varredura).
  */

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 2ª Lista de Eestrutura de Dados: Lista Encadeada
+/* 1ª Lista de Eestrutura de Dados: Lista Encadeada
  *
  * Faça uma função para intercalar duas listas encadeadas
  */
