@@ -4,12 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Turma turma = new Turma("Banco", 4);
+        Turma turma = new Turma("Banco", 10);
 
         System.out.println("*ADICIONAR ALUNO*");
         turma.adicionarAluno(new Aluno(123, "Danielly", "Banco", new Nota(7, 2), new Nota(8, 2), new Nota(7, 1), new Nota(8, 3)));
         turma.adicionarAluno(new Aluno(124, "Matheus", "Banco", new Nota(8, 2), new Nota(9, 2), new Nota(9, 1), new Nota(7, 3)));
         turma.adicionarAluno(new Aluno(125, "Bruna", "Banco", new Nota(6, 2), new Nota(10, 2), new Nota(9, 1), new Nota(7, 3)));
+        turma.adicionarAluno(new Aluno(126, "aaaa", "Banco", new Nota(8, 2), new Nota(9, 2), new Nota(9, 1), new Nota(7, 3)));
+        turma.adicionarAluno(new Aluno(127, "bbbb", "Banco", new Nota(6, 2), new Nota(10, 2), new Nota(9, 1), new Nota(7, 3)));
 
         System.out.println("\n=-=-=-=-=-=-=-=-=-=-=--=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=");
 

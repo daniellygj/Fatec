@@ -8,7 +8,7 @@ public class Turma {
     private String nomeTurma;
     private Aluno alunos[];
     private int qtd = 0;
-
+    private int indice = 0;
 
     Turma(String nomeTurma, int qtd){
         this.alunos = new Aluno[qtd];
@@ -26,23 +26,19 @@ public class Turma {
             return false;
         }
 
-        for (int i=0; i<qtd; i++) {
-             if (alunos[i] == null) {
-                 alunos[i] = aluno;
-                 System.out.println("Aluno matriculado com sucesso");
-                 return true;
-             }
-        }
-        return false;
+
+         alunos[indice++] = aluno;
+         System.out.println("Aluno matriculado com sucesso");
+         return true;
     }
 
-    public boolean alterarDados(int matricula, String nomeDado, String valor) {
+    public boolean alterarDados(int matricula, String nomeDado, String campo) {
         for (int i=0; i<qtd; i++) {
             if (alunos[i].getMatricula() == matricula) {
                 if (nomeDado.equals("nome")) {
-                    alunos[i].setNome(valor);
+                    alunos[i].setNome(campo);
                 } else if (nomeDado.equals("curso")){
-                    alunos[i].setCurso(valor);
+                    alunos[i].setCurso(campo);
                 } else {
                     System.out.println("Ta errado");
                 }
@@ -84,14 +80,16 @@ public class Turma {
     }
 
     public void excluirAlunoPorNome(String nome) {
-        int i=0;
-        for (; i<qtd; i++) {
+        for (int i = 0; i<qtd; i++) {
             if (alunos[i].getNome().equals(nome)) {
-                System.out.println("Aluno(a) excluido(a): " + alunos[i].getNome());
-                alunos[i] = null;
-                for (; i<qtd; i++) {
-                    alunos[i] = alunos[i++];
+                for (; i<(qtd-1); i++) {
+                     if (alunos[i+1] != null) {
+                         alunos[i] = alunos[i+1];
+                    } else
+                        break;
                 }
+                indice--;
+                alunos[i] = null;
                 break;
             }
         }
