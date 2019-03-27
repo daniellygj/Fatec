@@ -21,6 +21,7 @@ cel *intercalar(cel *l1, cel *l2) {
             l3->prox = l2;
             break;
         }
+
         aux = l3->prox;
         l3->prox = l2;
         l3 = l3->prox;
@@ -30,6 +31,8 @@ cel *intercalar(cel *l1, cel *l2) {
         l3 = l3->prox;
     }
 }
+
+
 
 
 
