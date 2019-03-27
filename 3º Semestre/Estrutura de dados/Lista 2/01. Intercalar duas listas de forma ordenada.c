@@ -78,7 +78,12 @@ int main() {
     cel *i = NULL;
     cel *t = NULL;
 
-    inserirLista (&lista1, 1);
+    inserirLista(&lista1, 1);
+    inserirLista(&lista1, 2);
+    inserirLista(&lista2, 10);
+    inserirLista(&lista2, 11);
+
+  /*  inserirLista (&lista1, 1);
     inserirLista (&lista1, 1);
     inserirLista (&lista1, 2);
     inserirLista (&lista1, 3);
@@ -93,7 +98,7 @@ int main() {
     inserirLista (&lista2, 8);
     inserirLista (&lista2, 9);
     inserirLista (&lista2, 10);
-    inserirLista (&lista2, 11);
+    inserirLista (&lista2, 11);*/
 
     intercalar(lista1, lista2, &i, &t);
 
