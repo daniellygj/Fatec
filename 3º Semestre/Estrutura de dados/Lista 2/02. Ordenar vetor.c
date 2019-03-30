@@ -16,19 +16,24 @@
 
 
 void ordenar(int vet[], int i, int h, int n) {
-    int vet2[n] , indice = 0;
+    int aux = h;
+    while (i < n) {
+        if (vet[i] > vet[h]) {
+            int temp = vet[i];
+            vet[i] = vet[h];
+            vet[h] = temp;
+        }
 
-    if (vet[i] > vet[h]) {
-        for (int j = h; j < n; j++, indice++)
-            vet2[indice] = vet[j];
-
-        for (int j = i; j < h; j++, indice ++)
-            vet2[indice] = vet[j];
-
-        for (int j = 0; j < n; j++)
-            vet[j] = vet2[j];
+        h++;
+        if (h == n) {
+            i++;
+            if(n >= aux) 
+                h = i;
+            else 
+                h = aux;  
+        }
     }
- }
+}
 
 
  int main() {
