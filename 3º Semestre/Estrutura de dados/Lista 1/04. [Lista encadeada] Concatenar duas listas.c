@@ -15,7 +15,7 @@ typedef struct Cel cel;
 
  void concatenar(cel **lista1, cel *lista2) {
     if (*lista1 != NULL){
-        for (cel *aux=lista1; aux->prox != NULL; aux=aux->prox)
+        for (cel *aux = *lista1; aux->prox != NULL; aux = aux->prox);
             aux->prox = lista2;
    } else
         *lista1 = lista2;
