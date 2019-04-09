@@ -1,0 +1,31 @@
+package Baralhoo;
+
+public class Carta {
+    private String nome;
+    private String naipe;
+
+    Carta(String nome, String naipe) {
+        this.nome = nome;
+        this.naipe = naipe;
+    }
+
+    Carta() {
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNaipe() {
+        return naipe;
+    }
+
+    public void setNaipe(String naipe) {
+        this.naipe = naipe;
+    }
+}
