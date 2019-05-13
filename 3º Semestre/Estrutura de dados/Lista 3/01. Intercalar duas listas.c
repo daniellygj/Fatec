@@ -14,43 +14,44 @@
 
 typedef struct Cel cel;
 
-cel *intercalar(cel *l1, cel *l2) {
-    cel *l3 = l1, *aux = NULL, *aux2 = NULL;
-
-    while (l2 != NULL &&  l3 != NULL) {
-        if (l3->prox == NULL) {
-            l3->prox = l2;
-            break;
-        }
-
-        aux = l3->prox;
-        l3->prox = l2;
-        l3 = l3->prox;
-        aux2 = l3->prox;
-        l3->prox = aux;
-        l2 = aux2;
-        l3 = l3->prox;
-    }
-}
-
 
 void *inserir (cel **lista, int x) {
-    cel *temp = NULL, *aux = *lista;
+    cel *temp = NULL;
 
     temp = malloc(sizeof(cel));
     temp->valor = x;
     temp->prox = NULL;
 
-
     if (*lista == NULL)
-      *lista = temp;
+        *lista = temp;
     else {
-      for (; aux->prox != NULL; aux = aux->prox);
-      aux->prox = temp;
+        cel *aux = *lista
+        for (; aux->prox != NULL; aux = aux->prox);
+        aux->prox = temp;
     }
- }
+}
 
 
+cel *intercalar(cel *l1, cel *l2) {
+    cel *l3 = NULL;
+    cel *aux1 = l1;
+    cel *aux2 = l2;
+
+    while(aux1 != NULL && aux2 != NULL) {
+
+        if (aux1 != NULL) {
+            inserir(&l3, aux1->valor);
+            aux1 = aux1->prox;
+        }
+
+        if (aux2 != NULL) {
+            inserir(&l3, aux2->valor);
+            aux2 = aux2->prox;
+        }
+    }
+
+    return l3;
+}
 
  void imprimir(cel *lista) {
     for (cel *aux = lista; aux != NULL; aux = aux->prox)
@@ -60,6 +61,7 @@ void *inserir (cel **lista, int x) {
  int main() {
     cel *lst = NULL;
     cel *lst2 = NULL;
+    cel *lst3 = NULL;
 
     inserir(&lst, 1);
     inserir(&lst, 1);
@@ -67,15 +69,24 @@ void *inserir (cel **lista, int x) {
     inserir(&lst, 1);
     inserir(&lst, 1);
     inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
 
-    inserir(&lst2, 7);
-    inserir(&lst2, 9);
-    inserir(&lst2, 8);
-    inserir(&lst2, 510);
+    inserir(&lst2, 2);
 
-    *intercalar(lst, lst2);
 
+    printf("lista1\n");
     imprimir(lst);
+
+    printf("lista2\n");
+    imprimir(lst2);
+
+    printf("\n\nresultado\n");
+
+
+    lst3 = intercalar(lst, lst2);
+
+    imprimir(lst3);
 }
 
 
