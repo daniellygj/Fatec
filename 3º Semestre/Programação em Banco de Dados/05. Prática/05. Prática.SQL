@@ -1,33 +1,77 @@
 -- Crie as tabelas conforme modelo lógico acima e insira pelo menos 5 linhas
-CREATE TABLE EST_ESTADO(
-	EST_COD NUMBER(4),
-	EST_ESTADO VARCHAR2(30),
-	
-	CONSTRAINT EST_COD_PK PRIMARY KEY(EST_COD)
-);
+<table class="table" border="1">
+  <thead>
+    <tr>
+      <th>Coluna 1</th>
+      <th>Coluna 2</th>
+      <th><input type="checkbox" class="checkAll" name="checkAll" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+  </tbody>
+</table>
 
-CREATE TABLE CID_CIDADE (
-	CID_COD NUMBER(4),
-	EST_COD NUMBER(4),
-	CID_NOME VARCHAR2(30),
-	
-	CONSTRAINT CID_EST_COD_PK PRIMARY KEY (CID_COD, EST_COD),
-	CONSTRAINT EST_COD_FK FOREIGN KEY (EST_COD) REFERENCES EST_ESTADO(EST_COD)
-);
-
-CREATE TABLE DEP_DEPARTAMENTO (
-	DEP_COD NUMBER(4),
-	DEP_DESCRICAO VARCHAR2(20),
-	
-	CONSTRAINT DEP_COD_PK PRIMARY KEY (DEP_COD)
-);
-
-CREATE TABLE CAR_CARGO (
-	CAR_COD NUMBER(4),
-	CAR_DESCRICAO VARCHAR2(20),
-	
-	CONSTRAINT CAR_COD_PK PRIMARY KEY (CAR_COD)
-);
+<table class="table" border="1">
+  <thead>
+    <tr>
+      <th>Coluna 1</th>
+      <th>Coluna 2</th>
+      <th><input type="checkbox" class="checkAll" name="checkAll" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+    <tr role="row">
+      <td>Texto 1</td>
+      <td>Texto 2</td>
+      <td><input type="checkbox" name="check" /></td>
+    </tr>
+  </tbody>
+</table>
 
 CREATE TABLE FUN_FUNCIONARIO (
 	FUN_COD NUMBER(4),
