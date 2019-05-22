@@ -37,6 +37,34 @@ void* insereArvore(arvore **r, int valor) {
     }
 }
 
+int altura(arvore *r) {
+    int alturaDir;
+    int alturaEsq;
+
+    if (r == NULL) {
+        return 1;
+    } else {
+        int alturaDir = altura(r->dir);
+        int alturaEsq = altura(r->esq);
+
+        if (alturaDir > alturaEsq)
+            return alturaDir +1;
+        else
+            return alturaEsq +1;
+    }
+}
+
+arvore *buscar(arvore *r, int x) {
+    if (r != NULL) {
+        if (r->valor == x)
+            return r;
+        if (x > r-> valor)
+            buscar(r->dir, x);
+        else
+            buscar(r->esq, x);
+    }
+}
+
 int main() {
     arvore *sla = NULL;
 
@@ -51,8 +79,17 @@ int main() {
     insereArvore(&sla, 9);
     insereArvore(&sla, -10);
     insereArvore(&sla, 11);
+    insereArvore(&sla, 2);
+    insereArvore(&sla, -7);
+    insereArvore(&sla, -33);
+    insereArvore(&sla, 70);
+    insereArvore(&sla, 33);
+    insereArvore(&sla, 23);
+    insereArvore(&sla, 20);
 
 
-    imprimeArvore(sla);
+    //imprimeArvore(sla);
+
     printf("\n");
+    printf("%d", buscar(sla, 20)->valor);
 }
