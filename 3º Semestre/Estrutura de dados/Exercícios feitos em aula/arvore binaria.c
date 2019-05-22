@@ -40,17 +40,17 @@ void* insereArvore(arvore **r, int valor) {
 int main() {
     arvore *sla = NULL;
 
-    //sla = insereArvore(sla, 10);
     insereArvore(&sla, 5);
     insereArvore(&sla, 1);
-    insereArvore(&sla, 2);
+    insereArvore(&sla, 30);
     insereArvore(&sla, 6);
     insereArvore(&sla, 3);
-    insereArvore(&sla, 7);
+    insereArvore(&sla, 59);
     insereArvore(&sla, 4);
     insereArvore(&sla, 10);
     insereArvore(&sla, 9);
-    insereArvore(&sla, 8);
+    insereArvore(&sla, -10);
+    insereArvore(&sla, 11);
 
 
     imprimeArvore(sla);
