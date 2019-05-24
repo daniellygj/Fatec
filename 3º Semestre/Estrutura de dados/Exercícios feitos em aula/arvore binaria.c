@@ -65,31 +65,44 @@ arvore *buscar(arvore *r, int x) {
     }
 }
 
+arvore *inverter(arvore *r) {
+  if (r) {
+    arvore *temp = r->dir;
+    r->dir = r->esq;
+    r->esq = temp;
+
+    inverter(r->dir);
+    inverter(r->esq);
+  }
+    return r;
+}
+
+
 int main() {
     arvore *sla = NULL;
 
-    insereArvore(&sla, 5);
-    insereArvore(&sla, 1);
-    insereArvore(&sla, 30);
     insereArvore(&sla, 6);
     insereArvore(&sla, 3);
-    insereArvore(&sla, 59);
+    insereArvore(&sla, 10);
+    insereArvore(&sla, 2);
+    insereArvore(&sla, 5);
+    insereArvore(&sla, 7);
+    insereArvore(&sla, 9);
+    insereArvore(&sla, 1);
     insereArvore(&sla, 4);
     insereArvore(&sla, 10);
-    insereArvore(&sla, 9);
-    insereArvore(&sla, -10);
-    insereArvore(&sla, 11);
-    insereArvore(&sla, 2);
-    insereArvore(&sla, -7);
-    insereArvore(&sla, -33);
-    insereArvore(&sla, 70);
-    insereArvore(&sla, 33);
-    insereArvore(&sla, 23);
-    insereArvore(&sla, 20);
 
 
-    //imprimeArvore(sla);
+
+   imprimeArvore(sla);
+   arvore *aux = sla->dir;
+
+
 
     printf("\n");
-    printf("%d", buscar(sla, 20)->valor);
+    sla = inverter(sla);
+    aux = sla->dir;
+
+    imprimeArvore(sla);
+//    printf("%d", buscar(sla, 5)->valor);
 }
