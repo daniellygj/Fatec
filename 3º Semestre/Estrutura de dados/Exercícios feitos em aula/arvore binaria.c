@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+#include <string.h>
+
+#include <locale.h>
+
 struct ARVORE {
     int valor;
     struct ARVORE *dir;
@@ -77,7 +82,6 @@ arvore *inverter(arvore *r) {
     return r;
 }
 
-
 int main() {
     arvore *sla = NULL;
 
@@ -92,17 +96,8 @@ int main() {
     insereArvore(&sla, 4);
     insereArvore(&sla, 10);
 
-
-
    imprimeArvore(sla);
-   arvore *aux = sla->dir;
-
-
-
-    printf("\n");
-    sla = inverter(sla);
-    aux = sla->dir;
-
-    imprimeArvore(sla);
-//    printf("%d", buscar(sla, 5)->valor);
+   printf("\n");
+   remover(buscar(sla, 5));
+   imprimeArvore(sla);
 }
