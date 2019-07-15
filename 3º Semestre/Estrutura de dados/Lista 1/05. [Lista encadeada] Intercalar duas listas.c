@@ -63,20 +63,21 @@ void *inserir (cel **lista, int x) {
 
 
     inserir(&lst, 1);
-inserir(&lst, 1);
-inserir(&lst, 1);
-inserir(&lst, 1);
-inserir(&lst, 1);
-inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
 
-    inserir(&lst2, 7);
-    inserir(&lst2, 9);
-    inserir(&lst2, 8);
-    inserir(&lst2, 510);
+    inserir(&lst2, 5);
+    inserir(&lst2, 3);
+    inserir(&lst2, 1);
+    inserir(&lst2, 4);
+    inserir(&lst2, 6);
 
-    *intercalar(lst, lst2);
+   // *intercalar(lst, lst2);
 
-    imprimir(lst);
+    imprimir(lst2);
 }
 
 
