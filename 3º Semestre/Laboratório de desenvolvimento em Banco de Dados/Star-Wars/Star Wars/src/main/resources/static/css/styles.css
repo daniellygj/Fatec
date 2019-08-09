@@ -1,0 +1,220 @@
+/* <<<<<table>>>>>>>>*/
+th {
+  background-color: #555;
+  color: white;
+}
+
+td {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+table tbody tr.selected {
+    background-color: #f0f0f0;
+}
+
+.legenda {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* <<<<<<<< Checkbox >>>>>>>>>*/
+.roundedTwo {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px auto;
+  background: #fcfff4;
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+  label {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    cursor: pointer;
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    &:after {
+      content: '';
+      width: 9px;
+      height: 5px;
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      border: 3px solid #fcfff4;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.3;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
+ /* <<<< FORMS >>>> */
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #337AB7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #659ECF;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+/* <<< TAB/ABA  >>>>*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*,*::before,*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body {
+    height:100vh;
+}
+
+body {
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+    font:14px/1.5 'Open Sans',
+    sans-serif;color:#345;
+    background:#f0f2f4;
+}
+
+p:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+main {
+  max-width: 20000px;
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,.2);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #abc;
+}
+
+.hide-radio {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  color: #abc;
+  border: 1px solid transparent;
+  margin-bottom: 0px;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+
+
+label:hover {
+  color: #789;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 3px solid #abc;
+  border-top: 4px solid #555;
+  border-bottom: 3px solid #555;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+    display: block;
+}
+
+
+@media screen and (max-width: 800px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  label {
+    padding: 15px;
+  }
+}
+
+.margintitle {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.marginfield {
+    margin-bottom: 5px;
+}
+
+/* <<<< BUTAO >>> */
+.button-style {
+      border-color: white;
+}
+
+.btn {
+    background-color: #555 !important;
+}
+
+.btn:hover {
+    background-color: #696969 !important;
+}
