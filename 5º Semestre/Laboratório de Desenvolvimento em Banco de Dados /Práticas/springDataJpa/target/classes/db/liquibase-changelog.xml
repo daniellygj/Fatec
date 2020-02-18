@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="danny" id="aidi-1">
+        <createTable tableName="usr_usuario">
+            <column name="usr_id" type="BIGINT"/>
+            <column name="usr_nome" type="varchar(20)"/>
+            <column name="usr_senha" type="varchar(20)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-2">
+        <addPrimaryKey columnNames="usr_id" tableName="usr_usuario" constraintName="usr_usuario_pk"/>
+    </changeSet>
+
+    <changeSet id="aidi-3" author="danny">
+        <addUniqueConstraint columnNames="usr_nome" tableName="usr_usuario" constraintName="usr_nome_uk"/>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-11">
+        <addAutoIncrement columnDataType="BIGINT" columnName="usr_id" incrementBy="1" tableName="usr_usuario"/>
+    </changeSet>
+
+
+    <changeSet author="danny" id="aidi-4">
+        <createTable tableName="aut_autorizacao">
+            <column name="aut_id" type="BIGINT"/>
+            <column name="aut_nome" type="varchar(20)"/>
+            <column name="usr_senha" type="varchar(20)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-5">
+        <addPrimaryKey columnNames="aut_id" tableName="aut_autorizacao" constraintName="aut_autorizacao_pk"/>
+    </changeSet>
+
+    <changeSet id="aidi-6" author="danny">
+        <addUniqueConstraint columnNames="aut_nome" tableName="aut_autorizacao" constraintName="aut_nome_uk"/>
+    </changeSet>
+
+    <changeSet author="dannY" id="aidi-11">
+        <addDefaultValue columnDataType="BIGINT" columnName="aut_id" defaultValue="0" tableName="aut_autorizacao"/>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-12">
+        <addAutoIncrement columnDataType="BIGINT" columnName="aut_id" incrementBy="1" tableName="aut_autorizacao"/>
+    </changeSet>
+
+
+    <changeSet author="danny" id="aidi-7">
+        <createTable tableName="uau_usuario_autorizacao">
+            <column name="usr_id" type="BIGINT"/>
+            <column name="aut_id" type="BIGINT"/>
+            <column name="usr_senha" type="varchar(20)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-8">
+        <addPrimaryKey columnNames="usr_id, aut_id" tableName="uau_usuario_autorizacao" constraintName="uau_usuario_autorizacao_pk"/>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-9">
+        <addForeignKeyConstraint baseColumnNames="usr_id" baseTableName="uau_usuario_autorizacao" constraintName="uau_usr_fk"
+                                 referencedColumnNames="usr_id" referencedTableName="usr_usuario"/>
+    </changeSet>
+
+    <changeSet author="danny" id="aidi-10">
+        <addForeignKeyConstraint baseColumnNames="aut_id" baseTableName="uau_usuario_autorizacao" constraintName="uau_aut_fk"
+                                 referencedColumnNames="aut_id" referencedTableName="aut_autorizacao"/>
+    </changeSet>
+</databaseChangeLog>
