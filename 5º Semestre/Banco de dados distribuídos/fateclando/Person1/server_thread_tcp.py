@@ -6,29 +6,30 @@ from threading import Thread
 global public_key
 global private_key
 
-arq = open('Person1/.chavePri.txt', 'rb')
 
-private_key = bytes()
-for linha in arq:
-    private_key += linha
-arq.close()
+def captura_chave_privada():
+    arq = open('Person1/.chavePri.txt', 'rb')
+    private_key = bytes()
+    for linha in arq:
+        private_key += linha
+    arq.close()
+    return private_key
 
 
-def decifrar_message(msgc):
-    print(msgc)
-    print(type(msgc))
+def decrypt_message(msgc):
+    private_key = captura_chave_privada()
     return rsa.decrypt(
         msgc, rsa.PrivateKey.load_pkcs1(private_key, format='PEM')
     )
 
 
-def conexao(con, cli):
+def connection(con, cli):
     while True:
         msg = con.recv(1024)
         if b'-----BEGIN RSA PUBLIC KEY-----' in msg:
             public_key = msg
         else:
-            print(decifrar_message(msg))
+            print(decrypt_message(msg))
         if not msg:
             break
 
@@ -36,16 +37,19 @@ def conexao(con, cli):
     con.close()
 
 
-# Endereco IP do Servidor
-HOST = ''
-# Porta que o Servidor vai escutar
-PORT = 5004
-tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-orig = (HOST, PORT)
-tcp.bind(orig)
-tcp.listen(1)
-while True:
-    con, cliente = tcp.accept()
-    print('Concetado por ', cliente)
-    t = Thread(target=conexao, args=(con, cliente,))
-    t.start()
+def start_server():
+    HOST = ''
+    PORT = 5005
+
+    tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    orig = (HOST, PORT)
+
+    captura_chave_privada()
+    tcp.bind(orig)
+    tcp.listen(1)
+
+    while True:
+        con, cliente = tcp.accept()
+        print('Conectado por ', cliente)
+        t = Thread(target=connection, args=(con, cliente,))
+        t.start()
