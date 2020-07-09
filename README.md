@@ -18,5 +18,5 @@ O objetivo desse repositório, é guardar todo o progresso que tive na Fatec, do
   * Programação em banco de dados
 
 #### Quinto semestre:
-    * Projeto de banco de dados distribuídos
-    * Laboratório de desenvolvimento em banco de dados V
+  * Projeto de banco de dados distribuídos
+  * Laboratório de desenvolvimento em banco de dados V
