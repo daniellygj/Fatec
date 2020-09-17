@@ -1,20 +1,24 @@
 import org.junit.Test;
-import service.CheckSpeed;
+import service.Radar;
+import service.RadarImpl;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class TrafficViolationTest {
+public class RadarTest {
 
-    private CheckSpeed checkSpeed;
+    private Radar radar;
 
+    public RadarTest() {
+        this.radar = new RadarImpl();
+    }
 
     @Test
     public void hasSpeedInfraction_test() {
         int allowedSpeed = 100;
         int vehicleSpeed = 120;
 
-        boolean infraction = checkSpeed.checkSpeed(allowedSpeed, vehicleSpeed);
+        boolean infraction = radar.checkSpeed(allowedSpeed, vehicleSpeed);
 
         assertTrue(infraction);
     }
@@ -24,7 +28,7 @@ public class TrafficViolationTest {
         int allowedSpeed = 100;
         int vehicleSpeed = 80;
 
-        boolean infraction = checkSpeed.checkSpeed(allowedSpeed, vehicleSpeed);
+        boolean infraction = radar.checkSpeed(allowedSpeed, vehicleSpeed);
 
         assertFalse(infraction);
     }

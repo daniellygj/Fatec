@@ -1,6 +1,6 @@
 package service;
 
-public interface CheckSpeed {
+public interface Radar {
 
     Boolean checkSpeed(int allowedSpeed, int vehicleSpeed);
 }
