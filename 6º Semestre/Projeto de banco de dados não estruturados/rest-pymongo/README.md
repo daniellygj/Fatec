@@ -22,4 +22,4 @@ Para executar:
 
 ```python rest.py```
 
-Necessário Pythoon 3.x
+Necessário Python 3.x
